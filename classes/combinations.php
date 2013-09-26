@@ -2,79 +2,6 @@
 
 require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 
-class Combinations__List_Table extends WP_List_Table {
-	var $data=array();
-	
-	function __construct($class) {
-		parent::__construct( array(
-			'singular'=> 'wp_list_text_link', //Singular label
-			'plural' => $class, 
-			'ajax'	=> false //We won't support Ajax for this table
-		) );
-	}
-	
-	function display_tablenav( $which ) {
-		if ( 'top' == $which ) {
-			echo '<div class="tablenav '.esc_attr( $which ).'"><div class="alignleft actions">';
-			$this->bulk_actions(); 
-			echo '</div>';
-			$this->extra_tablenav( $which );
-			$this->pagination( $which );
-			echo '<br class="clear" /></div>';
-		}
-	}	
-	
-	function extra_tablenav( $which ) {
-		echo '
-			<ul class="subsubsub">
-				<li class="all">
-					<a href="#" class="current">
-						'.__('Total combinations').'
-						<span class="count">('.count($this->items).')</span>
-					</a>					
-				</li>
-			</ul>
-		';		
-	}
-
-
-	function prepare_items($items, $columns) {
-		$hidden = array('id', 'combinationIDS');
-		$sortable = array();
-		$this->_column_headers = array($columns, $hidden, $sortable);
-		$this->items = $items;
-	}
-	
-	function column_default( $item, $column_name ) {
-		switch( $column_name ) { 
-			case 'id':
-				return $item[$column_name];
-			case 'article':				
-			case 'title':
-				return "<input type='text' disabled=true name='combination[{$item[id]}][{$column_name}]' value='{$item[$column_name]}' />";
-			case 'combination':
-				return $item[$column_name];
-			case 'combinationIDS':
-				return $item[$column_name];
-			default:
-				return $item[$column_name];
-		}		
-	}
-	
-	function column_article($item) {
-	  $actions = array(
-				'edit'      => sprintf('<a class="btnCombinationEdit" id="%s" href="#">Edit</a>', $item['id']),
-				'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
-	  );
-	  return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
-	}
-	
-	function no_items() {
-		_e( 'No combinations add.' );
-	}
-
-}
-
 
 class Combinations {
 
@@ -102,10 +29,11 @@ class Combinations {
 	*
 	*
 	*/
-	function clientFeaturesForm() {
-		global $wpdb;
-
-	
+	function clientFeaturesForm($lotID) {
+        $rels=$this->getLotAllFeatures($lotID, 'combinRelGroupId');
+        foreach ($rels as $rel) {
+            echo Formatter::widget('combfeature', $rel, $lotID);
+        }
 	}
 
 
@@ -115,8 +43,8 @@ class Combinations {
 	*
 	*/
 	function edit_form_advanced($post) {
-		global $wpdb;		
-		
+		global $wpdb;
+
 	}
 
     /**
@@ -143,7 +71,7 @@ class Combinations {
         return $qRels;
     }
 
-    /*
+    /**
     * Отдаём список комбинаций товара
     *
     */
@@ -171,7 +99,7 @@ class Combinations {
 		return $items;	
 	}
 	
-	/*
+	/**
 	* Показываем бокс с комбинациями товара
 	*
 	*/	
@@ -214,7 +142,7 @@ class Combinations {
 	}
 	
 	
-	/*
+	/**
 	* Раскидываем характеристики по группам
 	*
 	*
@@ -233,7 +161,7 @@ class Combinations {
 	}
 	
 	
-	/*
+	/**
 	* Обновляем список комбинаций по хуякс запросу
 	*
 	*
@@ -249,7 +177,7 @@ class Combinations {
 	}
 	
 	
-	/*
+	/**
 	* Создаём все возможные комбинации из перечня характеристик
 	*
 	*
@@ -295,7 +223,7 @@ class Combinations {
 		}
 	}
 	
-	/*
+	/**
 	* Удаляем комбинацию и заодно и отношения к названиям
 	*
 	*
@@ -331,4 +259,78 @@ class Combinations {
 		die();
 	}
 	
-} 
+}
+
+
+class Combinations__List_Table extends WP_List_Table {
+    var $data=array();
+
+    function __construct($class) {
+        parent::__construct( array(
+            'singular'=> 'wp_list_text_link', //Singular label
+            'plural' => $class,
+            'ajax'	=> false //We won't support Ajax for this table
+        ) );
+    }
+
+    function display_tablenav( $which ) {
+        if ( 'top' == $which ) {
+            echo '<div class="tablenav '.esc_attr( $which ).'"><div class="alignleft actions">';
+            $this->bulk_actions();
+            echo '</div>';
+            $this->extra_tablenav( $which );
+            $this->pagination( $which );
+            echo '<br class="clear" /></div>';
+        }
+    }
+
+    function extra_tablenav( $which ) {
+        echo '
+			<ul class="subsubsub">
+				<li class="all">
+					<a href="#" class="current">
+						'.__('Total combinations').'
+						<span class="count">('.count($this->items).')</span>
+					</a>
+				</li>
+			</ul>
+		';
+    }
+
+
+    function prepare_items($items, $columns) {
+        $hidden = array('id', 'combinationIDS');
+        $sortable = array();
+        $this->_column_headers = array($columns, $hidden, $sortable);
+        $this->items = $items;
+    }
+
+    function column_default( $item, $column_name ) {
+        switch( $column_name ) {
+            case 'id':
+                return $item[$column_name];
+            case 'article':
+            case 'title':
+                return "<input type='text' disabled=true name='combination[{$item[id]}][{$column_name}]' value='{$item[$column_name]}' />";
+            case 'combination':
+                return $item[$column_name];
+            case 'combinationIDS':
+                return $item[$column_name];
+            default:
+                return $item[$column_name];
+        }
+    }
+
+    function column_article($item) {
+        $actions = array(
+            'edit'      => sprintf('<a class="btnCombinationEdit" id="%s" href="#">Edit</a>', $item['id']),
+            'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
+        );
+        return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
+    }
+
+    function no_items() {
+        _e( 'No combinations add.' );
+    }
+
+}

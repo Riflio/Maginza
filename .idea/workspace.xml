@@ -7,8 +7,8 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380237193836" ignored="false" />
-    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380238032149" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380238037783" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380239039779" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,14 +37,22 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="12" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.44103774">
+            <state line="250" column="35" selection-start="7637" selection-end="7637" vertical-scroll-proportion="5.0898204">
               <folding>
-                <marker date="1380238032928" expanded="true" signature="3456:4150" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380238032928" expanded="true" signature="4051:4110" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380238032928" expanded="true" signature="4566:4641" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380238032928" expanded="true" signature="5162:5450" placeholder="..." />
-                <marker date="1380238032928" expanded="true" signature="6575:6666" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380239240654" expanded="true" signature="1647:2341" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380239240654" expanded="true" signature="2242:2301" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380239240654" expanded="true" signature="2758:2833" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380239240654" expanded="true" signature="4769:4860" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formatter.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/formatter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="19" selection-start="446" selection-end="452" vertical-scroll-proportion="-14.384615">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -250,7 +258,11 @@
       <created>1380237196544</created>
       <updated>1380237196544</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Работаю над комбинациями">
+      <created>1380238040161</created>
+      <updated>1380238040161</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -282,7 +294,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -401,15 +413,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/formatter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="446" selection-end="452" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="12" selection-start="3229" selection-end="3229" vertical-scroll-proportion="0.44103774">
+        <state line="250" column="35" selection-start="7637" selection-end="7637" vertical-scroll-proportion="5.0898204">
           <folding>
-            <marker date="1380238032928" expanded="true" signature="3456:4150" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380238032928" expanded="true" signature="4051:4110" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380238032928" expanded="true" signature="4566:4641" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380238032928" expanded="true" signature="5162:5450" placeholder="..." />
-            <marker date="1380238032928" expanded="true" signature="6575:6666" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+            <marker date="1380239240654" expanded="true" signature="1647:2341" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380239240654" expanded="true" signature="2242:2301" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380239240654" expanded="true" signature="2758:2833" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380239240654" expanded="true" signature="4769:4860" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
           </folding>
         </state>
       </provider>
