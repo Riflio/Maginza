@@ -104,7 +104,7 @@ class Combinations {
 	*/
 	function clientFeaturesForm() {
 		global $wpdb;
-			
+
 	
 	}
 
