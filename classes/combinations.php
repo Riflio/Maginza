@@ -118,19 +118,39 @@ class Combinations {
 		global $wpdb;		
 		
 	}
-	
-	/*
-	* Отдаём список комбинаций товара
-	*
-	*/	
-	
-	public function getCombinationList($lotID) {
+
+    /**
+     * получим все названия характеристик и название их группы для всех комбинаций лота
+     *
+     */
+    private function getLotAllFeatures($lotID, $orderBy='combinRelID') {
+        global $wpdb;
+        $table_combinations_rel=Options::$table_combinations_rel;
+        $qRels=$wpdb->get_results($wpdb->prepare(
+            "
+              SELECT  rels.combinRelID, rels.combinRelCombinID, rels.combinRelGroupId
+              ,GROUP_CONCAT(DISTINCT termsItems.term_id  SEPARATOR ',' ) as GroupFeaturesIDS
+              ,GROUP_CONCAT(DISTINCT termsItems.name  SEPARATOR ',' ) as GroupFeatures
+              ,termsGroup.name as GroupName
+              FROM {$table_combinations_rel} as rels
+              JOIN {$wpdb->terms} as termsItems ON FIND_IN_SET(termsItems.term_id, rels.combinRelItemsID )
+              JOIN {$wpdb->terms} as termsGroup ON termsGroup.term_id=rels.combinRelGroupId
+              WHERE rels.combinRelCombinID IN (SELECT combinID FROM wp_maginza_combinations WHERE lotID=%d)
+              GROUP BY rels.{$orderBy}
+			", $lotID
+        ), OBJECT_K); //-- что бы первый столбец запроса был айдишником в массиве
+
+        return $qRels;
+    }
+
+    /*
+    * Отдаём список комбинаций товара
+    *
+    */
+    public function getCombinationList($lotID) {
 		global $wpdb;
 		$items=array();
-		
-		$table_combinations=Options::$table_combinations;
-		$table_combinations_rel=Options::$table_combinations_rel;
-		
+    	$table_combinations=Options::$table_combinations;
 		//-- получим все комбинации товара
 		$qCombinations=$wpdb->get_results($wpdb->prepare(
 			"SELECT comb.*
@@ -138,33 +158,16 @@ class Combinations {
 			WHERE comb.lotID=%d
 			", $lotID
 		));
-		
 		//-- На выход добавим все комбинации
 		foreach ($qCombinations as $comb) {
 			$items[$comb->combinID]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle, 'combination'=>'', 'combinationIDS'=>'-1' );
 		}
-		
-		//--получим все названия характеристик и название их группы для всех наших комбинаций
-        $qRels=$wpdb->get_results($wpdb->prepare(
-			"
-              SELECT  rels.combinRelID, rels.combinRelCombinID, rels.combinRelGroupId
-              ,rels.combinRelItemsID as GroupFeaturesIDS
-              ,GROUP_CONCAT(DISTINCT termsItems.name  SEPARATOR ',' ) as GroupFeatures
-              ,termsGroup.name as GroupName
-              FROM {$table_combinations_rel} as rels
-              JOIN {$wpdb->terms} as termsItems ON FIND_IN_SET(termsItems.term_id, rels.combinRelItemsID )
-              JOIN {$wpdb->terms} as termsGroup ON termsGroup.term_id=rels.combinRelGroupId
-              WHERE rels.combinRelCombinID IN (SELECT combinID FROM wp_maginza_combinations WHERE lotID=%d)
-              GROUP BY rels.combinRelID
-			", $lotID
-		), OBJECT_K); //-- что бы первый столбец запроса был айдишником в массиве
-		
-		//-- На выход раскидаем названия характеристик и названия групп по комбинациям
+        //-- На выход раскидаем названия характеристик и названия групп по комбинациям
+        $qRels=$this->getLotAllFeatures($lotID, 'combinRelID');
         foreach ($qRels as $key => $rel) {
             $items[$rel->combinRelCombinID]['combination'].="<b>{$rel->GroupName}: </b> {$rel->GroupFeatures}  </br>";
             $items[$rel->combinRelCombinID]['combinationIDS'].=",{$rel->GroupFeaturesIDS}";
         }
-
 		return $items;	
 	}
 	
