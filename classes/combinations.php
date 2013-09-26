@@ -131,39 +131,37 @@ class Combinations {
 		$table_combinations=Options::$table_combinations;
 		$table_combinations_rel=Options::$table_combinations_rel;
 		
-		//-- получим все комбинации товара вместе с айдишниками зависимостей названий
+		//-- получим все комбинации товара
 		$qCombinations=$wpdb->get_results($wpdb->prepare(
-			"SELECT comb.*, GROUP_CONCAT(rels.combinRelID SEPARATOR ',' ) as relsID
+			"SELECT comb.*,
 			FROM  {$table_combinations} as comb
-			JOIN {$table_combinations_rel} as rels ON rels.combinRelCombinID=comb.combinID 
 			WHERE comb.lotID=%d
-			GROUP BY comb.combinID
 			", $lotID
 		));
 		
-		$relIDs='-1'; //-- сохраним все айдишники таблицы зависимостей названий характеристик и группы
+		//-- На выход добавим все комбинации
 		foreach ($qCombinations as $comb) {
-			$items[]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle,  'combination'=>$comb->relsID);
+			$items[]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle);
 			$relIDs.=(','.$comb->relsID);
 		}		
 		
-		//--получим все названия характеристик и название их группы по айдишникам
+		//--получим все названия характеристик и название их группы для всех наших комбинаций
 		$qNames=$wpdb->get_results($wpdb->prepare(
 			"
-			SELECT rels.combinRelID, rels.combinRelItemsID, 
-			GROUP_CONCAT(DISTINCT termsItems.name  SEPARATOR ',' ) as GroupFeatures, 
-			GROUP_CONCAT(DISTINCT rels.combinRelItemsID  SEPARATOR ',' ) as GroupFeaturesIDs, 
-			termsGroups.name as GroupName, rels.combinRelGroupId as GroupID
-			FROM  {$table_combinations_rel} as rels
-			JOIN  {$wpdb->terms} as termsGroups ON  termsGroups.term_id = rels.combinRelGroupId 
-			JOIN  {$wpdb->terms} as termsItems ON  FIND_IN_SET(termsItems.term_id, rels.combinRelItemsID )
-			WHERE   FIND_IN_SET (rels.combinRelID, %s)  
-			GROUP BY rels.combinRelID
-			", $relIDs
+              SELECT  rels.combinRelID, rels.combinRelCombinID, rels.combinRelGroupId
+              ,rels.combinRelItemsID as GroupFeaturesIDS
+              ,GROUP_CONCAT(DISTINCT termsItems.name  SEPARATOR ',' ) as GroupFeatures
+              ,termsGroup.name as GroupNasme
+              FROM {$table_combinations_rel} as rels
+              JOIN {$wpdb->terms} as termsItems ON FIND_IN_SET(termsItems.term_id, rels.combinRelItemsID )
+              JOIN {$wpdb->terms} as termsGroup ON termsGroup.term_id=rels.combinRelGroupId
+              WHERE rels.combinRelCombinID IN (SELECT combinID FROM wp_maginza_combinations WHERE lotID=%d)
+              GROUP BY rels.combinRelID
+			", $lotID
 		), OBJECT_K); //-- что бы первый столбец запроса был айдишником в массиве
 		
-		//-- раскидаем названия вместо айдишников
-		foreach ($items as $key =>  $item) {
+		//-- раскидаем названия характеристик и названия групп по комбинациям
+		/*foreach ($items as $key =>  $item) {
 			$ids=explode(',', $items[$key]['combination']);
 			$items[$key]['combination']='';
 			foreach ($ids as $id) {
@@ -171,8 +169,12 @@ class Combinations {
 				$items[$key]['combinationIDS']=$qNames[$id]->GroupFeaturesIDs;				
 			}	
 			
-		}
-		
+		}*/
+        var_dump($qNames);
+        echo '<br>EEE:';
+        var_dump(array_search(array("combinRelCombinID"=>99), $qNames));
+
+        echo 'testt';
 		return $items;	
 	}
 	

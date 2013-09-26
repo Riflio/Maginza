@@ -7,8 +7,8 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380233730920" ignored="false" />
-    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380233741288" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380233749138" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380236213434" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +23,11 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Maginza" />
@@ -32,26 +37,13 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="10" selection-start="2973" selection-end="2973" vertical-scroll-proportion="0.46462265">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="21" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="25" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="176" column="19" selection-start="5238" selection-end="5238" vertical-scroll-proportion="0.7016509">
+              <folding>
+                <marker date="1380236216633" expanded="true" signature="3447:3523" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380236216633" expanded="true" signature="3921:4581" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380236216633" expanded="true" signature="4481:4540" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380236216633" expanded="true" signature="6496:6587" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,6 +175,9 @@
       <TestRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -242,7 +237,11 @@
       <created>1380233733363</created>
       <updated>1380233733363</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Обновил ридми 3 (Перехожу с SVN на Git)">
+      <created>1380233754589</created>
+      <updated>1380233754589</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -272,7 +271,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34555554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759872" sideWeight="0.65444446" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -378,24 +377,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="25" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.0">
+        <state line="12" column="21" selection-start="258" selection-end="258" vertical-scroll-proportion="0.23340961">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+        <state line="34" column="25" selection-start="1938" selection-end="1938" vertical-scroll-proportion="0.4738676">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="10" selection-start="2973" selection-end="2973" vertical-scroll-proportion="0.46462265">
-          <folding />
+        <state line="176" column="19" selection-start="5238" selection-end="5238" vertical-scroll-proportion="0.7016509">
+          <folding>
+            <marker date="1380236216633" expanded="true" signature="3447:3523" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380236216633" expanded="true" signature="3921:4581" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380236216633" expanded="true" signature="4481:4540" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380236216633" expanded="true" signature="6496:6587" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+          </folding>
         </state>
       </provider>
     </entry>
