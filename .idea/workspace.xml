@@ -2,37 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Maginza.iml" afterPath="$PROJECT_DIR$/.idea/Maginza.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/admin.maginza.css" afterPath="$PROJECT_DIR$/css/admin.maginza.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/admin.php" afterPath="$PROJECT_DIR$/classes/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/buyer.php" afterPath="$PROJECT_DIR$/classes/buyer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/combinations.php" afterPath="$PROJECT_DIR$/classes/combinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/langs/default-ru_RU.po" afterPath="$PROJECT_DIR$/langs/default-ru_RU.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/formatter.php" afterPath="$PROJECT_DIR$/classes/formatter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/globalsettings.php" afterPath="$PROJECT_DIR$/classes/globalsettings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/interfaces.php" afterPath="$PROJECT_DIR$/classes/interfaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.admin.js" afterPath="$PROJECT_DIR$/js/jquery.admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.maginza.js" afterPath="$PROJECT_DIR$/js/jquery.maginza.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/lot.php" afterPath="$PROJECT_DIR$/classes/lot.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/lots.php" afterPath="$PROJECT_DIR$/classes/lots.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maginza.php" afterPath="$PROJECT_DIR$/maginza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/merchant.php" afterPath="$PROJECT_DIR$/classes/merchant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/meta.php" afterPath="$PROJECT_DIR$/classes/meta.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/metasettings.php" afterPath="$PROJECT_DIR$/classes/metasettings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/options.php" afterPath="$PROJECT_DIR$/classes/options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/order.php" afterPath="$PROJECT_DIR$/classes/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/setup.php" afterPath="$PROJECT_DIR$/classes/setup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231092448" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231204093" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231195809" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +30,7 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="314" column="0" selection-start="9078" selection-end="9078" vertical-scroll-proportion="0.6082677">
+            <state line="315" column="7" selection-start="9083" selection-end="9083" vertical-scroll-proportion="0.6417323">
               <folding />
             </state>
           </provider>
@@ -221,7 +196,11 @@
       <created>1380231100912</created>
       <updated>1380231100912</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2222">
+      <created>1380231209928</created>
+      <updated>1380231209928</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -246,10 +225,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="10" width="1900" height="1040" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35180995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35180995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -258,7 +237,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -354,7 +333,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="314" column="0" selection-start="9078" selection-end="9078" vertical-scroll-proportion="0.6082677">
+        <state line="315" column="7" selection-start="9083" selection-end="9083" vertical-scroll-proportion="0.6417323">
           <folding />
         </state>
       </provider>
