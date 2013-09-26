@@ -6,10 +6,11 @@ Requires at least: 3.1.1
 Tested up to: 3.1.1, 3.1.2
 Stable tag: 1.0
 
-Плагин для создания интернет магазина на основе wordpress
-
 == Description ==
 
+Плагин для создания интернет магазина на основе wordpress
+
+В РАЗРАБОТКЕ! НЕ ГОТОВ К ИСПОЛЬЗОВАНИЮ!
 
 == Installation ==
 
