@@ -7,8 +7,8 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380233749138" ignored="false" />
-    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380236213434" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380236241118" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380237170910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +37,13 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="19" selection-start="5238" selection-end="5238" vertical-scroll-proportion="0.7016509">
+            <state line="172" column="5" selection-start="5117" selection-end="5117" vertical-scroll-proportion="0.7216981">
               <folding>
-                <marker date="1380236216633" expanded="true" signature="3447:3523" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380236216633" expanded="true" signature="3921:4581" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380236216633" expanded="true" signature="4481:4540" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380236216633" expanded="true" signature="6496:6587" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380237170773" expanded="true" signature="3447:3522" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380237170773" expanded="true" signature="3949:4608" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380237170773" expanded="true" signature="4508:4567" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380237170773" expanded="true" signature="4888:5177" placeholder="..." />
+                <marker date="1380237170773" expanded="true" signature="6302:6393" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
@@ -241,7 +242,11 @@
       <created>1380233754589</created>
       <updated>1380233754589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Работаю над комбинациями">
+      <created>1380236243850</created>
+      <updated>1380236243850</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -330,7 +335,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновил ридми 3 (Перехожу с SVN на Git)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работаю над комбинациями" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -351,6 +356,7 @@
     <MESSAGE value="Обновил ридми" />
     <MESSAGE value="Обновил ридми 2" />
     <MESSAGE value="Обновил ридми 3 (Перехожу с SVN на Git)" />
+    <MESSAGE value="Работаю над комбинациями" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -393,12 +399,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="19" selection-start="5238" selection-end="5238" vertical-scroll-proportion="0.7016509">
+        <state line="172" column="5" selection-start="5117" selection-end="5117" vertical-scroll-proportion="0.7216981">
           <folding>
-            <marker date="1380236216633" expanded="true" signature="3447:3523" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380236216633" expanded="true" signature="3921:4581" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380236216633" expanded="true" signature="4481:4540" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380236216633" expanded="true" signature="6496:6587" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+            <marker date="1380237170773" expanded="true" signature="3447:3522" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380237170773" expanded="true" signature="3949:4608" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380237170773" expanded="true" signature="4508:4567" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380237170773" expanded="true" signature="4888:5177" placeholder="..." />
+            <marker date="1380237170773" expanded="true" signature="6302:6393" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
           </folding>
         </state>
       </provider>

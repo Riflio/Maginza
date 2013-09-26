@@ -133,7 +133,7 @@ class Combinations {
 		
 		//-- получим все комбинации товара
 		$qCombinations=$wpdb->get_results($wpdb->prepare(
-			"SELECT comb.*,
+			"SELECT comb.*
 			FROM  {$table_combinations} as comb
 			WHERE comb.lotID=%d
 			", $lotID
@@ -141,17 +141,16 @@ class Combinations {
 		
 		//-- На выход добавим все комбинации
 		foreach ($qCombinations as $comb) {
-			$items[]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle);
-			$relIDs.=(','.$comb->relsID);
-		}		
+			$items[$comb->combinID]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle, 'combination'=>'', 'combinationIDS'=>'-1' );
+		}
 		
 		//--получим все названия характеристик и название их группы для всех наших комбинаций
-		$qNames=$wpdb->get_results($wpdb->prepare(
+        $qRels=$wpdb->get_results($wpdb->prepare(
 			"
               SELECT  rels.combinRelID, rels.combinRelCombinID, rels.combinRelGroupId
               ,rels.combinRelItemsID as GroupFeaturesIDS
               ,GROUP_CONCAT(DISTINCT termsItems.name  SEPARATOR ',' ) as GroupFeatures
-              ,termsGroup.name as GroupNasme
+              ,termsGroup.name as GroupName
               FROM {$table_combinations_rel} as rels
               JOIN {$wpdb->terms} as termsItems ON FIND_IN_SET(termsItems.term_id, rels.combinRelItemsID )
               JOIN {$wpdb->terms} as termsGroup ON termsGroup.term_id=rels.combinRelGroupId
@@ -160,21 +159,12 @@ class Combinations {
 			", $lotID
 		), OBJECT_K); //-- что бы первый столбец запроса был айдишником в массиве
 		
-		//-- раскидаем названия характеристик и названия групп по комбинациям
-		/*foreach ($items as $key =>  $item) {
-			$ids=explode(',', $items[$key]['combination']);
-			$items[$key]['combination']='';
-			foreach ($ids as $id) {
-				$items[$key]['combination'].="<b>{$qNames[$id]->GroupName}: </b> {$qNames[$id]->GroupFeatures}</br>";
-				$items[$key]['combinationIDS']=$qNames[$id]->GroupFeaturesIDs;				
-			}	
-			
-		}*/
-        var_dump($qNames);
-        echo '<br>EEE:';
-        var_dump(array_search(array("combinRelCombinID"=>99), $qNames));
+		//-- На выход раскидаем названия характеристик и названия групп по комбинациям
+        foreach ($qRels as $key => $rel) {
+            $items[$rel->combinRelCombinID]['combination'].="<b>{$rel->GroupName}: </b> {$rel->GroupFeatures}  </br>";
+            $items[$rel->combinRelCombinID]['combinationIDS'].=",{$rel->GroupFeaturesIDS}";
+        }
 
-        echo 'testt';
 		return $items;	
 	}
 	
