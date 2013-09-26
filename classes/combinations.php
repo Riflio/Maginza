@@ -312,7 +312,7 @@ class Combinations {
 		$wpdb->delete(Options::$table_combinations_rel, array('combinRelCombinID'=>$combID), array('%d'));	
 		die();
 	}
-	
+
 	/**
 	* Добавляем/редактируем комбинацию в базу по хуякс запросу
 	*
