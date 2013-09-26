@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Обновил ридми">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231610972" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380232812096" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231195809" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +41,7 @@
       <file leaf-file-name="readme.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="141" selection-end="141" vertical-scroll-proportion="0.09725401">
+            <state line="12" column="21" selection-start="258" selection-end="258" vertical-scroll-proportion="0.23340961">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="25" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0">
+            <state line="35" column="25" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,7 +234,11 @@
       <created>1380231568843</created>
       <updated>1380231568843</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Обновил ридми 2">
+      <created>1380232813145</created>
+      <updated>1380232813145</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -323,7 +327,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обновил ридми" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновил ридми 2" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -342,6 +346,7 @@
     <MESSAGE value="Тест коммита" />
     <MESSAGE value="Тест коммита2" />
     <MESSAGE value="Обновил ридми" />
+    <MESSAGE value="Обновил ридми 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -370,7 +375,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="25" selection-start="2065" selection-end="2065" vertical-scroll-proportion="0.0">
+        <state line="35" column="25" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -384,7 +389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="141" selection-end="141" vertical-scroll-proportion="0.09725401">
+        <state line="12" column="21" selection-start="258" selection-end="258" vertical-scroll-proportion="0.23340961">
           <folding />
         </state>
       </provider>
