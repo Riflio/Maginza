@@ -3,7 +3,7 @@ Contributors: PavelK
 Donate link: http://pavelk.ru/donate
 Tags: ecommerce
 Requires at least: 3.1.1
-Tested up to: 3.1.1, 3.1.2
+Tested up to: 3.1.1, 3.6.0
 Stable tag: 1.0
 
 == Description ==
