@@ -326,7 +326,7 @@ class Combinations {
 		$sfeatures=implode($features, ',');
 		
 		$combinFeatures=$this->featuresbygroups($sfeatures);
-				
+
 		if ($action=="addCombination")
 			$this->addCombination($lotID, $combinFeatures);
 		if ($action=="autogeneratecombination") 
