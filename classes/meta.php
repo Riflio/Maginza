@@ -12,13 +12,13 @@ class Meta extends Formatter {
 
 	function getGroupsList() {
 		global $wpdb;
-		//TODO: запоминать вывод.
+		//TODO: Р·Р°РїРѕРјРёРЅР°С‚СЊ РІС‹РІРѕРґ.
 		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group);
 	}
 	
 	function getLotMetagroups($lot) {
 		$curGroups = get_metadata('maginza', $lot->ID, 'metaoptiongroups', true);	
-		if (!$curGroups) { //-- если у лота нет не одной группы опций, то ставим ему группы от таксономий.
+		if (!$curGroups) { //-- РµСЃР»Рё Сѓ Р»РѕС‚Р° РЅРµС‚ РЅРµ РѕРґРЅРѕР№ РіСЂСѓРїРїС‹ РѕРїС†РёР№, С‚Рѕ СЃС‚Р°РІРёРј РµРјСѓ РіСЂСѓРїРїС‹ РѕС‚ С‚Р°РєСЃРѕРЅРѕРјРёР№.
 			$lotTerms= wp_get_post_terms($lot->ID, 'types');
 			$termGroups='-1';
 			foreach ($lotTerms as $term) {
@@ -26,7 +26,7 @@ class Meta extends Formatter {
 				if (!$curTermGroups ) continue;
 				$termGroups=$termGroups.','.$curTermGroups;
 			}	
-			$curGroups=($termGroups=='-1') ? '1' : $termGroups; //-- ну нет, дак нет, ставим дефолтное значение.
+			$curGroups=($termGroups=='-1') ? '1' : $termGroups; //-- РЅСѓ РЅРµС‚, РґР°Рє РЅРµС‚, СЃС‚Р°РІРёРј РґРµС„РѕР»С‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ.
 		}
 		return $curGroups;
 	}
@@ -35,11 +35,11 @@ class Meta extends Formatter {
 	
 	function getLotMetaOptions($lot) {
 		global $wpdb;	
-		//-- проверим, принадлежит ли нужной группе, отсортируем в порядке возрастания айдишников групп и  только уникальные названия
+		//-- РїСЂРѕРІРµСЂРёРј, РїСЂРёРЅР°РґР»РµР¶РёС‚ Р»Рё РЅСѓР¶РЅРѕР№ РіСЂСѓРїРїРµ, РѕС‚СЃРѕСЂС‚РёСЂСѓРµРј РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ Р°Р№РґРёС€РЅРёРєРѕРІ РіСЂСѓРїРї Рё  С‚РѕР»СЊРєРѕ СѓРЅРёРєР°Р»СЊРЅС‹Рµ РЅР°Р·РІР°РЅРёСЏ
 		$lotMetaGroups=$this->getLotMetagroups($lot);
 		$metaOpts=$wpdb->get_results('SELECT DISTINCT optName, optType, optValue, optFormatter, optVisible, optClientEditable, optGroupID FROM '.Options::$table_meta_options.' WHERE optGroupID IN ('.$lotMetaGroups.') ORDER BY optGroupID ', OBJECT);	
 		return $metaOpts; 
-		//TODO: запомнить вывод
+		//TODO: Р·Р°РїРѕРјРЅРёС‚СЊ РІС‹РІРѕРґ
 	}
 	
 	private function getMetaValue($lot, $metaName) {
@@ -48,23 +48,23 @@ class Meta extends Formatter {
 		return $metaVal;
 	}
 	
-	//-- проверяем и находим, присутствует ли мета опция в мета группах лота и возвращаем опцию
+	//-- РїСЂРѕРІРµСЂСЏРµРј Рё РЅР°С…РѕРґРёРј, РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ Р»Рё РјРµС‚Р° РѕРїС†РёСЏ РІ РјРµС‚Р° РіСЂСѓРїРїР°С… Р»РѕС‚Р° Рё РІРѕР·РІСЂР°С‰Р°РµРј РѕРїС†РёСЋ
 	function OptionInMetaGroups($lot, $metaName) {
 		$metaOpts=$this->getLotMetaOptions($lot);
-		if (!$metaOpts) return; 	 //-- нас наебали, расходимся	
-		foreach ($metaOpts as $metaOpt) { //-- находим среди всех нужную
+		if (!$metaOpts) return; 	 //-- РЅР°СЃ РЅР°РµР±Р°Р»Рё, СЂР°СЃС…РѕРґРёРјСЃСЏ	
+		foreach ($metaOpts as $metaOpt) { //-- РЅР°С…РѕРґРёРј СЃСЂРµРґРё РІСЃРµС… РЅСѓР¶РЅСѓСЋ
 			if ($metaOpt->optName==$metaName) return $metaOpt;
 		}		
 		return false;
 	}
 	
-	//-- решаем, что делать с метаопцией
+	//-- СЂРµС€Р°РµРј, С‡С‚Рѕ РґРµР»Р°С‚СЊ СЃ РјРµС‚Р°РѕРїС†РёРµР№
 	private function processMetaOption($metaOpt, $metaVal) {
-		if (!$metaOpt) return false; //-- нас наебали, расходимся	
+		if (!$metaOpt) return false; //-- РЅР°СЃ РЅР°РµР±Р°Р»Рё, СЂР°СЃС…РѕРґРёРјСЃСЏ	
 		if (!$metaVal) $metaVal=$metaOpt->optValue;	
-		//-- проверить, виден ли
+		//-- РїСЂРѕРІРµСЂРёС‚СЊ, РІРёРґРµРЅ Р»Рё
 		if (!$metaOpt->optVisible) return; 		
-		//-- проверить, если редактируемый или из админки, то выводим виджет, нет - через форматтер прогоняем
+		//-- РїСЂРѕРІРµСЂРёС‚СЊ, РµСЃР»Рё СЂРµРґР°РєС‚РёСЂСѓРµРјС‹Р№ РёР»Рё РёР· Р°РґРјРёРЅРєРё, С‚Рѕ РІС‹РІРѕРґРёРј РІРёРґР¶РµС‚, РЅРµС‚ - С‡РµСЂРµР· С„РѕСЂРјР°С‚С‚РµСЂ РїСЂРѕРіРѕРЅСЏРµРј
 		if ($metaOpt->optClientEditable || is_admin()  ) {
 			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal);
 		} else {
@@ -72,7 +72,7 @@ class Meta extends Formatter {
 		}
 	}
 	
-	//-- выводим отформатированное значение или виджет
+	//-- РІС‹РІРѕРґРёРј РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР»Рё РІРёРґР¶РµС‚
 	public function theMetaValue($lot, $metaName) {
 		global $wpdb;	
 		$metaVal=$this->getMetaValue($lot, $metaName);		
@@ -83,13 +83,13 @@ class Meta extends Formatter {
 	
 	/**
 	*
-	*  $exclude (string) если надо исключить из вывода какой либо виджет или форматтер
+	*  $exclude (string) РµСЃР»Рё РЅР°РґРѕ РёСЃРєР»СЋС‡РёС‚СЊ РёР· РІС‹РІРѕРґР° РєР°РєРѕР№ Р»РёР±Рѕ РІРёРґР¶РµС‚ РёР»Рё С„РѕСЂРјР°С‚С‚РµСЂ
 	*/
 	public function showMetaForm($lot, $exclude='') {
 		global $wpdb;			
 		$options=$this->getLotMetaOptions($lot);
 		$exclude=explode(',', $exclude);
-		//-- в любом случае добавим айдишник лота
+		//-- РІ Р»СЋР±РѕРј СЃР»СѓС‡Р°Рµ РґРѕР±Р°РІРёРј Р°Р№РґРёС€РЅРёРє Р»РѕС‚Р°
 		echo "<input type='hidden' name='lotid' id='lotid' value='{$lot->ID}'/>";
 		if (!$options) return; 
 		foreach($options as $option) {

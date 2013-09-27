@@ -3,7 +3,7 @@
  * Всё, что касается товара
  */
 
-class Lot extends Meta  {
+class Lot extends Combinations {
 	public $LOT;
 	
 	
@@ -34,6 +34,11 @@ class Lot extends Meta  {
 		$inst=Lot::getInstance();
 		$inst->showMetaForm($inst->LOT, $exclude);
 	}
+
+    public function combFeaturesForm() {
+        $inst=Lot::getInstance();
+
+    }
 	
 }
 

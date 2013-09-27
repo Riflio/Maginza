@@ -3,7 +3,7 @@
 require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 
 
-class Combinations {
+class Combinations extends Meta{
 
 	function __construct() {
 		add_action('admin_init', array(&$this, 'admin_init'));
@@ -29,7 +29,7 @@ class Combinations {
 	*
 	*
 	*/
-	function clientFeaturesForm($lotID) {
+	function clientCombFeaturesForm($lotID) {
         $rels=$this->getLotAllFeatures($lotID, 'combinRelGroupId');
         foreach ($rels as $rel) {
             echo Formatter::widget('combfeature', $rel, $lotID);
