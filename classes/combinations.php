@@ -32,10 +32,10 @@ class Combinations extends Meta{
 	*
 	*
 	*/
-	public function clientCombFeaturesForm($lotID) {
+	public function clientCombFeaturesForm($lotID, $formName) {
         $rels=$this->getLotAllFeatures($lotID, 'combinRelGroupId');
         foreach ($rels as $rel) {
-            echo Formatter::combFeature($rel, $lotID);
+            echo Formatter::combFeature($rel, $formName);
         }
 
 
@@ -65,8 +65,9 @@ class Combinations extends Meta{
     *
     */
     function ajax_whatcombination() {
+        $features=Formatter::reqCombFeature($_GET['formname']);
+        if (!$features) return;
         $lotID=intval($_GET['lotid']);
-        $features=Formatter::reqCombFeature($lotID);
         echo json_encode($this->whatCombination($features, $lotID));
         die();
     }

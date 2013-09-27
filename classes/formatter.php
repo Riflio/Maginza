@@ -30,19 +30,19 @@ class Formatter extends Options{
      *
      *
      */
-	function widget($type, $metaOpt, $metaVal, $lot) {
+	function widget($type, $metaOpt, $metaVal, $formName) {
 		$args = func_get_args();
 		apply_filters('mz_widget', $args);
 		apply_filters('mz_widget_'.$type, $args);
 		switch ($type) { //-- виджеты по умолчанию
 			case 'text': 
-				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
 			break;
 			case 'spin':
-				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
 			break;
 			case 'hidden':
-				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
+				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
 
 		}
@@ -52,10 +52,10 @@ class Formatter extends Options{
     *
     *
     */
-    function reqMetaOptpValue($lotID) {
+    function reqMetaOptpValue($formName) {
         if (isset($_REQUEST['metaoptvals'])) {
             $vals=$_REQUEST['metaoptvals'];
-            $vals=$vals[$lotID];
+            $vals=$vals[$formName];
             return $vals;
         } else {
             return false;
@@ -66,7 +66,7 @@ class Formatter extends Options{
      * Выводим списки характеристик комбинаций
      *
      */
-    function combFeature($rel, $lotID) {
+    function combFeature($rel, $formName) {
         //TODO: Добавить фильтр или событие для кастомизации списков
         $feature="<div class='featureslist  feature-{$rel->combinRelGroupId}'><b>{$rel->GroupName}:</b><br/>";
         $IDS=explode(',', $rel->GroupFeaturesIDS);
@@ -74,15 +74,15 @@ class Formatter extends Options{
         for ($i=0; $i<count($IDS); $i++) {
             $feature.="<a id='fid-{$IDS[$i]}' class='' href='#'>{$Names[$i]}</a>, ";
         }
-        $feature.="<input type='hidden' class='feature' name='feature[$lotID][{$rel->combinRelGroupId}]'>";
+        $feature.="<input type='hidden' class='feature' name='feature[{$formName}][{$rel->combinRelGroupId}]'>";
         $feature.='</div>';
         return $feature;
     }
 
-    function reqCombFeature($lotID) {
+    function reqCombFeature($formName) {
         if (isset($_REQUEST['feature'])) {
             $vals=$_REQUEST['feature'];
-            $vals=$vals[$lotID];
+            $vals=$vals[$formName];
             return $vals;
         } else {
             return false;

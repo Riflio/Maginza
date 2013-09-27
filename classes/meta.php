@@ -59,25 +59,25 @@ class Meta extends Formatter {
 	}
 	
 	//-- решаем, что делать с метаопцией
-	private function processMetaOption($metaOpt, $metaVal, $lot) {
+	private function processMetaOption($metaOpt, $metaVal, $formName) {
 		if (!$metaOpt) return false; //-- нас наебали, расходимся	
 		if (!$metaVal) $metaVal=$metaOpt->optValue;	
 		//-- проверить, виден ли
 		if (!$metaOpt->optVisible) return; 		
 		//-- проверить, если редактируемый или из админки, то выводим виджет, нет - через форматтер прогоняем
 		if ($metaOpt->optClientEditable || is_admin()  ) {
-			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal, $lot);
+			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal, $formName);
 		} else {
 			echo $this->format($metaOpt->optFormatter, $metaOpt, $metaVal);
 		}
 	}
 	
 	//-- выводим отформатированное значение или виджет
-	public function theMetaValue($lot, $metaName) {
+	public function theMetaValue($lot, $metaName, $formName='') {
 		global $wpdb;	
 		$metaVal=$this->getMetaValue($lot, $metaName);		
 		$metaOpt=$this->OptionInMetaGroups($lot, $metaName);		
-		$this->processMetaOption($metaOpt, $metaVal, $lot);
+		$this->processMetaOption($metaOpt, $metaVal, $formName);
 		return true;		
 	}
 	
@@ -85,7 +85,7 @@ class Meta extends Formatter {
 	*
 	*  $exclude (string) если надо исключить из вывода какой либо виджет или форматтер
 	*/
-	public function showMetaForm($lot, $exclude='') {
+	public function showMetaForm($lot, $exclude='', $formName) {
 		global $wpdb;			
 		$options=$this->getLotMetaOptions($lot);
 		$exclude=explode(',', $exclude);
@@ -95,7 +95,7 @@ class Meta extends Formatter {
 		foreach($options as $option) {
 			if (in_array($option->optName, $exclude))	continue;				
 			$metaVal=$this->getMetaValue($lot, $option->optName);			
-			$this->processMetaOption($option, $metaVal, $lot);
+			$this->processMetaOption($option, $metaVal,  $formName);
 		}		
 		return true;
 	}

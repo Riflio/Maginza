@@ -203,14 +203,21 @@ class MetaSettings extends Meta {
 		
 	}
 	
-	//-- добавляем на страницу редактирования категории товаров выбор метаопций
-	function category_form_fields($tag) {
+
+    /**
+     *  Добавляем на страницу редактирования категории товаров выбор групп метаопций
+     *
+     */
+    function category_form_fields($tag) {
 		$curGroups = get_metadata('maginza', $tag->term_id, 'metaoptiongroups', true);			
 		$this->listGroupsSettings($curGroups, true);
 	}
 	
 	
-	
+	/**
+    *
+    *
+    */
 	function edited_term_taxonomies($term_id) {
 		if (!$term_id) return;
 		$metaGroups=(isset($_POST['metaoptiongroups']))? $_POST['metaoptiongroups'] : false;
@@ -220,7 +227,7 @@ class MetaSettings extends Meta {
 	
 	function render_box_lotmetavalues($lot) {
 		echo '<div class="lotmetavalues">';
-		$this->showMetaForm($lot);
+		$this->showMetaForm($lot, '',  'adminpostform');
 		echo '</div>';
 	}
 	
@@ -244,7 +251,7 @@ class MetaSettings extends Meta {
 
 
 		//--обновляем значения опций
-		$metaOptions=Formatter::reqMetaOptpValue($lotId);
+		$metaOptions=Formatter::reqMetaOptpValue('adminpostform');
 		if(!$metaOptions) return;
 		foreach($metaOptions as $metaName => $metaVal) {
 			$metaVal=apply_filters('mz_setmetaoptionvalue', $metaVal, $lotId, $metaName);

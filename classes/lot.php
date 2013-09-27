@@ -30,14 +30,14 @@ class Lot extends Combinations {
 		$inst->theMetaValue($inst->LOT, $metaName);
 	}
 	
-	public function metaForm($exclude='') {
+	public function metaForm($exclude='', $formName) {
 		$inst=Lot::getInstance();
-		$inst->showMetaForm($inst->LOT, $exclude);
+		$inst->showMetaForm($inst->LOT, $exclude, $formName);
 	}
 
-    public function combFeaturesForm() {
+    public function combFeaturesForm($formName) {
         $inst=Lot::getInstance();
-        $inst->clientCombFeaturesForm($inst->LOT->ID);
+        $inst->clientCombFeaturesForm($inst->LOT->ID, $formName);
     }
 	
 }
