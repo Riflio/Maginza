@@ -48,7 +48,7 @@ class Combinations extends Meta{
     public function whatCombination($features, $lotID) {
         $combins=$this->getCombinationList($lotID);
         $fCount=count($features);
-        $features=implode('|', $features);
+        $features=implode('|', array_diff($features, array('')));
         var_dump($features);
         $res=array();
         foreach ($combins as $comb) {
