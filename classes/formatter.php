@@ -54,7 +54,7 @@ class Formatter extends Options{
      */
     function combFeature($rel, $lotID) {
         //TODO: Добавить фильтр или событие для кастомизации списков
-        $feature="<div class='featureslist  feature-{$rel->combinRelGroupId}'>";
+        $feature="<div class='featureslist  feature-{$rel->combinRelGroupId}'><b>{$rel->GroupName}:</b><br/>";
         $IDS=explode(',', $rel->GroupFeaturesIDS);
         $Names=explode(',', $rel->GroupFeatures);
         for ($i=0; $i<count($IDS); $i++) {
