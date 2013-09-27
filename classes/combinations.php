@@ -51,7 +51,7 @@ class Combinations extends Meta{
         foreach ($combins as $comb) {
             preg_match_all('/('.$features.')/i', $comb['combinationIDS'], $res);
             echo count($res);
-            var_dump($res);
+
         }
     }
 
