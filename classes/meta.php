@@ -59,14 +59,14 @@ class Meta extends Formatter {
 	}
 	
 	//-- решаем, что делать с метаопцией
-	private function processMetaOption($metaOpt, $metaVal) {
+	private function processMetaOption($metaOpt, $metaVal, $lot) {
 		if (!$metaOpt) return false; //-- нас наебали, расходимся	
 		if (!$metaVal) $metaVal=$metaOpt->optValue;	
 		//-- проверить, виден ли
 		if (!$metaOpt->optVisible) return; 		
 		//-- проверить, если редактируемый или из админки, то выводим виджет, нет - через форматтер прогоняем
 		if ($metaOpt->optClientEditable || is_admin()  ) {
-			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal);
+			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal, $lot);
 		} else {
 			echo $this->format($metaOpt->optFormatter, $metaOpt, $metaVal);
 		}
@@ -95,7 +95,7 @@ class Meta extends Formatter {
 		foreach($options as $option) {
 			if (in_array($option->optName, $exclude))	continue;				
 			$metaVal=$this->getMetaValue($lot, $option->optName);			
-			$this->processMetaOption($option, $metaVal);
+			$this->processMetaOption($option, $metaVal, $lot);
 		}		
 		return true;
 	}

@@ -30,19 +30,19 @@ class Formatter extends Options{
      *
      *
      */
-	function widget($type, $metaOpt) {
+	function widget($type, $metaOpt, $metaVal, $lot) {
 		$args = func_get_args();
 		apply_filters('mz_widget', $args);
 		apply_filters('mz_widget_'.$type, $args);
 		switch ($type) { //-- виджеты по умолчанию
 			case 'text': 
-				return '<input name="metaoptvals['.$metaOpt->optName.']" type="text" value="'.$args[2].'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
 			break;
 			case 'spin':
-				return '<input name="metaoptvals['.$metaOpt->optName.']" type="text" value="'.$args[2].'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
 			break;
 			case 'hidden':
-				return '<input name="metaoptvals['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$args[2].'" /> ';
+				return '<input name="metaoptvals['.$lot->ID.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
 
 		}
