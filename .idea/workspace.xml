@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/combinations.php" afterPath="$PROJECT_DIR$/classes/combinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/lot.php" afterPath="$PROJECT_DIR$/classes/lot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/formatter.php" afterPath="$PROJECT_DIR$/classes/formatter.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242353921" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242479862" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242446771" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
+    <file path="/formatter.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380243743227" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +40,21 @@
       <file leaf-file-name="combinations.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="11" selection-start="971" selection-end="971" vertical-scroll-proportion="-6.3333335">
+            <state line="34" column="40" selection-start="1155" selection-end="1155" vertical-scroll-proportion="-6.9607844">
               <folding>
-                <marker date="1380242448635" expanded="true" signature="1670:2364" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380242448635" expanded="true" signature="2265:2324" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380242448635" expanded="true" signature="2781:2856" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380242448635" expanded="true" signature="4792:4883" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380243900801" expanded="true" signature="1660:2354" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380243900801" expanded="true" signature="2255:2314" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380243900801" expanded="true" signature="2771:2846" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380243900801" expanded="true" signature="4782:4873" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lot.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="lot.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/lot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="729" selection-end="729" vertical-scroll-proportion="0.7016509">
+            <state line="37" column="36" selection-start="751" selection-end="767" vertical-scroll-proportion="-24.192308">
               <folding>
                 <element signature="e#6#40#0" expanded="true" />
               </folding>
@@ -88,15 +89,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="48" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-22.884615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="metasettings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,10 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formatter.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="formatter.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/formatter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="446" selection-end="452" vertical-scroll-proportion="-14.384615">
+            <state line="55" column="65" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.6191038">
+              <folding>
+                <element signature="e#6#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalsettings.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -155,8 +158,9 @@
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/maginza.php" />
-        <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/classes/lot.php" />
+        <option value="$PROJECT_DIR$/classes/formatter.php" />
+        <option value="$PROJECT_DIR$/classes/combinations.php" />
       </list>
     </option>
   </component>
@@ -352,7 +356,11 @@
       <created>1380242356049</created>
       <updated>1380242356049</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Работаю над комбинациями">
+      <created>1380242481997</created>
+      <updated>1380242481997</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -503,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/formatter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="446" selection-end="452" vertical-scroll-proportion="-14.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/meta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="16" selection-start="2502" selection-end="2502" vertical-scroll-proportion="-32.115383">
@@ -559,23 +560,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
+    <entry file="file://$PROJECT_DIR$/classes/lot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="971" selection-end="971" vertical-scroll-proportion="-6.3333335">
+        <state line="37" column="36" selection-start="751" selection-end="767" vertical-scroll-proportion="-24.192308">
           <folding>
-            <marker date="1380242448635" expanded="true" signature="1670:2364" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380242448635" expanded="true" signature="2265:2324" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380242448635" expanded="true" signature="2781:2856" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380242448635" expanded="true" signature="4792:4883" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+            <element signature="e#6#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/lot.php">
+    <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="729" selection-end="729" vertical-scroll-proportion="0.7016509">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="40" selection-start="1155" selection-end="1155" vertical-scroll-proportion="-6.9607844">
           <folding>
-            <element signature="e#6#40#0" expanded="true" />
+            <marker date="1380243900801" expanded="true" signature="1660:2354" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380243900801" expanded="true" signature="2255:2314" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380243900801" expanded="true" signature="2771:2846" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380243900801" expanded="true" signature="4782:4873" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/formatter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="65" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.6191038">
+          <folding>
+            <element signature="e#6#90#0" expanded="true" />
           </folding>
         </state>
       </provider>

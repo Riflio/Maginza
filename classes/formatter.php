@@ -1,15 +1,18 @@
 <?php
-/*
- * 
+/**
+ *  Всё, что выводится пользователю магинзой проходит через этот класс.
  *  
  */
 
 class Formatter extends Options{
 
 	function __construct() {}
-	
 
-	function format($templ, $param) {
+    /**
+     *
+     *
+     */
+    function format($templ, $param) {
 		$args = func_get_args();
 		apply_filters('mz_format', $args);
 		apply_filters('mz_format_'.$args[0], $args);
@@ -22,7 +25,11 @@ class Formatter extends Options{
 			break;	
 		}
 	}
-	
+
+    /**
+     *
+     *
+     */
 	function widget($type, $metaOpt) {
 		$args = func_get_args();
 		apply_filters('mz_widget', $args);
@@ -37,8 +44,25 @@ class Formatter extends Options{
 			case 'hidden':
 				return '<input name="metaoptvals['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$args[2].'" /> ';
 			break;
+
 		}
 	}
+
+    /**
+     * Выводим списки характеристик комбинаций
+     *
+     */
+    function combFeature($rel, $lotID) {
+        //TODO: Добавить фильтр или событие для кастомизации списков
+        $feature="<div class='featureslist  feature-{$rel->combinRelGroupId}'>";
+        $IDS=explode(',', $rel->GroupFeaturesIDS);
+        $Names=explode(',', $rel->GroupFeatures);
+        for ($i=0; $i<count($IDS); $i++) {
+            $feature.="<a id='fid-{$IDS[$i]}' class='' href='#'>{$Names[$i]}</a>, ";
+        }
+        $feature.='</div>';
+        return $feature;
+    }
 	
 }
 
