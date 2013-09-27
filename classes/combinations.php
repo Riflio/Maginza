@@ -17,6 +17,9 @@ class Combinations extends Meta{
 		add_action('wp_ajax_autogeneratecombination', array(&$this, 'ajax_addCombination'));
 		add_action('wp_ajax_delCombination', array(&$this, 'ajax_delCombination'));
 		add_action('wp_ajax_refreshCombList', array(&$this, 'ajax_refreshCombList'));
+
+        add_action('wp_ajax_whatcombination', array(&$this, 'ajax_whatcombination'));
+        add_action('wp_ajax_nopriv_whatcombination', array(&$this, 'ajax_whatcombination'));
 	}
 	
 	function init() {
@@ -38,9 +41,26 @@ class Combinations extends Meta{
 
 	}
 
+    /**
+    * Отгадываем комбинацию по выбранным характеристикам
+    *
+    */
+    public function whatCombination($features) {
 
-	
-	/**
+    }
+
+
+    /**
+    *  Отгадываем комбинацию по хуякс запросу
+    *
+    */
+    function ajax_whatcombination() {
+        $features=$_GET['feature'];
+           return  $features;
+        $this->whatCombination($features);
+    }
+
+    /**
 	* Сохраняяем все параметры бокса комбинаций товара
 	*
 	*/
