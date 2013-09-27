@@ -60,8 +60,8 @@ class Formatter extends Options{
         for ($i=0; $i<count($IDS); $i++) {
             $feature.="<a id='fid-{$IDS[$i]}' class='' href='#'>{$Names[$i]}</a>, ";
         }
-        $feature.='</div>';
         $feature.="<input type='hidden' class='feature' name='feature[{$rel->combinRelGroupId}]'>";
+        $feature.='</div>';
         return $feature;
     }
 	
