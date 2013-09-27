@@ -42,17 +42,20 @@ class Combinations extends Meta{
 	}
 
     /**
-    * Отгадываем комбинацию по выбранным характеристикам
+    * Отгадываем комбинацию по характеристикам
     *
     */
     public function whatCombination($features, $lotID) {
         $combins=$this->getCombinationList($lotID);
+        $fCount=count($features);
         $features=implode('|', $features);
+        $res=array();
         foreach ($combins as $comb) {
-            $res=preg_match_all('/('.$features.')/i', $comb['combinationIDS'], $res);
-            echo $res;
-
+            //--находим какой либо из переданных айдишников в айдишниках комбинации и считаем количество совпадений
+            $m=preg_match_all('/('.$features.')/i', $comb['combinationIDS'], $res);
+            if ($m==$fCount) return $comb; //-- совпало сколько передали - значит точно нужная комбинация
         }
+        return false;
     }
 
 
@@ -63,8 +66,7 @@ class Combinations extends Meta{
     function ajax_whatcombination() {
         $features=$_GET['feature']; //FIXME: защита!
         $lotID=intval($_GET['lotid']);
-        var_dump($features);
-        $this->whatCombination($features, $lotID);
+        echo json_encode($this->whatCombination($features, $lotID));
         die();
     }
 
