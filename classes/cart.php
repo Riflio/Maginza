@@ -10,6 +10,7 @@ class Cart extends Order {
 		echo 'Корзина';
 		$orderItems=$this->getListOrderItems();
 
+        echo '<form method="GET">';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
             Lot::getInstance($lotID);
@@ -34,6 +35,7 @@ class Cart extends Order {
             echo '</div>';
 
         }
+        echo '</form>';
 	}
 
 

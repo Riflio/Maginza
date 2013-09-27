@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380260229166" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380261140816" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -16,7 +16,7 @@
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380258870328" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257658082" ignored="false" />
-    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380260209578" ignored="false" />
+    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380262476067" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,24 +67,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="64" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.6014151">
+            <state line="36" column="9" selection-start="1133" selection-end="1133" vertical-scroll-proportion="-23.538462">
               <folding>
-                <marker date="1380261136319" expanded="true" signature="563:1055" placeholder="..." />
+                <marker date="1380262481645" expanded="true" signature="599:1091" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formatter.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="formatter.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/formatter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="25" selection-start="1608" selection-end="1608" vertical-scroll-proportion="-22.5">
+            <state line="46" column="0" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.5990566">
               <folding>
                 <element signature="e#6#90#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meta.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/meta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="7" selection-start="2881" selection-end="2881" vertical-scroll-proportion="-15.769231">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,15 +105,6 @@
               <folding>
                 <element signature="e#6#40#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.maginza.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jquery.maginza.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -530,7 +530,11 @@
       <created>1380260231301</created>
       <updated>1380260231301</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Разрабатываю корзину">
+      <created>1380261142778</created>
+      <updated>1380261142778</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -656,13 +660,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/merchant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -766,20 +763,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/formatter.php">
+    <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="25" selection-start="1608" selection-end="1608" vertical-scroll-proportion="-22.5">
+        <state line="36" column="9" selection-start="1133" selection-end="1133" vertical-scroll-proportion="-23.538462">
           <folding>
-            <element signature="e#6#90#0" expanded="true" />
+            <marker date="1380262481645" expanded="true" signature="599:1091" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/cart.php">
+    <entry file="file://$PROJECT_DIR$/classes/meta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="64" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.6014151">
+        <state line="83" column="7" selection-start="2881" selection-end="2881" vertical-scroll-proportion="-15.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/formatter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.5990566">
           <folding>
-            <marker date="1380261136319" expanded="true" signature="563:1055" placeholder="..." />
+            <element signature="e#6#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
