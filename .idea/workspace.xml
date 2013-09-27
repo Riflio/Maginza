@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Разрабатываю корзину">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380259946799" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380260224914" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -16,7 +16,7 @@
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380258870328" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257658082" ignored="false" />
-    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380260050637" ignored="false" />
+    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380260209578" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +70,9 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="20" selection-start="530" selection-end="530" vertical-scroll-proportion="0.42099056">
+            <state line="29" column="61" selection-start="912" selection-end="912" vertical-scroll-proportion="0.5813679">
               <folding>
-                <marker date="1380260078095" expanded="true" signature="583:1007" placeholder="..." />
+                <marker date="1380260216781" expanded="true" signature="563:1029" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -81,7 +81,7 @@
       <file leaf-file-name="lot.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/lot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="48" selection-end="51" vertical-scroll-proportion="-1.8846154">
+            <state line="32" column="28" selection-start="630" selection-end="638" vertical-scroll-proportion="-19.538462">
               <folding>
                 <element signature="e#6#40#0" expanded="true" />
               </folding>
@@ -520,7 +520,11 @@
       <created>1380259949096</created>
       <updated>1380259949096</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Разрабатываю корзину">
+      <created>1380260141301</created>
+      <updated>1380260141301</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -758,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/lot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="48" selection-end="51" vertical-scroll-proportion="-1.8846154">
+        <state line="32" column="28" selection-start="630" selection-end="638" vertical-scroll-proportion="-19.538462">
           <folding>
             <element signature="e#6#40#0" expanded="true" />
           </folding>
@@ -767,9 +771,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="530" selection-end="530" vertical-scroll-proportion="0.42099056">
+        <state line="29" column="61" selection-start="912" selection-end="912" vertical-scroll-proportion="0.5813679">
           <folding>
-            <marker date="1380260078095" expanded="true" signature="583:1007" placeholder="..." />
+            <marker date="1380260216781" expanded="true" signature="563:1029" placeholder="..." />
           </folding>
         </state>
       </provider>
