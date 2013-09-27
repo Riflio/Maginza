@@ -21,8 +21,12 @@ class Cart extends Order {
                 echo '<div class="orderitem-previmg"> test1 </div>';
 
                 echo '<div class="orderitem-content">';
-                    echo '<span class="article">Артикул:'.Lot::theMeta('Article').' </span>';
-                    echo '<span class="article">Цена:'.Lot::theMeta('Price').' </span>';
+                    echo '<span class="article">Артикул:';
+                        Lot::theMeta('Article');
+                    echo ' </span>';
+                    echo '<span class="article">Цена:';
+                        Lot::theMeta('Price');
+                    echo' </span>';
                     echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
                 echo '</div>';
 
