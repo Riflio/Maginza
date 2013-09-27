@@ -8,16 +8,22 @@ class Cart extends Order {
 
 	function showCart($args) {
 		echo 'Корзина';
-		$orders=$this->getListOrders();
+		$orders=$this->getListOrderItems();
+
+        foreach($orders as $order) {
+
+            echo '<div class="orderitem">';
+
+                echo '<div class="orderitem-previmg"> test1 </div>';
+
+                echo '<div class="orderitem-content"> test2 </div>';
+
+            echo '</div>';
+
+        }
 	}
-	
-	function getListOrders() {
-		global $wpdb;
-		 $wpdb->get_results($wpdb->prepare('SELECT * FROM '.Options::$table_order.' WHERE userID=%s ', Buyer::ID()));
-	
-	
-	}
-	
+
+
 	
 }
 

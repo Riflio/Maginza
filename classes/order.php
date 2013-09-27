@@ -25,20 +25,23 @@ class Order extends Lot {
 		die();	
 	}
 
+
     /**
     * Выдаём айдишник заказа.
     * Если заказа нет (клиент добавил первый товар), то создаём.
     */
-
-    function orderID() {
+    function orderID($create=false) {
         global $wpdb;
         $table_order=Options::$table_order;
         $qOrder=$wpdb->get_var($wpdb->prepare("SELECT orderID FROM {$table_order} WHERE userID=%s AND orderStatus=0 LIMIT 1", Buyer::ID() ));
         if ($qOrder) {
             return $qOrder;
-        } else {
+        } else
+        if ($create) {
             $wpdb->insert($table_order, array('userID'=>Buyer::ID(), 'orderStatus'=>0, 'orderDT'=>date("Y-m-d H:i:s")), array('%s', '%s'));
             return $wpdb->insert_id;
+        } else {
+            return false;
         }
     }
 
@@ -76,7 +79,7 @@ class Order extends Lot {
         $wpdb->insert(
 			Options::$table_order_items,
 			array(
-				'orderID'=>$this->orderID(),
+				'orderID'=>$this->orderID(true),
 				'orderItemID'=>$lotID,
 				'metaOptions'=>$values,
 				'combinationID'=>$combination['id']
@@ -88,6 +91,26 @@ class Order extends Lot {
          echo json_encode($status);
 		
 	}
+
+    /**
+     * Отдаём список заказов клиента
+     *
+     */
+    function getListOrders() {
+
+    }
+
+
+    /**
+     * Отдаём список товаров в текущем заказе клиента
+     *
+     */
+    function getListOrderItems() {
+        global $wpdb;
+        $table_order_items=Options::$table_order_items;
+        $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$table_order_items} WHERE orderID=%d ",  $this->orderID()));
+        return $orders;
+    }
 	
 	function onOrder($lotID, $values, $combination) {
 	//	global $wpdb;
