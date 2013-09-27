@@ -24,8 +24,8 @@ require_once 'classes/interfaces.php';
 
 require_once 'classes/options.php';
 require_once 'classes/formatter.php';
-require_once 'classes/meta.php';  
-require_once 'classes/metasettings.php';
+require_once 'classes/meta.php';  require_once 'classes/metasettings.php';
+require_once 'classes/combinations.php';
 require_once 'classes/lot.php';
 
 require_once 'classes/buyer.php';
@@ -34,7 +34,6 @@ require_once 'classes/order.php';
 
 require_once 'classes/cart.php';
 
-require_once 'classes/combinations.php';
 
 
 require_once 'classes/globalsettings.php';
