@@ -149,8 +149,7 @@ jQuery(document).ready(function($){
 	});
 	
 	
-	$("#mbcombinations").on('click', 'a#combinationsave', function(){
-		
+	$("#mbcombinations").on('click', 'a#combinationsave, a.btnCombinationSave', function(){
 		$.get(
 			ajaxurl+'?'+$("input[name^='tax_input[features]']").serialize(),
 			{
