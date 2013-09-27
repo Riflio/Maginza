@@ -67,6 +67,7 @@ class Combinations extends Meta{
     function ajax_whatcombination() {
         $features=$_GET['feature']; //FIXME: защита!
         $lotID=intval($_GET['lotid']);
+        $features=$features[$lotID];
         echo json_encode($this->whatCombination($features, $lotID));
         die();
     }

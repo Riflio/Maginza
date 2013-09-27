@@ -49,6 +49,20 @@ class Formatter extends Options{
 	}
 
     /**
+    *
+    *
+    */
+    function reqMetaOptpValue($lotID) {
+        if (isset($_REQUEST['metaoptvals'])) {
+            $vals=$_REQUEST['metaoptvals'];
+            $vals=$vals[$lotID];
+            return $vals;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Выводим списки характеристик комбинаций
      *
      */
@@ -60,7 +74,7 @@ class Formatter extends Options{
         for ($i=0; $i<count($IDS); $i++) {
             $feature.="<a id='fid-{$IDS[$i]}' class='' href='#'>{$Names[$i]}</a>, ";
         }
-        $feature.="<input type='hidden' class='feature' name='feature[{$rel->combinRelGroupId}]'>";
+        $feature.="<input type='hidden' class='feature' name='feature[$lotID][{$rel->combinRelGroupId}]'>";
         $feature.='</div>';
         return $feature;
     }

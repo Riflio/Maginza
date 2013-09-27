@@ -236,14 +236,15 @@ class MetaSettings extends Meta {
 	
 	function save_box_metagroupsandvalues($lotId) {
 		if (!$lotId) return;
-		
+
 		//--обновляем список активных групп опций у лота		
 		$metaGroups=(isset($_POST['metaoptiongroups']))? $_POST['metaoptiongroups'] : false;
 		if(!$metaGroups) return;
 		update_metadata('maginza', $lotId, 'metaoptiongroups', implode(',', $metaGroups));		
-		
+
+
 		//--обновляем значения опций
-		$metaOptions=(isset($_POST['metaoptvals']))? $_POST['metaoptvals'] : false;
+		$metaOptions=Formatter::reqMetaOptpValue($lotId);
 		if(!$metaOptions) return;
 		foreach($metaOptions as $metaName => $metaVal) {
 			$metaVal=apply_filters('mz_setmetaoptionvalue', $metaVal, $lotId, $metaName);
