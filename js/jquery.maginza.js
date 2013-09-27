@@ -9,6 +9,7 @@ jQuery(document).ready(function($){
 			maginza.ajaxurl+'?'+$('#formorder').serialize(),
 			{
 				action:	'order',
+                formname: 'singlelot',
 				method: met,
 				rand: Math.random()
 			},
