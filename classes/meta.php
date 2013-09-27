@@ -77,7 +77,7 @@ class Meta extends Formatter {
 		global $wpdb;	
 		$metaVal=$this->getMetaValue($lot, $metaName);		
 		$metaOpt=$this->OptionInMetaGroups($lot, $metaName);		
-		$this->processMetaOption($metaOpt, $metaVal);		
+		$this->processMetaOption($metaOpt, $metaVal, $lot);
 		return true;		
 	}
 	
