@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380259088864" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380259617986" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -70,9 +70,9 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="58" selection-start="354" selection-end="354" vertical-scroll-proportion="0.30070755">
+            <state line="21" column="55" selection-start="528" selection-end="528" vertical-scroll-proportion="0.42099056">
               <folding>
-                <marker date="1380259614822" expanded="true" signature="525:633" placeholder="..." />
+                <marker date="1380259655294" expanded="true" signature="525:634" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -504,7 +504,11 @@
       <created>1380259090916</created>
       <updated>1380259090916</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Разрабатываю корзину">
+      <created>1380259620136</created>
+      <updated>1380259620136</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -751,9 +755,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="58" selection-start="354" selection-end="354" vertical-scroll-proportion="0.30070755">
+        <state line="21" column="55" selection-start="528" selection-end="528" vertical-scroll-proportion="0.42099056">
           <folding>
-            <marker date="1380259614822" expanded="true" signature="525:633" placeholder="..." />
+            <marker date="1380259655294" expanded="true" signature="525:634" placeholder="..." />
           </folding>
         </state>
       </provider>

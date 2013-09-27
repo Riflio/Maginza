@@ -19,7 +19,7 @@ class Cart extends Order {
 
                 echo '<div class="orderitem-previmg"> test1 </div>';
 
-                echo '<div class="orderitem-content">'
+                echo '<div class="orderitem-content">';
                     echo  $combinations[$item->combinationID]['Combination'];
                 echo '</div>';
 
