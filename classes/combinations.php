@@ -49,6 +49,7 @@ class Combinations extends Meta{
         $combins=$this->getCombinationList($lotID);
         $fCount=count($features);
         $features=implode('|', $features);
+        var_dump($features);
         $res=array();
         foreach ($combins as $comb) {
             //--находим какой либо из переданных айдишников в айдишниках комбинации и считаем количество совпадений
