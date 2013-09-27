@@ -61,6 +61,7 @@ class Formatter extends Options{
             $feature.="<a id='fid-{$IDS[$i]}' class='' href='#'>{$Names[$i]}</a>, ";
         }
         $feature.='</div>';
+        $feature.="<input type='hidden' name='feature[{$rel->combinRelGroupId}]'>";
         return $feature;
     }
 	

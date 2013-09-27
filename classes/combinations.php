@@ -34,6 +34,8 @@ class Combinations extends Meta{
         foreach ($rels as $rel) {
             echo Formatter::combFeature($rel, $lotID);
         }
+
+
 	}
 
 
