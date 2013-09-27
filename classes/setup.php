@@ -11,12 +11,11 @@ class Setup extends Options {
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 		
 		$sql = "CREATE TABLE " . Options::$table_order . " (
-					  id mediumint(9) NOT NULL AUTO_INCREMENT, 
+					  orderID mediumint(9) NOT NULL AUTO_INCREMENT,
 					  userID varchar(255) NOT NULL,
-					  lotID int NOT NULL,
-					  lotMetaOptions text NOT NULL,
-					  lotMetaOptionsHash text NOT NULL,		  
-					  UNIQUE KEY id (id)
+					  orderStatus int NOT NULL,
+					  orderDT datetime  NOT NULL,
+					  UNIQUE KEY orderID (orderID)
 		);";		
 		dbDelta($sql);		
 		//TODO: Добавить группу по умолчанию
@@ -73,8 +72,18 @@ class Setup extends Options {
 			combinRelItemsID longtext,
 			PRIMARY KEY	(combinRelID)
 		) $charset_collate;";
-		dbDelta($sql);	
-	}
+		dbDelta($sql);
+
+        //-- Таблица товаров заказа с выбранными комбинациями и метаопциями
+        $sql="CREATE TABLE ".Options::$table_order_items." (
+			orderItemsID bigint(20) unsigned NOT NULL auto_increment,
+			orderID bigint(20),
+			combinationID bigint(20),
+			metaoptions longtext,
+			PRIMARY KEY	orderItemsID (orderItemsID)
+		) $charset_collate;";
+        dbDelta($sql);
+    }
 
 
 	
@@ -91,7 +100,9 @@ class Setup extends Options {
 		$sql='DROP TABLE  IF EXISTS '.Options::$table_combinations;
 		$wpdb->query($sql);			
 		$sql='DROP TABLE  IF EXISTS '.Options::$table_combinations_rel;
-		$wpdb->query($sql);			
+		$wpdb->query($sql);
+        $sql='DROP TABLE  IF EXISTS '.Options::$table_order_items;
+        $wpdb->query($sql);
 	}
 	
 }

@@ -5,6 +5,7 @@ class Options {
 
 
 	public static $table_order='wp_maginza_order';
+	public static $table_order_items='wp_maginza_order_items';
 	public static $table_meta_group='wp_maginza_metagroup';
 	public static $table_meta_options='wp_maginza_metaoptions';
 	public static $table_meta='wp_maginzameta';
