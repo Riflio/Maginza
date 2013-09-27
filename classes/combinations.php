@@ -360,7 +360,7 @@ class Combinations__List_Table extends WP_List_Table {
             'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
             'save'      => sprintf('<a class="btnCombinationSave" id="%s" href="#">Save</a>', $item['id']),
         );
-        return sprintf('%1$s %2$s %3$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
+        return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
     }
 
     function no_items() {

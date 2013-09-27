@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Lj,fdbk">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/combinations.php" afterPath="$PROJECT_DIR$/classes/combinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.admin.js" afterPath="$PROJECT_DIR$/js/jquery.admin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251706430" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251794824" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -46,24 +45,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="combinations.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="360" column="64" selection-start="11374" selection-end="11392" vertical-scroll-proportion="-22.307692">
+            <state line="362" column="33" selection-start="11480" selection-end="11480" vertical-scroll-proportion="0.73532933">
               <folding>
-                <marker date="1380251748030" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380251748030" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380251748030" expanded="true" signature="3953:4028" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380251748030" expanded="true" signature="5964:6055" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380251844197" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380251844197" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380251844197" expanded="true" signature="3953:4028" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380251844197" expanded="true" signature="5964:6055" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.admin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="67" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.7471396">
+            <state line="169" column="67" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,8 +103,8 @@
         <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/lot.php" />
         <option value="$PROJECT_DIR$/classes/formatter.php" />
-        <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/js/jquery.admin.js" />
+        <option value="$PROJECT_DIR$/classes/combinations.php" />
       </list>
     </option>
   </component>
@@ -391,7 +390,11 @@
       <created>1380251504042</created>
       <updated>1380251504042</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Добавил кнопку сохранить рядом с кнопкой редактировать, для удобства">
+      <created>1380251797684</created>
+      <updated>1380251797684</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -480,7 +483,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доделываю отгадывание комбинации" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил кнопку сохранить рядом с кнопкой редактировать, для удобства" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -508,6 +511,7 @@
     <MESSAGE value="Правка комбинаций" />
     <MESSAGE value="Копаюсь с регуляркой поиска комьинации" />
     <MESSAGE value="Доделываю отгадывание комбинации" />
+    <MESSAGE value="Добавил кнопку сохранить рядом с кнопкой редактировать, для удобства" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -615,22 +619,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="64" selection-start="11374" selection-end="11392" vertical-scroll-proportion="-22.307692">
-          <folding>
-            <marker date="1380251748030" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380251748030" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380251748030" expanded="true" signature="3953:4028" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380251748030" expanded="true" signature="5964:6055" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
-          </folding>
+        <state line="169" column="67" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
+    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="67" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.7471396">
-          <folding />
+        <state line="362" column="33" selection-start="11480" selection-end="11480" vertical-scroll-proportion="0.73532933">
+          <folding>
+            <marker date="1380251844197" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380251844197" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380251844197" expanded="true" signature="3953:4028" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380251844197" expanded="true" signature="5964:6055" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+          </folding>
         </state>
       </provider>
     </entry>
