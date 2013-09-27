@@ -53,7 +53,7 @@ class Order extends Lot {
     function addToOrder($lotID, $data, $features) {
 		global $wpdb;
 		$status=(object) NULL;
-
+        //TODO: Проверять на заполненость полей перед добавлением, а так же добавить фильтр.
 
 		//-- получим список опций товара, что бы на основе их выбирать нужное, из того, что нам подсунули.
 		$metaOptions=$this->getLotMetaOptions(get_post($lotID)); 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Вношу правки по безопасности">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/order.php" afterPath="$PROJECT_DIR$/classes/order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380267395055" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380267972025" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380267295006" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -135,10 +135,10 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="38" selection-start="371" selection-end="371" vertical-scroll-proportion="0.28502995">
+            <state line="35" column="23" selection-start="824" selection-end="824" vertical-scroll-proportion="0.33293414">
               <folding>
-                <marker date="1380267529095" expanded="true" signature="848:924" placeholder="SELECT order..{$table_order}..." />
-                <marker date="1380267529095" expanded="true" signature="2947:2998" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380267969592" expanded="true" signature="848:924" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380267969592" expanded="true" signature="3039:3090" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -556,7 +556,11 @@
       <created>1380267397356</created>
       <updated>1380267397357</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Вношу правки по безопасности">
+      <created>1380267549209</created>
+      <updated>1380267549209</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -645,7 +649,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разрабатываю корзину" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вношу правки по безопасности" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -677,6 +681,7 @@
     <MESSAGE value="Подправил кнопку сохранить рядом с кнопкой редактировать, для удобства" />
     <MESSAGE value="Разрабатываю заказ товара" />
     <MESSAGE value="Разрабатываю корзину" />
+    <MESSAGE value="Вношу правки по безопасности" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -800,10 +805,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="371" selection-end="371" vertical-scroll-proportion="0.28502995">
+        <state line="35" column="23" selection-start="824" selection-end="824" vertical-scroll-proportion="0.33293414">
           <folding>
-            <marker date="1380267529095" expanded="true" signature="848:924" placeholder="SELECT order..{$table_order}..." />
-            <marker date="1380267529095" expanded="true" signature="2947:2998" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380267969592" expanded="true" signature="848:924" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1380267969592" expanded="true" signature="3039:3090" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
