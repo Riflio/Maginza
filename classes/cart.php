@@ -29,7 +29,7 @@ class Cart extends Order {
                         Lot::theMeta('Price');
                     echo' </span>';
                     echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
-                         Lot::metaForm('Article,Price,Selprevimg', $item->combinationID);
+                         Lot::metaForm('Article,Price', $item->combinationID);
                 echo '</div>';
 
             echo '</div>';
