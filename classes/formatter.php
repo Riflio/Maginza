@@ -1,6 +1,6 @@
 <?php
 /**
- *  Всё, что выводится пользователю магинзой проходит через этот класс.
+ *  Всё, что выводится и вводится  пользователем магинзы проходит через этот класс.
  *  
  */
 
@@ -78,7 +78,17 @@ class Formatter extends Options{
         $feature.='</div>';
         return $feature;
     }
-	
+
+    function reqCombFeature($lotID) {
+        if (isset($_REQUEST['feature'])) {
+            $vals=$_REQUEST['feature'];
+            $vals=$vals[$lotID];
+            return $vals;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 ?>
