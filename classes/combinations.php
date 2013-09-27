@@ -29,7 +29,7 @@ class Combinations extends Meta{
 	*
 	*
 	*/
-	function clientCombFeaturesForm($lotID) {
+	public function clientCombFeaturesForm($lotID) {
         $rels=$this->getLotAllFeatures($lotID, 'combinRelGroupId');
         foreach ($rels as $rel) {
             echo Formatter::widget('combfeature', $rel, $lotID);

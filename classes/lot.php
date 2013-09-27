@@ -37,7 +37,7 @@ class Lot extends Combinations {
 
     public function combFeaturesForm() {
         $inst=Lot::getInstance();
-
+        $inst->clientCombFeaturesForm($inst->LOT->ID);
     }
 	
 }
