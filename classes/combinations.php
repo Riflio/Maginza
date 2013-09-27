@@ -56,9 +56,9 @@ class Combinations extends Meta{
     */
     function ajax_whatcombination() {
         $features=$_GET['feature'];
-        echo  $features;
-        die();
+        var_dump($features);
         $this->whatCombination($features);
+        die();
     }
 
     /**
