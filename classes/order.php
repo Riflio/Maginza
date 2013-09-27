@@ -131,7 +131,10 @@ class Order extends Lot {
 	public function theDeleteButton($isShow=true, $lotID=-1) {
 		
 	}
-	
+
+    private function getMetaValue($lot, $metaName) {
+        return 123123123;
+    }
 	
 }
 
