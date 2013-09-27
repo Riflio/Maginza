@@ -78,7 +78,7 @@ class Order extends Lot {
 			array(
 				'orderID'=>$this->orderID(),
 				'orderItemID'=>$lotID,
-				'lotMetaOptions'=>$values,
+				'metaOptions'=>$values,
 				'combinationID'=>$combination['id']
 			), array('%d', '%d', '%s', '%d')
 		);
