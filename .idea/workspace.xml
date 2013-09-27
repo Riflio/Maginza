@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380246966715" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380248776621" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380248235910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -48,12 +48,12 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="1726" selection-end="1726" vertical-scroll-proportion="0.53173655">
+            <state line="51" column="31" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.4706587">
               <folding>
-                <marker date="1380248765199" expanded="true" signature="2503:3197" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380248765199" expanded="true" signature="3098:3157" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380248765199" expanded="true" signature="3614:3689" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380248765199" expanded="true" signature="5625:5716" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380249049067" expanded="true" signature="2507:3201" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380249049067" expanded="true" signature="3102:3161" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380249049067" expanded="true" signature="3618:3693" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380249049067" expanded="true" signature="5629:5720" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
@@ -340,7 +340,11 @@
       <created>1380246968822</created>
       <updated>1380246968822</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Правка комбинаций">
+      <created>1380248780630</created>
+      <updated>1380248780630</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -571,12 +575,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="1726" selection-end="1726" vertical-scroll-proportion="0.53173655">
+        <state line="51" column="31" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.4706587">
           <folding>
-            <marker date="1380248765199" expanded="true" signature="2503:3197" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380248765199" expanded="true" signature="3098:3157" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380248765199" expanded="true" signature="3614:3689" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380248765199" expanded="true" signature="5625:5716" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+            <marker date="1380249049067" expanded="true" signature="2507:3201" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380249049067" expanded="true" signature="3102:3161" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380249049067" expanded="true" signature="3618:3693" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380249049067" expanded="true" signature="5629:5720" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
           </folding>
         </state>
       </provider>
