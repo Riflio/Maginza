@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.maginza.js" afterPath="$PROJECT_DIR$/js/jquery.maginza.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/order.php" afterPath="$PROJECT_DIR$/classes/order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257265201" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257379109" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
     <file path="/formatter.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380245917788" ignored="false" />
     <file path="/options.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380253720626" ignored="false" />
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
-    <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380256870216" ignored="false" />
+    <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257717802" ignored="false" />
+    <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380257658082" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +41,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="metasettings.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="197.53847">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="combinations.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,9 +58,9 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="19" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.5497006">
+            <state line="37" column="27" selection-start="982" selection-end="982" vertical-scroll-proportion="0.4071856">
               <folding>
-                <marker date="1380257372814" expanded="true" signature="841:911" placeholder="SELECT * FRO..{$table_order}..." />
+                <marker date="1380257721360" expanded="true" signature="837:913" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -96,7 +89,16 @@
       <file leaf-file-name="jquery.admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="161" column="21" selection-start="4245" selection-end="4245" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.maginza.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/jquery.maginza.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -171,6 +173,7 @@
         <option value="$PROJECT_DIR$/css/admin.maginza.css" />
         <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/setup.php" />
+        <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
         <option value="$PROJECT_DIR$/classes/order.php" />
       </list>
     </option>
@@ -487,7 +490,11 @@
       <created>1380257267966</created>
       <updated>1380257267966</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Разрабатываю заказ товара">
+      <created>1380257381880</created>
+      <updated>1380257381880</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -612,13 +619,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="32" selection-start="3042" selection-end="3042" vertical-scroll-proportion="-55.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/merchant.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.923077">
@@ -679,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/options.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="36" selection-start="133" selection-end="133" vertical-scroll-proportion="-4.576923">
@@ -728,11 +721,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="21" selection-start="4245" selection-end="4245" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.maginza.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="19" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.5497006">
+        <state line="37" column="27" selection-start="982" selection-end="982" vertical-scroll-proportion="0.4071856">
           <folding>
-            <marker date="1380257372814" expanded="true" signature="841:911" placeholder="SELECT * FRO..{$table_order}..." />
+            <marker date="1380257721360" expanded="true" signature="837:913" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>

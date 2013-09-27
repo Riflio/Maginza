@@ -33,9 +33,9 @@ class Order extends Lot {
     function orderID() {
         global $wpdb;
         $table_order=Options::$table_order;
-        $qOrder=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$table_order} WHERE userID=%s AND orderStatus=0 LIMIT 1", Buyer::ID() ));
+        $qOrder=$wpdb->get_var($wpdb->prepare("SELECT orderID FROM {$table_order} WHERE userID=%s AND orderStatus=0 LIMIT 1", Buyer::ID() ));
         if ($qOrder) {
-            return $qOrder->orderID;
+            return $qOrder;
         } else {
             $wpdb->insert($table_order, array('userID'=>Buyer::ID(), 'orderStatus'=>0, 'orderDT'=>date("Y-m-d H:i:s")), array('%s', '%s'));
             return $wpdb->insert_id;

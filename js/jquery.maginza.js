@@ -12,9 +12,15 @@ jQuery(document).ready(function($){
 				method: met,
 				rand: Math.random()
 			},
-			function(data){
-				//data=$.parseJSON(data);	
-				$('.orderMessage').html(data);
+			function(_data){
+                try {
+                    var data=$.parseJSON(_data);
+                }
+                catch (err) {
+                    return;
+                }
+
+				$('.orderMessage').html(data.msg);
 				$('.orderMessage').show(1000).delay(3000).hide(1000);		
 			}				
 		);		
