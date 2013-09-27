@@ -16,8 +16,8 @@ class Order extends Lot {
 		$method=$_GET['method'];		
 		$lotID=intval($_GET['lotid']);
 		if ($method==="buy") {			
-			$metaOpts=Formatter::reqMetaOptpValue($lotID);
-            $features=Formatter::reqCombFeature($lotID);
+			$metaOpts=Formatter::reqMetaOptpValue($_GET['formname']);
+            $features=Formatter::reqCombFeature($_GET['formname']);
 
 			echo $this->addToOrder($lotID, $metaOpts, $features);
 		}
