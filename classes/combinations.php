@@ -45,8 +45,12 @@ class Combinations extends Meta{
     * Отгадываем комбинацию по выбранным характеристикам
     *
     */
-    public function whatCombination($features) {
-
+    public function whatCombination($features, $lotID) {
+        $combins=$this->getCombinationList($lotID);
+        $features=implode('|', $features);
+        foreach ($combins as $comb) {
+            echo preg_match('/('.$features.')/i', $comb['combinationIDS']);
+        }
     }
 
 
@@ -55,9 +59,10 @@ class Combinations extends Meta{
     *
     */
     function ajax_whatcombination() {
-        $features=$_GET['feature'];
+        $features=$_GET['feature']; //FIXME: защита!
+        $lotID=intval($_GET['lotid']);
         var_dump($features);
-        $this->whatCombination($features);
+        $this->whatCombination($features, $lotID);
         die();
     }
 
