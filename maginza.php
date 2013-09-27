@@ -1,7 +1,7 @@
 <?php
 /*
 	Plugin Name: Maginza
-	Plugin URI: http://wordpress-as-cms.pavelk.ru/maginza
+	Plugin URI: http://pavelk.ru/maginza
 	Description: Интернет магазин
 	Version: 1.0
 	Author: PavelK

@@ -78,8 +78,9 @@ class Setup extends Options {
         $sql="CREATE TABLE ".Options::$table_order_items." (
 			orderItemsID bigint(20) unsigned NOT NULL auto_increment,
 			orderID bigint(20),
+			orderItemID bigint(20) NOT NULL,
 			combinationID bigint(20),
-			metaoptions longtext,
+			metaOptions longtext,
 			PRIMARY KEY	orderItemsID (orderItemsID)
 		) $charset_collate;";
         dbDelta($sql);
