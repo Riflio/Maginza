@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380259617986" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380259656974" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380251657910" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380242475163" ignored="false" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="combinations.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="42" selection-start="5665" selection-end="5676" vertical-scroll-proportion="-16.346153">
+            <state line="128" column="56" selection-start="4531" selection-end="4542" vertical-scroll-proportion="-17.076923">
               <folding>
                 <marker date="1380251844197" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
                 <marker date="1380251844197" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
@@ -70,9 +70,9 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="55" selection-start="528" selection-end="528" vertical-scroll-proportion="0.42099056">
+            <state line="22" column="74" selection-start="603" selection-end="603" vertical-scroll-proportion="0.44103774">
               <folding>
-                <marker date="1380259655294" expanded="true" signature="525:634" placeholder="..." />
+                <marker date="1380259726126" expanded="true" signature="525:634" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -508,7 +508,11 @@
       <created>1380259620136</created>
       <updated>1380259620136</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Разрабатываю корзину">
+      <created>1380259659286</created>
+      <updated>1380259659286</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -743,7 +747,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="42" selection-start="5665" selection-end="5676" vertical-scroll-proportion="-16.346153">
+        <state line="128" column="56" selection-start="4531" selection-end="4542" vertical-scroll-proportion="-17.076923">
           <folding>
             <marker date="1380251844197" expanded="true" signature="2842:3536" placeholder="SELECT rels...{$table_combinations_rel}..." />
             <marker date="1380251844197" expanded="true" signature="3437:3496" placeholder="SELECT combi..wp_maginza_combinations..." />
@@ -755,9 +759,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="55" selection-start="528" selection-end="528" vertical-scroll-proportion="0.42099056">
+        <state line="22" column="74" selection-start="603" selection-end="603" vertical-scroll-proportion="0.44103774">
           <folding>
-            <marker date="1380259655294" expanded="true" signature="525:634" placeholder="..." />
+            <marker date="1380259726126" expanded="true" signature="525:634" placeholder="..." />
           </folding>
         </state>
       </provider>
