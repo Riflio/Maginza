@@ -12,6 +12,7 @@ class Cart extends Order {
 
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
+            Lot::getInstance($lotID);
 
             $combinations=$this->getCombinationList($lotID);
 
@@ -20,7 +21,9 @@ class Cart extends Order {
                 echo '<div class="orderitem-previmg"> test1 </div>';
 
                 echo '<div class="orderitem-content">';
-                    echo  $combinations[$item->combinationID]['combination'];
+                    echo '<span class="article">Артикул:'.Lot::theMeta('Article').' </span>';
+                    echo '<span class="article">Цена:'.Lot::theMeta('Price').' </span>';
+                    echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
                 echo '</div>';
 
             echo '</div>';
