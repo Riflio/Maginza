@@ -7,14 +7,14 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380272262203" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380279016161" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380270131583" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
     <file path="/formatter.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380267138558" ignored="false" />
     <file path="/options.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380253720626" ignored="false" />
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
-    <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380279010738" ignored="false" />
+    <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380279147407" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380271274019" ignored="false" />
     <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380262476067" ignored="false" />
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269779992" ignored="false" />
@@ -108,10 +108,10 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="25" selection-start="3850" selection-end="3850" vertical-scroll-proportion="0.8371258">
+            <state line="134" column="10" selection-start="3782" selection-end="3782" vertical-scroll-proportion="0.81676644">
               <folding>
-                <marker date="1380279014062" expanded="true" signature="870:946" placeholder="SELECT order..{$table_order}..." />
-                <marker date="1380279014062" expanded="true" signature="3061:3112" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380279149973" expanded="true" signature="870:946" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380279149973" expanded="true" signature="3061:3112" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -590,7 +590,11 @@
       <created>1380272266703</created>
       <updated>1380272266703</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Работа над корзиной">
+      <created>1380279018655</created>
+      <updated>1380279018655</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -834,10 +838,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="25" selection-start="3850" selection-end="3850" vertical-scroll-proportion="0.8371258">
+        <state line="134" column="10" selection-start="3782" selection-end="3782" vertical-scroll-proportion="0.81676644">
           <folding>
-            <marker date="1380279014062" expanded="true" signature="870:946" placeholder="SELECT order..{$table_order}..." />
-            <marker date="1380279014062" expanded="true" signature="3061:3112" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380279149973" expanded="true" signature="870:946" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1380279149973" expanded="true" signature="3061:3112" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>

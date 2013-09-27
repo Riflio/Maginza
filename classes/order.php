@@ -132,7 +132,7 @@ class Order extends Lot {
 		
 	}
 
-    private function getMetaValue($lot, $metaName) {
+    public function getMetaValue($lot, $metaName) {
         return 123123123;
     }
 	
