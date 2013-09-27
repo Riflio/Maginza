@@ -49,8 +49,8 @@ class Combinations extends Meta{
         $combins=$this->getCombinationList($lotID);
         $features=implode('|', $features);
         foreach ($combins as $comb) {
-            preg_match_all('/('.$features.')/i', $comb['combinationIDS'], $res);
-            echo count($res);
+            $res=preg_match_all('/('.$features.')/i', $comb['combinationIDS'], $res);
+            echo $res;
 
         }
     }
