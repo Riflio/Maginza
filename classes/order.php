@@ -19,7 +19,7 @@ class Order extends Combinations {
      *
      *
      */
-    function addToOrder($orderID, $lotID, $data, $features) {
+    function addItemOrder($orderID, $lotID, $data, $features) {
 		global $wpdb;
 		$status=(object) NULL;
         //TODO: Проверять на заполненость полей перед добавлением, а так же добавить фильтр.
@@ -74,10 +74,10 @@ class Order extends Combinations {
      * Отдаём список товаров в текущем заказе клиента
      *
      */
-    function getListOrderItems() {
+    function getListOrderItems($orderID) {
         global $wpdb;
         $table_order_items=Options::$table_order_items;
-        $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$table_order_items} WHERE orderID=%d ",  $this->orderID()));
+        $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$table_order_items} WHERE orderID=%d ", $orderID ));
         return $orders;
     }
 	
@@ -91,9 +91,12 @@ class Order extends Combinations {
 		if ($postData->post_type!='lots') return;
  		Lot::getInstance($postData);
 	}
-		
-	
 
+
+    function getMetaValue($lot, $metaName) {
+        return '1231';
+
+    }
 
 
 	

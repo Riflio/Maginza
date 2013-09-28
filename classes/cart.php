@@ -10,7 +10,7 @@ class Cart extends Order {
 
 	function showCart($args) {
 		echo 'Корзина';
-		$orderItems=$this->getListOrderItems();
+		$orderItems=$this->getListOrderItems($this->orderID());
 
         echo '<form method="GET">';
         foreach($orderItems as $item) {
@@ -31,7 +31,7 @@ class Cart extends Order {
 
                     echo' </span>';
                     echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
-
+                       $this->showMetaForm($lotID, '', 'testtest');
                 echo '</div>';
 
             echo '</div>';
@@ -47,7 +47,7 @@ class Cart extends Order {
             $metaOpts=Formatter::reqMetaOptpValue($_GET['formname']);
             $features=Formatter::reqCombFeature($_GET['formname']);
 
-            echo $this->addToOrder($this->orderID(true), $lotID, $metaOpts, $features);
+            echo $this->addItemOrder($this->orderID(true), $lotID, $metaOpts, $features);
         }
 
         die();

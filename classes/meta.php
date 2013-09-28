@@ -42,7 +42,7 @@ class Meta extends Formatter {
 		//TODO: запомнить вывод
 	}
 	
-	private function getMetaValue($lot, $metaName) {
+	function getMetaValue($lot, $metaName) {
 		$metaVal=get_metadata('maginza', $lot->ID, $metaName, true);	
 		$metaVal=apply_filters('getmetavalue',$metaVal, $metaName, $lot->ID);
 		return $metaVal;
