@@ -54,6 +54,10 @@ class Cart extends Order {
                        echo '<span class="cost">5555Р</span>';
                     echo '</div>';
 
+                    echo '<div class="actionbtns">';
+                        Cart::theButton('delete', 'Удалить');
+                    echo '</div>';
+
                 echo '</div>';
 
             echo '</div>';
@@ -100,11 +104,7 @@ class Cart extends Order {
         echo Formatter::format('button', $action, $text);
     }
 
-    public function theDeleteButton($isShow=true, $lotID=-1) {
 
-    }
-
-	
 }
 
 
