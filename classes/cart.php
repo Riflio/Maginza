@@ -15,6 +15,7 @@ class Cart extends Order {
         echo '<form method="GET">';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
+            $lot=get_post($lotID);
 
             $this->setItemID($item->orderItemsID);
 
@@ -32,7 +33,7 @@ class Cart extends Order {
 
                     echo' </span>';
                     echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
-                       $this->showMetaForm($lotID, '', 'testtest');
+                       $this->showMetaForm($lot, '', 'testtest');
                 echo '</div>';
 
             echo '</div>';
