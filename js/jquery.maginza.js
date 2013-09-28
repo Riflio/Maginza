@@ -27,7 +27,29 @@ jQuery(document).ready(function($){
 		);		
 		return false;
 	});
-	
+
+
+    $('.actionbtns #delete').on('click', function(){
+        var itemID=$(this).parents('.orderitem').find('#orderItemID').val();
+        $.get(
+            maginza.ajaxurl,
+            {
+                action:	'order',
+                method: 'deleteorderitem',
+                orderitemid: itemID,
+                rand: Math.random()
+            },
+            function(_data){
+                try {
+                    var data=$.parseJSON(_data);
+                }
+                catch (err) {
+                    return;
+                }
+                $('.orderitem.item-'+data.orderitemid).remove();
+            }
+        );
+    });
 	
 
 });

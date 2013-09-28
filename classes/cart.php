@@ -80,7 +80,6 @@ class Cart extends Order {
             $itemID=intval($_GET['orderitemid']);
             $customOpts=$metaOpts=$this->checkMetaOptions(get_post($lotID), $_GET); //-- выберем метаопцтт из всего запроса
 
-
             $this->setItemID($itemID);
             $totalPrice=$this->getItemTotalPrice($customOpts);
 
@@ -90,6 +89,15 @@ class Cart extends Order {
             $price->orderitemid=$itemID;
             $price->rand=$_GET['rand'];
             echo json_encode($price);
+        }
+
+        if ($method==="deleteorderitem") {
+            $itemID=intval($_GET['orderitemid']);
+            $this->deleteOrderItem($itemID);
+
+            $res=(object) NULL;
+            $res->orderitemid=$itemID;
+            echo json_encode($res);
         }
         die();
     }
