@@ -17,6 +17,7 @@ class Cart extends Order {
             $itemID=$item->orderItemsID;
 
             $lot=get_post($lotID);
+            $comb=$this->getCombination();
 
             $this->setItemID($itemID);
 
@@ -36,7 +37,7 @@ class Cart extends Order {
                     echo '<span class="article">Цена:';
                         $this->theMetaValue($lot, 'Price', 'cart');
                     echo' </span>';
-                    echo '<span class="comb">'.$this->getCombination().'</span>';
+                    echo '<span class="comb">'.$comb['combination'].'</span>';
                        $this->showMetaForm($lot, 'Price,Article,Selprevimg', 'testtest');
                 echo '</div>';
 
