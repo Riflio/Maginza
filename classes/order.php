@@ -8,7 +8,6 @@ class Order extends OrderItem {
 
 	public function __construct() {						
 
-
 	}
 
     /**

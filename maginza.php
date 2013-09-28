@@ -28,8 +28,9 @@ require_once 'classes/lot.php'; require_once 'classes/lots.php';
 
 require_once 'classes/buyer.php';
 
-require_once 'classes/order.php';
 require_once 'classes/orderitem.php';
+require_once 'classes/order.php';
+
 
 require_once 'classes/cart.php';
 
