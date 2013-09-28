@@ -47,9 +47,21 @@ class Meta extends Formatter {
 		$metaVal=apply_filters('getmetavalue',$metaVal, $metaName, $lot->ID);
 		return $metaVal;
 	}
-	
-	//-- проверяем и находим, присутствует ли мета опция в мета группах лота и возвращаем опцию
-	function OptionInMetaGroups($lot, $metaName) {
+
+    /**
+     *
+     *
+     */
+    function setMetaOrderValues() {
+
+    }
+
+
+    /**
+     *  проверяем и находим, присутствует ли мета опция в мета группах лота и возвращаем опцию
+     *
+     */
+    function OptionInMetaGroups($lot, $metaName) {
 		$metaOpts=$this->getLotMetaOptions($lot);
 		if (!$metaOpts) return; 	 //-- нас наебали, расходимся	
 		foreach ($metaOpts as $metaOpt) { //-- находим среди всех нужную
@@ -58,8 +70,11 @@ class Meta extends Formatter {
 		return false;
 	}
 	
-	//-- решаем, что делать с метаопцией
-	private function processMetaOption($metaOpt, $metaVal, $formName) {
+	/**
+    * решаем, что делать с метаопцией
+	*
+    */
+     private function processMetaOption($metaOpt, $metaVal, $formName) {
 		if (!$metaOpt) return false; //-- нас наебали, расходимся	
 		if (!$metaVal) $metaVal=$metaOpt->optValue;	
 		//-- проверить, виден ли

@@ -4,53 +4,22 @@
  *
  */
 
-class Order extends Lot {	
+class Order extends Combinations {
 
 	public function __construct() {						
-		add_action('wp_ajax_order', array(&$this, 'ajax_order'));			
-		add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));	
+
 		add_action('the_post', array(&$this, 'the_post'),100,100);	
 	}
 	
-	function ajax_order() {		
-		$method=$_GET['method'];		
-		$lotID=intval($_GET['lotid']);
-		if ($method==="buy") {			
-			$metaOpts=Formatter::reqMetaOptpValue($_GET['formname']);
-            $features=Formatter::reqCombFeature($_GET['formname']);
-
-			echo $this->addToOrder($lotID, $metaOpts, $features);
-		}
-		
-		die();	
-	}
 
 
-    /**
-    * Выдаём айдишник заказа.
-    * Если заказа нет (клиент добавил первый товар), то создаём.
-    */
-    function orderID($create=false) {
-        global $wpdb;
-        $table_order=Options::$table_order;
-        $qOrder=$wpdb->get_var($wpdb->prepare("SELECT orderID FROM {$table_order} WHERE userID=%s AND orderStatus=0 LIMIT 1", Buyer::ID() ));
-        if ($qOrder) {
-            return $qOrder;
-        } else
-        if ($create) {
-            $wpdb->insert($table_order, array('userID'=>Buyer::ID(), 'orderStatus'=>0, 'orderDT'=>date("Y-m-d H:i:s")), array('%s', '%s'));
-            return $wpdb->insert_id;
-        } else {
-            return false;
-        }
-    }
 
 
     /**
      *
      *
      */
-    function addToOrder($lotID, $data, $features) {
+    function addToOrder($orderID, $lotID, $data, $features) {
 		global $wpdb;
 		$status=(object) NULL;
         //TODO: Проверять на заполненость полей перед добавлением, а так же добавить фильтр.
@@ -79,7 +48,7 @@ class Order extends Lot {
         $wpdb->insert(
 			Options::$table_order_items,
 			array(
-				'orderID'=>$this->orderID(true),
+				'orderID'=>$orderID,
 				'orderItemID'=>$lotID,
 				'metaOptions'=>$values,
 				'combinationID'=>$combination['id']
@@ -124,17 +93,9 @@ class Order extends Lot {
 	}
 		
 	
-	public function theButton($action, $text) {
-		echo Formatter::format('button', $action, $text);
-	}
-	
-	public function theDeleteButton($isShow=true, $lotID=-1) {
-		
-	}
 
-    public function getMetaValue($lot, $metaName) {
-        return 123123123;
-    }
+
+
 	
 }
 
