@@ -13,7 +13,7 @@ class Meta extends Formatter {
 	function getGroupsList() {
 		global $wpdb;
 		//TODO: запоминать вывод.
-		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group.' ORDER BY groupID');
+		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group.' ORDER BY groupID', ARRAY_A);
 	}
 	
 	function getLotMetagroups($lot) {
