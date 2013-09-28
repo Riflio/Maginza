@@ -47,6 +47,20 @@ class OrderItem extends Combinations{
     }
 
     /**
+     *  Возьмём значения по умолчанию опций лота  объединим с изменёнными значениями опций лота из текущего элемента заказа
+     *  + объединим с текущими переданными значениями опций
+     */
+    public function orderItemMetaOptionsValues($lot, $customMetaOptions=array()) {
+        $lotMetaOptions=$this->getLotMetaOptions($lot);
+        $orderItemMetaOptions=array();
+        foreach ($lotMetaOptions as $metaOpt) {
+            $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+        }
+        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
+        return $metaOpts;
+
+    }
+    /**
      * Отдаём конечную стоимость позиции товара
      *
      */
@@ -58,14 +72,7 @@ class OrderItem extends Combinations{
         //--
         $formula=$this->getLotFormula($lot);
 
-        // возьмём значения по умолчанию опций лота  объединим с изменёнными значениями опций лота из текущего элемента заказа
-        // + объединим с текущими изменёнными значениями опций
-        $lotMetaOptions=$this->getLotMetaOptions($lot);
-        $orderItemMetaOptions=array();
-        foreach ($lotMetaOptions as $metaOpt) {
-            $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
-        }
-        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
+        $metaOpts=$this->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
         $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 

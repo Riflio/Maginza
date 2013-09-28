@@ -83,7 +83,7 @@ class Cart extends Order {
         }
         if ($method==="getitemtotalprice") {
             $itemID=intval($_GET['orderitemid']);
-            $customOpts=$metaOpts=$this->checkMetaOptions(get_post($lotID), $_GET); //-- выберем метаопцтт из всего запроса
+            $customOpts=$metaOpts=$this->checkMetaOptions(get_post($lotID), $_GET); //-- выберем метаопци из всего запроса
 
             $this->setItemID($itemID);
             $totalPrice=$this->getItemTotalPrice($customOpts);
@@ -148,11 +148,23 @@ class Cart extends Order {
      *
      */
     public function saveCart($metaoptvals) {
-        foreach($metaoptvals as $orderitemid => $vals) {
+        foreach($metaoptvals as $orderitemid => $saveMetaOpts) {
+            $orderitemid=explode('-', $orderitemid);
+            $orderitemid=$orderitemid[1];
 
+            $iItem=OrderItem::getInstance();
+            $iItem->setItemID($orderitemid);
+
+            $item=$iItem->getItem();
+            $lot=get_post($item->orderItemID);
+
+            $saveMetaOpts=$this->checkMetaOptions($lot, $saveMetaOpts);
+
+            $orderItemMetaOptions=$iItem->orderItemMetaOptionsValues($lot, $saveMetaOpts);
+
+            var_dump($orderItemMetaOptions);
         }
 
-        var_dump($metaoptvals);
     }
 
     /**

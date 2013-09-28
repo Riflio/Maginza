@@ -14,6 +14,15 @@ class Order extends OrderItem {
      *
      *
      */
+    public function updateOrderItem($orderItemID, $lotID, $metaOptions) {
+        global $wpdb;
+
+    }
+
+    /**
+     *
+     *
+     */
     public function deleteOrderItem($itemID) {
         global $wpdb;
         $errCode=$wpdb->delete(Options::$table_order_items, array('orderItemsID'=>$itemID), array('%d'));
@@ -26,7 +35,7 @@ class Order extends OrderItem {
      */
     public function addItemOrder($orderID, $lotID, $data, $features) {
 		global $wpdb;
-		$status=(object) NULL;
+		$status=(object) NULL; //TODO: перенести в Cart
         //TODO: Проверять на заполненость полей перед добавлением, а так же добавить фильтр.
 
 		//--выбирать нужное, из того, что нам подсунули.
