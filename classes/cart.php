@@ -64,6 +64,9 @@ class Cart extends Order {
             echo '</div>';
 
         }
+
+        Cart::theButton('savecart', 'Сохранить', "#");
+        Cart::theButton('sendCart', 'Отправить заказ', "#");
         echo '</form></div>';
 	}
 
