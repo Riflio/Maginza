@@ -24,6 +24,16 @@ class OrderItem extends Combinations{
         $inst->itemID=$itemID;
     }
 
+    /**
+     *
+     */
+    function getItem() {
+        global $wpdb;
+        $inst=OrderItem::getInstance();
+        $table_order_items=Options::$table_order_items;
+        $item=$wpdb->get_row("SELECT * FROM {$table_order_items} WHERE orderItemsID={$inst->itemID} LIMIT 1");
+        return $item;
+    }
 
     /**
      *  Переопределяем функию полученея значения метаопции, отдаём значение из позиции заказа.
@@ -31,7 +41,9 @@ class OrderItem extends Combinations{
      */
     function getMetaValue($lot, $metaName) {
         $inst=OrderItem::getInstance();
-        return  $inst->itemID;
+        $item=$inst->getItem();
+        $metaOpts=unserialize($item->metaOptions);
+        return  $metaOpts[$metaName];
     }
 
 
