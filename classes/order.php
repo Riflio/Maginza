@@ -10,6 +10,8 @@ class Order extends OrderItem {
 
 	}
 
+
+
     /**
      *
      *
@@ -19,15 +21,9 @@ class Order extends OrderItem {
 		$status=(object) NULL;
         //TODO: Проверять на заполненость полей перед добавлением, а так же добавить фильтр.
 
-		//-- получим список опций товара, что бы на основе их выбирать нужное, из того, что нам подсунули.
-		$metaOptions=$this->getLotMetaOptions(get_post($lotID)); 
-		$values=array();
-		foreach ($metaOptions as $metaOption) {
-			if ($metaOption->optClientEditable && $metaOption->optVisible) {
-				$values[$metaOption->optName]=$data[$metaOption->optName]; //TODO:  ПРОВЕРЯТЬ!!!
-			}		
-		}
-		$values=serialize($values);
+		//--выбирать нужное, из того, что нам подсунули.
+		$metaOpts=$this->checkMetaOptions(get_post($lotID), $data);
+        $metaOpts=serialize($metaOpts);
 
         //-- подберём комбинацию по характеристикам
         $combination=$this->whatCombination($features, $lotID);
@@ -45,7 +41,7 @@ class Order extends OrderItem {
 			array(
 				'orderID'=>$orderID,
 				'orderItemID'=>$lotID,
-				'metaOptions'=>$values,
+				'metaOptions'=>$metaOpts,
 				'combinationID'=>$combination['id']
 			), array('%d', '%d', '%s', '%d')
 		);

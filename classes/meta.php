@@ -52,9 +52,8 @@ class Meta extends Formatter {
      * Отдаём формулу расчёта стоимости позиции
      */
     public function getLotFormula($lot) {
-        $groupIDS=$this->getLotMetagroups($lot);
-        return $groupIDS;
-        $groups=$this->getGroupsList();
+       $groupIDS=explode(',', $this->getLotMetagroups($lot));
+       $groups=$this->getGroupsList();
         foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
            $group=$groups[$groupID];
             if ($group->lotPriceFormula!='') {
@@ -76,8 +75,23 @@ class Meta extends Formatter {
 		}		
 		return false;
 	}
-	
-	/**
+
+    /**
+     *  Проверяем переданные метаопции на наличие в метаопциях лота, и отдаём только нужные
+     *
+     */
+    public function  checkMetaOptions($lot, $sMetaOptions) {
+        $metaOptions=$this->getLotMetaOptions($lot);
+        $values=array();
+        foreach ($metaOptions as $metaOption) {
+            if ($metaOption->optClientEditable && $metaOption->optVisible) {
+                $values[$metaOption->optName]=$sMetaOptions[$metaOption->optName]; //TODO:  ПРОВЕРЯТЬ!!!
+            }
+        }
+        return $values;
+    }
+
+    /**
     * решаем, что делать с метаопцией
 	*
     */

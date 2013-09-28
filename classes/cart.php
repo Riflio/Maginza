@@ -78,7 +78,8 @@ class Cart extends Order {
         }
         if ($method==="getitemtotalprice") {
             $itemID=intval($_GET['orderitemid']);
-            $customOpts=$_GET['customopts'];
+            $customOpts=$metaOpts=$this->checkMetaOptions(get_post($lotID), $_GET); //-- выберем метаопцтт из всего запроса
+
 
             $this->setItemID($itemID);
             $totalPrice=$this->getItemTotalPrice($customOpts);
