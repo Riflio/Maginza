@@ -154,6 +154,7 @@ class MetaSettings extends Meta {
 	function updateMetaOptions() {
 		global $wpdb;
 		$options=$_POST['metaoption']; //TODO: checkit!
+        if ($options=='') return;
 		//-- обновляем опции
 		$errCode=0;
 		foreach ($options as $key => $option) {
