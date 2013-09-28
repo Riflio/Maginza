@@ -43,6 +43,7 @@ class OrderItem extends Combinations{
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
         $metaOpts=unserialize($item->metaOptions);
+        var_dump($metaOpts);
         return  $metaOpts[$metaName];
     }
 

@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368359854" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368423097" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380270131583" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380361239502" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366570984" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380266939250" ignored="false" />
-    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368349397" ignored="false" />
+    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368479796" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +110,11 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.29834905">
+            <state line="45" column="28" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.8396226">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380368412413" expanded="true" signature="650:1092" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380368412413" expanded="true" signature="650:727" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380368486536" expanded="true" signature="650:1121" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380368486536" expanded="true" signature="650:727" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -640,7 +640,11 @@
       <created>1380368363500</created>
       <updated>1380368363500</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Работа над заказом">
+      <created>1380368426930</created>
+      <updated>1380368426930</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -884,11 +888,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="320" selection-end="320" vertical-scroll-proportion="0.29834905">
+        <state line="45" column="28" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.8396226">
           <folding>
             <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380368412413" expanded="true" signature="650:1092" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380368412413" expanded="true" signature="650:727" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380368486536" expanded="true" signature="650:1121" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380368486536" expanded="true" signature="650:727" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
