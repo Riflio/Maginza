@@ -9,6 +9,7 @@ class Cart extends Order {
     }
 
 	function showCart($args) {
+        global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
         echo '<div class="cart"><form method="GET">';
         foreach($orderItems as $item) {
@@ -16,7 +17,7 @@ class Cart extends Order {
             $itemID=$item->orderItemsID;
 
             $lot=get_post($lotID);
-
+            setup_postdata($lot);
 
             $this->setItemID($itemID);
 
@@ -31,6 +32,12 @@ class Cart extends Order {
                 echo '</div>';
 
                 echo '<div class="orderitem-content">';
+                    echo '<div class="title">';
+                        the_title();
+                    echo ' </div>';
+                    echo '<div class="descr">';
+                        the_content();
+                    echo ' </div>';
                     echo '<div class="article">Артикул:';
                          $this->theMetaValue($lot, 'Article', 'cart');
                     echo ' </div>';
