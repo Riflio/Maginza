@@ -84,7 +84,7 @@ class Meta extends Formatter {
         $metaOptions=$this->getLotMetaOptions($lot);
         $values=array();
         foreach ($metaOptions as $metaOption) {
-            if ($metaOption->optClientEditable && $metaOption->optVisible & isset($sMetaOptions[$metaOption->optName]) ) {
+            if ($metaOption->optClientEditable && $metaOption->optVisible && isset($sMetaOptions[$metaOption->optName]) ) {
                 $values[$metaOption->optName]=$sMetaOptions[$metaOption->optName]; //TODO:  ПРОВЕРЯТЬ!!!
             }
         }
