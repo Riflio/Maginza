@@ -3,7 +3,7 @@
  *
  *
  */
-use FormulaInterpreter;
+
 
 class OrderItem extends Combinations{
     private static $instance;
@@ -67,10 +67,9 @@ class OrderItem extends Combinations{
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
 
-        $compiler = new FormulaInterpreter\Compiler();
-        $executable = $compiler->compile('2 + 2');
+        $parser = new Parser('2+3*2');
 
-        return  $executable->run();;
+        return   $parser->run();
     }
 
     /**

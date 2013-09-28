@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Работаю над формулой вычисления">
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\CommandFactoryException.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\CommandFactoryInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\FunctionCommandFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\NumericCommandFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\OperationCommandFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\VariableCommandFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\FunctionCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\NumericCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\OperationCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\VariableCommand.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Compiler.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\NotEnoughArgumentsException.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\UnknownFunctionException.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\UnknownVariableException.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Executable.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\CompositeParser.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\FunctionParser.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\NumericParser.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\OperatorParser.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\ParserException.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\ParserInterface.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\VariableParser.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maginza.php" afterPath="$PROJECT_DIR$/maginza.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/orderitem.php" afterPath="$PROJECT_DIR$/classes/orderitem.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401882492" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402903179" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -18,7 +43,7 @@
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380271274019" ignored="false" />
     <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400359903" ignored="false" />
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400863761" ignored="false" />
-    <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366570984" ignored="false" />
+    <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402935765" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380398072283" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,11 +121,11 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="23" selection-start="43" selection-end="43" vertical-scroll-proportion="0.10023585">
+            <state line="69" column="35" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.6014151">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380402414140" expanded="true" signature="1006:2917" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380402414140" expanded="true" signature="1006:1083" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380402967201" expanded="true" signature="983:2823" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380402967201" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -109,7 +134,7 @@
       <file leaf-file-name="maginza.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/maginza.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="7.1923075">
+            <state line="28" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-8.5">
               <folding>
                 <element signature="e#6#929#0" expanded="true" />
               </folding>
@@ -173,7 +198,6 @@
         <option value="$PROJECT_DIR$/css/admin.maginza.css" />
         <option value="$PROJECT_DIR$/classes/lot.php" />
         <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
-        <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/classes/setup.php" />
         <option value="$PROJECT_DIR$/classes/formatter.php" />
@@ -181,6 +205,7 @@
         <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/classes/meta.php" />
         <option value="$PROJECT_DIR$/classes/metasettings.php" />
+        <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/orderitem.php" />
       </list>
     </option>
@@ -907,7 +932,11 @@
       <created>1380401885417</created>
       <updated>1380401885417</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Работаю над формулой вычисления">
+      <created>1380402422257</created>
+      <updated>1380402422257</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1139,15 +1168,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maginza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="7.1923075">
-          <folding>
-            <element signature="e#6#929#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="37" selection-start="978" selection-end="978" vertical-scroll-proportion="-11.192307">
@@ -1155,13 +1175,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/maginza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-8.5">
+          <folding>
+            <element signature="e#6#929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="43" selection-end="43" vertical-scroll-proportion="0.10023585">
+        <state line="69" column="35" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.6014151">
           <folding>
             <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380402414140" expanded="true" signature="1006:2917" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380402414140" expanded="true" signature="1006:1083" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380402967201" expanded="true" signature="983:2823" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380402967201" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
