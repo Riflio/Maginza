@@ -41,7 +41,7 @@ class Cart extends Order {
                     echo '<span class="comb">';
                         echo $comb['combination'];
                     echo '</span>';
-                       $this->showMetaForm($lot, 'Price,Article,Selprevimg', 'testtest');
+                       $this->showMetaForm($lot, 'Price,Article,Selprevimg', 'cart-'.$itemID);
                 echo '</div>';
 
             echo '</div>';
