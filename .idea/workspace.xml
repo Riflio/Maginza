@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/formatter.php" afterPath="$PROJECT_DIR$/classes/formatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/meta.php" afterPath="$PROJECT_DIR$/classes/meta.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380380259873" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380380940324" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -45,10 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="meta.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="meta.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="48" selection-start="2586" selection-end="2593" vertical-scroll-proportion="-9.666667">
+            <state line="39" column="147" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.43333334">
               <folding />
             </state>
           </provider>
@@ -63,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="formatter.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="formatter.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/formatter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="121" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.5813679">
+            <state line="49" column="141" selection-start="1445" selection-end="1453" vertical-scroll-proportion="-18.961538">
               <folding />
             </state>
           </provider>
@@ -176,7 +176,6 @@
         <option value="$PROJECT_DIR$/css/admin.maginza.css" />
         <option value="$PROJECT_DIR$/classes/lot.php" />
         <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
-        <option value="$PROJECT_DIR$/classes/meta.php" />
         <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/order.php" />
         <option value="$PROJECT_DIR$/classes/combinations.php" />
@@ -185,6 +184,7 @@
         <option value="$PROJECT_DIR$/classes/setup.php" />
         <option value="$PROJECT_DIR$/classes/metasettings.php" />
         <option value="$PROJECT_DIR$/classes/formatter.php" />
+        <option value="$PROJECT_DIR$/classes/meta.php" />
       </list>
     </option>
   </component>
@@ -786,7 +786,11 @@
       <created>1380380263953</created>
       <updated>1380380263953</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Добавил label к виджетам у форматтера">
+      <created>1380380942847</created>
+      <updated>1380380942847</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -875,7 +879,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил к метаопции заголовок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил label к виджетам у форматтера" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -913,6 +917,7 @@
     <MESSAGE value="Добавил мета опцию по умолчанию - Price" />
     <MESSAGE value="Работаю над корзиной" />
     <MESSAGE value="Добавил к метаопции заголовок" />
+    <MESSAGE value="Добавил label к виджетам у форматтера" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -998,13 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="48" selection-start="2586" selection-end="2593" vertical-scroll-proportion="-9.666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="50" selection-start="1462" selection-end="1477" vertical-scroll-proportion="-14.384615">
@@ -1039,7 +1037,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/formatter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="121" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.5813679">
+        <state line="49" column="141" selection-start="1445" selection-end="1453" vertical-scroll-proportion="-18.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="147" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.43333334">
           <folding />
         </state>
       </provider>

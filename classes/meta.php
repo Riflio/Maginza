@@ -37,7 +37,7 @@ class Meta extends Formatter {
 		global $wpdb;	
 		//-- проверим, принадлежит ли нужной группе, отсортируем в порядке возрастания айдишников групп и  только уникальные названия
 		$lotMetaGroups=$this->getLotMetagroups($lot);
-		$metaOpts=$wpdb->get_results('SELECT DISTINCT optName, optType, optValue, optFormatter, optVisible, optClientEditable, optGroupID FROM '.Options::$table_meta_options.' WHERE optGroupID IN ('.$lotMetaGroups.') ORDER BY optGroupID ', OBJECT);	
+		$metaOpts=$wpdb->get_results('SELECT DISTINCT optName, optType, optValue, optFormatter, optVisible, optClientEditable, optGroupID, optTitle FROM '.Options::$table_meta_options.' WHERE optGroupID IN ('.$lotMetaGroups.') ORDER BY optGroupID ', OBJECT);
 		return $metaOpts; 
 		//TODO: запомнить вывод
 	}
