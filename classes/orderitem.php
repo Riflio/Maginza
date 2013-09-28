@@ -67,9 +67,10 @@ class OrderItem extends Combinations{
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
 
-        $parser = new Parser('2+3*2');
+        $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
-        return   $parser->run();
+        //$parser = new Parser($formula);
+        return   $formula;
     }
 
     /**

@@ -1,38 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Работаю над формулой вычисления">
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\CommandFactoryException.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\CommandFactoryInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\FunctionCommandFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\NumericCommandFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\OperationCommandFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandFactory\VariableCommandFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\CommandInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\FunctionCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\NumericCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\OperationCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Command\VariableCommand.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Compiler.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\NotEnoughArgumentsException.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\UnknownFunctionException.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Exception\UnknownVariableException.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Executable.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\CompositeParser.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\FunctionParser.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\NumericParser.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\OperatorParser.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\ParserException.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\ParserInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\Maginza\classes\FormulaInterpreter\Parser\VariableParser.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maginza.php" afterPath="$PROJECT_DIR$/maginza.php" />
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/orderitem.php" afterPath="$PROJECT_DIR$/classes/orderitem.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402903179" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380403160466" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -45,7 +20,7 @@
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400863761" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402935765" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
-    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380398072283" ignored="false" />
+    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380403696839" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,11 +96,11 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="35" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.6014151">
+            <state line="71" column="10" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.35849056">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380402967201" expanded="true" signature="983:2823" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380402967201" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380403869444" expanded="true" signature="983:2908" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380403869444" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -151,15 +126,6 @@
                 <marker date="1380400396370" expanded="true" signature="885:983" placeholder="..." />
                 <marker date="1380400396370" expanded="true" signature="3434:3510" placeholder="SELECT order..{$table_order}..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/setup.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="30" selection-start="1388" selection-end="1388" vertical-scroll-proportion="-15.307693">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -191,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/js/jquery.admin.js" />
         <option value="$PROJECT_DIR$/classes/options.php" />
@@ -206,6 +171,7 @@
         <option value="$PROJECT_DIR$/classes/meta.php" />
         <option value="$PROJECT_DIR$/classes/metasettings.php" />
         <option value="$PROJECT_DIR$/maginza.php" />
+        <option value="$PROJECT_DIR$/classes/FormulaInterpreter/Calculator.class.php" />
         <option value="$PROJECT_DIR$/classes/orderitem.php" />
       </list>
     </option>
@@ -333,6 +299,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maginza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maginza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FormulaInterpreter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -936,7 +920,15 @@
       <created>1380402422257</created>
       <updated>1380402422257</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Работаю над формулой вычисления">
+      <created>1380403011323</created>
+      <updated>1380403011323</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Работаю над формулой вычисления">
+      <created>1380403173467</created>
+      <updated>1380403173467</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1069,20 +1061,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="133" selection-end="133" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1184,13 +1162,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/FormulaInterpreter/Calculator.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="3" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.2806604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="720" column="31" selection-start="21369" selection-end="21369" vertical-scroll-proportion="0.44339624">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="35" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.6014151">
+        <state line="71" column="10" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.35849056">
           <folding>
             <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380402967201" expanded="true" signature="983:2823" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380402967201" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380403869444" expanded="true" signature="983:2908" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380403869444" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
