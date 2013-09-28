@@ -18,6 +18,9 @@ class Cart extends Order {
 
             $lot=get_post($lotID);
 
+            $post=$lot;
+            setup_postdata($post);
+
             $this->setItemID($itemID);
 
             $comb=$this->getCombination();
@@ -32,10 +35,10 @@ class Cart extends Order {
 
                 echo '<div class="orderitem-content">';
                     echo '<div class="title">';
-                        echo $lot->post_title;
+                        the_title();
                     echo ' </div>';
                     echo '<div class="descr">';
-                        echo $lot->post_content;
+                        the_content();
                     echo ' </div>';
                     echo '<div class="article">Артикул:';
                          $this->theMetaValue($lot, 'Article', 'cart');
