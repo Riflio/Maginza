@@ -44,10 +44,10 @@ class Formatter extends Options{
 
 		switch ($type) {
 			case 'text': 
-				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label><br/>';
+				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
 			break;
 			case 'spin':
-				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label><br/>';
+				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
 			break;
 			case 'hidden':
 				return '<input name="'.$name.'" id="'.$name.'" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
