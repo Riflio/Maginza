@@ -84,7 +84,7 @@ class Cart extends Order {
             $this->setItemID($itemID);
             $totalPrice=$this->getItemTotalPrice($customOpts);
 
-            var_dump($totalPrice);
+            echo  $totalPrice;
         }
         die();
     }
