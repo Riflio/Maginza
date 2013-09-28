@@ -33,7 +33,6 @@ class Formatter extends Options{
 	function widget($type, $metaOpt, $metaVal, $formName) {
 		$args = func_get_args();
 		apply_filters('mz_widget', $args);
-		apply_filters('mz_widget_'.$type, $args);
 		switch ($type) { //-- виджеты по умолчанию
 			case 'text': 
 				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
@@ -44,6 +43,9 @@ class Formatter extends Options{
 			case 'hidden':
 				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
+            default:
+                return apply_filters('mz_widget_'.$type, $args);
+            break;
 
 		}
 	}
