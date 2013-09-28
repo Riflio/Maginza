@@ -82,10 +82,8 @@ class Meta extends Formatter {
 		//-- проверить, если редактируемый или из админки, то выводим виджет, нет - через форматтер прогоняем
 		if ($metaOpt->optClientEditable || is_admin()  ) {
 			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal, $formName);
-            echo '<br>';
 		} else {
 			echo $this->format($metaOpt->optFormatter, $metaOpt, $metaVal);
-            echo '<br>';
 		}
 	}
 	
