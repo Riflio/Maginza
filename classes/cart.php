@@ -49,7 +49,7 @@ class Cart extends Order {
                     echo '<div class="countandprice">';
                        echo '<div class="price">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</div>';
                        echo '<span class="x">x</span>';
-                       echo '<div class="count">'; $this->theMetaValue($lot, 'Price',  'cart-'.$itemID); echo '</div>';
+                       echo '<div class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</div>';
                        echo '<span class="cost">5555Р</span>';
                     echo '</div>';
 
