@@ -34,6 +34,7 @@ class Cart extends Order {
                 echo '</div>';
 
                 echo '<div class="orderitem-content">';
+                    echo $this->metaFormID();
                     echo '<div class="title">';
                         the_title();
                     echo ' </div>';

@@ -86,7 +86,7 @@ class OrderItem extends Combinations{
       * Переопределяем функцию айдишника формы
       *
       */
-    public function metaFormID($lot) {
+    public function metaFormID($lot='') {
         $inst=OrderItem::getInstance();
         return "<input type='hidden' name='orderitemid' id='orderItemID' value='{$inst->itemID}'/>";
     }
