@@ -30,8 +30,7 @@ class OrderItem extends Combinations{
     public function getCombination() {
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
-        $comb=parent::getCombination($item->orderItemID, $inst->itemID);
-        echo 'FFF'.$item->orderItemID.'   '.$inst->itemID;
+        $comb=parent::getCombination($item->orderItemID, $item->combinationID);
         return $comb;
     }
 
