@@ -50,6 +50,44 @@ jQuery(document).ready(function($){
             }
         );
     });
-	
+
+    $('.cartactbtns #saveCart').on('click', function(){
+        $.get(
+            maginza.ajaxurl+'?'+$('#formcart').serialize(),
+            {
+                action:	'order',
+                method: 'savecart'
+            },
+            function(_data){
+                try {
+                    var data=$.parseJSON(_data);
+                }
+                catch (err) {
+                    return;
+                }
+                alert('Сохранено.');
+            }
+        );
+    });
+
+    $('.cartactbtns #sendCart').on('click', function(){
+        $.get(
+            maginza.ajaxurl,
+            {
+                action:	'order',
+                method: 'sendCart',
+                cartorderid: $('#cartOrderID').val()
+            },
+            function(_data){
+                try {
+                    var data=$.parseJSON(_data);
+                }
+                catch (err) {
+                    return;
+                }
+                alert('Ваш заказ отправлен на обработку.');
+            }
+        );
+    });
 
 });

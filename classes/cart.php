@@ -11,7 +11,8 @@ class Cart extends Order {
 	function showCart($args) {
         global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
-        echo '<div class="cart"><form method="GET">';
+        echo '<div class="cart"><form method="GET" id="formcart" >';
+            echo '<input type="hidden" name="cartOrderID" id="cartOrderID" value="'.$this->orderID().'" />';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
             $itemID=$item->orderItemsID;
@@ -65,7 +66,7 @@ class Cart extends Order {
 
         }
         echo '<div class="cartactbtns">';
-            Cart::theButton('savecart', 'Сохранить', "#");
+            Cart::theButton('saveCart', 'Сохранить', "#");
             Cart::theButton('sendCart', 'Отправить заказ', "#");
         echo '</div>';
         echo '</form></div>';
@@ -103,6 +104,17 @@ class Cart extends Order {
             $res->orderitemid=$itemID;
             echo json_encode($res);
         }
+
+        if ($method==="savecart") {
+            $metaoptvals=$_GET['metaoptvals'];
+            $this->saveCart($metaoptvals);
+        }
+
+        if ($method==="sendcart") {
+            $cartOrderID=intval($_GET['cartorderid']);
+            $this->sendCart($cartOrderID);
+        }
+
         die();
     }
 
@@ -129,6 +141,25 @@ class Cart extends Order {
 
     public function theButton($action, $text, $url) {
         echo Formatter::format('button', $action, $text, $url);
+    }
+
+    /**
+     *
+     *
+     */
+    public function saveCart($metaoptvals) {
+        foreach($metaoptvals as $orderitemid => $vals) {
+
+        }
+    }
+
+    /**
+     *
+     *
+     */
+    public function sendCart($orderID) {
+        global $wpdb;
+
     }
 
 
