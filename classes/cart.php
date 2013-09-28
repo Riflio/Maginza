@@ -17,10 +17,11 @@ class Cart extends Order {
             $itemID=$item->orderItemsID;
 
             $lot=get_post($lotID);
-            $comb=$this->getCombination();
+
 
             $this->setItemID($itemID);
 
+            $comb=$this->getCombination();
 
             //TODO: изменить на пользовательский шаблон
 
