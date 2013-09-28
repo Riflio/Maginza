@@ -54,6 +54,8 @@ class Meta extends Formatter {
     public function getLotFormula($lot) {
        $groupIDS=explode(',', $this->getLotMetagroups($lot));
        $groups=$this->getGroupsList();
+        var_dump($groups);
+        var_dump( $groupIDS);
         foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
            $group=$groups[$groupID];
             if ($group->lotPriceFormula!='null') {
