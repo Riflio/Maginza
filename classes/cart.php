@@ -16,6 +16,7 @@ class Cart extends Order {
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
 
+            $this->setItemID($item->orderItemsID);
 
             $combinations=$this->getCombinationList($lotID);
 
