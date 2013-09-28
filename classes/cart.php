@@ -27,7 +27,7 @@ class Cart extends Order {
 
             //TODO: изменить на пользовательский шаблон
 
-            echo '<div class="orderitem item-'.$lotID.'">';
+            echo '<div class="orderitem item-'.$itemID.'">';
 
                 echo '<div class="orderitem-previmg">';
                          $this->theMetaValue($lot, 'Selprevimg', 'cart');
