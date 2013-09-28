@@ -24,7 +24,10 @@ class Formatter extends Options{
 			break;
 			case 'button':
 				return sprintf(get_option('mz_format_addbutton'), $args[1], $args[2] );
-			break;	
+			break;
+            case 'price':
+                return sprintf(get_option('mz_format_price'), $args[2]);
+            break;
 		}
 	}
 

@@ -37,6 +37,7 @@ class MetaSettings extends Meta {
 			array('text','Text'),
 			array('number', 'Number'),
 			array('hidden', 'Hidden'),
+            array('price', 'Price')
 		);
 		
 		
