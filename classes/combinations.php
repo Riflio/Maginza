@@ -106,6 +106,14 @@ class Combinations extends Meta{
     }
 
     /**
+     *  Отдаём конкретную комбинацию
+     */
+    public function getCombination($lotID, $combID) {
+        $combs=getCombinationList($lotID);
+        return $combs[$combID];
+    }
+
+    /**
     * Отдаём список комбинаций товара
     *
     */

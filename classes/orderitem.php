@@ -25,7 +25,17 @@ class OrderItem extends Combinations{
     }
 
     /**
-     *
+     * Отдаём комбинацию(а в ней выбранные характеристики) позиции заказа
+     */
+    public function getCombination() {
+        $inst=OrderItem::getInstance();
+        $item=$inst->getItem();
+        $comb=parent::getCombination($item->orderItemID, $inst->itemID);
+        return $comb;
+    }
+
+    /**
+     * Отдаём позицию заказа
      */
     public function getItem() {
         global $wpdb;

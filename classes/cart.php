@@ -11,29 +11,33 @@ class Cart extends Order {
 	function showCart($args) {
 		echo 'Корзина';
 		$orderItems=$this->getListOrderItems($this->orderID());
-
         echo '<form method="GET">';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
+            $itemID=$item->orderItemsID;
+
             $lot=get_post($lotID);
 
-            $this->setItemID($item->orderItemsID);
+            $this->setItemID($itemID);
 
-            $combinations=$this->getCombinationList($lotID);
+
+            //TODO: изменить на пользовательский шаблон
 
             echo '<div class="orderitem">';
 
-                echo '<div class="orderitem-previmg"> test1 </div>';
+                echo '<div class="orderitem-previmg">';
+                         $this->theMetaValue($lot, 'Selprevimg', 'cart');
+                echo '</div>';
 
                 echo '<div class="orderitem-content">';
                     echo '<span class="article">Артикул:';
-
+                         $this->theMetaValue($lot, 'Article', 'cart');
                     echo ' </span>';
                     echo '<span class="article">Цена:';
-
+                        $this->theMetaValue($lot, 'Price', 'cart');
                     echo' </span>';
-                    echo '<span class="comb">'.$combinations[$item->combinationID]['combination'].'</span>';
-                       $this->showMetaForm($lot, '', 'testtest');
+                    echo '<span class="comb">'.$this->getCombination().'</span>';
+                       $this->showMetaForm($lot, 'Price,Article,Selprevimg', 'testtest');
                 echo '</div>';
 
             echo '</div>';
