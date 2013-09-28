@@ -58,14 +58,16 @@ jQuery(document).ready(function($){
                 action:	'order',
                 method: 'savecart'
             },
-            function(_data){
+            function(data){
+                alert(data);
+                alert('Сохранено.');
                 try {
                     var data=$.parseJSON(_data);
                 }
                 catch (err) {
                     return;
                 }
-                alert('Сохранено.');
+
             }
         );
     });

@@ -151,6 +151,8 @@ class Cart extends Order {
         foreach($metaoptvals as $orderitemid => $vals) {
 
         }
+
+        var_dump($metaoptvals);
     }
 
     /**
