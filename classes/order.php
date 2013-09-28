@@ -24,7 +24,7 @@ class Order extends OrderItem {
 		$values=array();
 		foreach ($metaOptions as $metaOption) {
 			if ($metaOption->optClientEditable && $metaOption->optVisible) {
-				$values[]=array($metaOption->optName=>$data[$metaOption->optName]); //TODO:  ПРОВЕРЯТЬ!!!
+				$values[$metaOption->optName]=$data[$metaOption->optName]; //TODO:  ПРОВЕРЯТЬ!!!
 			}		
 		}
 		$values=serialize($values);
