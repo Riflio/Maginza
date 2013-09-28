@@ -47,9 +47,9 @@ class Cart extends Order {
                         echo $comb['combination'];
                     echo '</div>';
                     echo '<div class="countandprice">';
-                       echo '<div class="price">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</div>';
+                       echo '<span class="price">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</span>';
                        echo '<span class="x">x</span>';
-                       echo '<div class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</div>';
+                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</span>';
                        echo '<span class="eq">=</span>';
                        echo '<span class="cost">5555Р</span>';
                     echo '</div>';
