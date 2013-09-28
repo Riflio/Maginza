@@ -43,13 +43,16 @@ class Cart extends Order {
                     echo '<div class="article">Артикул:';
                          $this->theMetaValue($lot, 'Article', 'cart');
                     echo ' </div>';
-                    echo '<div class="article">Цена:';
-                        $this->theMetaValue($lot, 'Price', 'cart');
-                    echo' </div>';
                     echo '<div class="comb">';
                         echo $comb['combination'];
                     echo '</div>';
-                       $this->showMetaForm($lot, 'Price,Article,Selprevimg', 'cart-'.$itemID);
+                    echo '<div class="countandprice">';
+                       echo '<div class="price">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</div>';
+                       echo '<span class="x">x</span>';
+                       echo '<div class="count">'; $this->theMetaValue($lot, 'Price',  'cart-'.$itemID); echo '</div>';
+                       echo '<span class="cost">5555Р</span>';
+                    echo '</div>';
+
                 echo '</div>';
 
             echo '</div>';
