@@ -44,8 +44,9 @@ class Formatter extends Options{
 				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
             default:
-                $val='';
-                return apply_filters('mz_widget_'.$type, $val, $args);
+                $val='111';
+                apply_filters('mz_widget_'.$type, $val, $args);
+                    return $val;
             break;
 
 		}
