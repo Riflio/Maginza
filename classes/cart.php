@@ -84,7 +84,11 @@ class Cart extends Order {
             $this->setItemID($itemID);
             $totalPrice=$this->getItemTotalPrice($customOpts);
 
-            echo  $totalPrice;
+            $price=(object) NULL;
+            $price->text=Formatter::format('Price',  $totalPrice);
+            $price->value=$totalPrice;
+            $price->orderitemid=$itemID;
+            echo json_encode($price);
         }
         die();
     }
