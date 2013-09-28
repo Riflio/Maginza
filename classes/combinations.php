@@ -109,7 +109,7 @@ class Combinations extends Meta{
      *  Отдаём конкретную комбинацию
      */
     public function getCombination($lotID, $combID) {
-        $combs=getCombinationList($lotID);
+        $combs=$this->getCombinationList($lotID);
         return $combs[$combID];
     }
 
