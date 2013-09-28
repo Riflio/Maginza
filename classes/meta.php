@@ -52,12 +52,10 @@ class Meta extends Formatter {
      * Отдаём формулу расчёта стоимости позиции
      */
     public function getLotFormula($lot) {
-       $groupIDS=explode(',', $this->getLotMetagroups($lot));
-       $groups=$this->getGroupsList();
-        var_dump($groups);
-        var_dump( $groupIDS);
+        $groupIDS=explode(',', $this->getLotMetagroups($lot));
+        $groups=$this->getGroupsList();
         foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
-           $group=$groups[$groupID];
+            $group=$groups[$groupID];
             if ($group->lotPriceFormula!='null') {
                 return $group->lotPriceFormula;
             }
