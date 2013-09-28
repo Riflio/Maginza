@@ -56,7 +56,7 @@ class Cart extends Order {
                     echo '</div>';
 
                     echo '<div class="actionbtns">';
-                        Cart::theButton('delete', 'Удалить');
+                        Cart::theButton('delete'.$itemID, 'Удалить');
                     echo '</div>';
 
                 echo '</div>';
