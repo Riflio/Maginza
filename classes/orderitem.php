@@ -36,14 +36,17 @@ class OrderItem extends Combinations{
     }
 
     /**
-     *  Переопределяем функию полученея значения метаопции, отдаём значение из позиции заказа.
+     *  Переопределяем функию полученея значения метаопции,
+     *  отдаём значение из позиции заказа
+     *  если значения нет, отдаём значение от лота
      *
      */
     function getMetaValue($lot, $metaName) {
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
         $metaOpts=unserialize($item->metaOptions);
-        return  $metaOpts[$metaName];
+        $metaval=($metaOpts[$metaName])? $metaOpts[$metaName] : parent::getMetaValue( $item->orderItemID, $metaName);
+        return  $metaval;
     }
 
 
