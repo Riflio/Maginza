@@ -11,7 +11,7 @@ class Cart extends Order {
 	function showCart($args) {
 		echo 'Корзина';
 		$orderItems=$this->getListOrderItems($this->orderID());
-        echo '<div class="Cart"><form method="GET">';
+        echo '<div class="cart"><form method="GET">';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
             $itemID=$item->orderItemsID;
