@@ -24,7 +24,7 @@ require_once 'classes/options.php';
 require_once 'classes/formatter.php';
 require_once 'classes/meta.php';  require_once 'classes/metasettings.php';
 require_once 'classes/combinations.php';
-require_once 'classes/lot.php';
+require_once 'classes/lot.php'; require_once 'classes/lots.php';
 
 require_once 'classes/buyer.php';
 
@@ -44,6 +44,7 @@ class Maginza extends Options  {
 	private $order;
 	private $cart;
 	public $combinations;
+    private $lots;
 	
 	function __construct(){
 		//-- подгрузим язык --//
@@ -56,10 +57,12 @@ class Maginza extends Options  {
 			$this->setup=new Setup(__FILE__);
 			$this->admin=new Admin();
 		}
+
 		$this->options=new Options();
 		$this->order=new Order();
 		$this->cart=new Cart();
 		$this->combinations=new Combinations();
+        $this->lots=new Lots();
 		
 		add_action('init', array($this, 'init'), 1);			
 		//--  Добавим поиск по артикулу а потом мож ещё по чему 
