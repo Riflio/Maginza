@@ -45,7 +45,7 @@ class OrderItem extends Combinations{
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
         $metaOpts=unserialize($item->metaOptions);
-        $metaval=($metaOpts[$metaName]!=null)? $metaOpts[$metaName] : 444;
+        $metaval=($metaOpts[$metaName]!=null)? $metaOpts[$metaName] : $lot->ID;
         return  $metaval;
     }
 
