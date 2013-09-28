@@ -45,7 +45,7 @@ class OrderItem extends Combinations{
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
         $metaOpts=unserialize($item->metaOptions);
-        $metaval=($metaOpts[$metaName])? $metaOpts[$metaName] : parent::getMetaValue( $item->orderItemID, $metaName);
+        $metaval=($metaOpts[$metaName]!=null)? $metaOpts[$metaName] : parent::getMetaValue( $item->orderItemID, $metaName);
         return  $metaval;
     }
 
