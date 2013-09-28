@@ -15,7 +15,9 @@ class Formatter extends Options{
     function format($templ, $param) {
 		$args = func_get_args();
 		apply_filters('mz_format', $args);
-		apply_filters('mz_format_'.$args[0], $args);
+		$val=apply_filters('mz_format_'.$args[0], '', $args);
+        if ($val!='') return $val;
+        //-- форматтеры по умолчанию
 		switch ($templ) {
 			case 'text':
 				return sprintf('%s', $args[2]);							
@@ -31,9 +33,11 @@ class Formatter extends Options{
      *
      */
 	function widget($type, $metaOpt, $metaVal, $formName) {
-		$args = func_get_args();
-		apply_filters('mz_widget', $args);
-		switch ($type) { //-- виджеты по умолчанию
+		apply_filters('mz_widget', '',  $metaOpt, $metaVal, $formName);
+        $val=apply_filters('mz_widget_'.$type, '',  $metaOpt, $metaVal, $formName);
+        if ($val!='') return $val;
+        //-- виджеты по умолчанию
+		switch ($type) {
 			case 'text': 
 				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
 			break;
@@ -43,10 +47,6 @@ class Formatter extends Options{
 			case 'hidden':
 				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
-            default:
-                return apply_filters('mz_widget_'.$type, '',  $metaOpt, $metaVal, $formName);
-             break;
-
 		}
 	}
 
