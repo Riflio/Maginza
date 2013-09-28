@@ -22,6 +22,7 @@ class MetaSettings extends Meta {
 
 		$this->columns=array(
 			'name'=> __('Name'),
+            'title'=> __('Title'),
 			'type'=> __('Type'),
 			'value'=> __('Value'),
 			'formatter'=>__('Formatter'),
@@ -158,11 +159,12 @@ class MetaSettings extends Meta {
 		foreach ($options as $key => $option) {
 			$errCode=$wpdb->update(Options::$table_meta_options, 
 				array(
-					'optType'=>$option['type'], 
+					'optType'=>$option['type'],
 					'optValue'=>$option['value'], 
 					'optFormatter'=>$option['formatter'],
 					'optVisible'=>intval($option['visible']), 
-					'optClientEditable'=>intval($option['editable']) 
+					'optClientEditable'=>intval($option['editable']),
+                    'optTitle'=>$option['title']
 				), 
 				array('id'=>$key), 
 				array('%s', '%s', '%s', '%d', '%d'), 
@@ -339,8 +341,10 @@ class MetaSettings__List_Table extends WP_List_Table {
 			case 'clienteditable': 
 				$editable=($item->optClientEditable==true)? 'checked':'';
 				return "<input name='metaoption[{$item->id}][editable]' type='checkbox' value='1' disabled {$editable} />";
+            case 'title':
+                return "<input name='metaoption[{$item->id}][title]' type='text' value='{$item->optTitle}' disabled />";
 			default:
-				return 'error'; //TODO: сделать ногрмальным сообщение об ошибке
+				return 'error'; //TODO: сделать нормальным сообщение об ошибке
 		}
 	}
 	
