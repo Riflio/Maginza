@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/metasettings.php" afterPath="$PROJECT_DIR$/classes/metasettings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/meta.php" afterPath="$PROJECT_DIR$/classes/meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/orderitem.php" afterPath="$PROJECT_DIR$/classes/orderitem.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380390803581" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380391414373" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -16,11 +18,11 @@
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366803713" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380271274019" ignored="false" />
-    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380390739614" ignored="false" />
-    <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380384211289" ignored="false" />
+    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380395269034" ignored="false" />
+    <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380395636196" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366570984" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380391408249" ignored="false" />
-    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371822433" ignored="false" />
+    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380396187990" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +50,16 @@
       <file leaf-file-name="meta.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-11.0">
+            <state line="123" column="40" selection-start="4077" selection-end="4089" vertical-scroll-proportion="-24.26923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metasettings.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="metasettings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="0.43377885">
+            <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="-14.0">
               <folding />
             </state>
           </provider>
@@ -96,24 +98,24 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="50" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-30.0">
+            <state line="90" column="54" selection-start="2707" selection-end="2718" vertical-scroll-proportion="-26.076923">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380371822514" expanded="true" signature="982:1579" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380371822514" expanded="true" signature="982:1059" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380396187748" expanded="true" signature="982:2772" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380396187748" expanded="true" signature="982:1059" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="0" selection-start="3579" selection-end="3579" vertical-scroll-proportion="-26.153847">
+            <state line="78" column="49" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.6214623">
               <folding>
-                <marker date="1380390785701" expanded="true" signature="885:990" placeholder="..." />
-                <marker date="1380390785701" expanded="true" signature="885:983" placeholder="..." />
-                <marker date="1380390785701" expanded="true" signature="3020:3096" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380396192874" expanded="true" signature="885:990" placeholder="..." />
+                <marker date="1380396192874" expanded="true" signature="885:983" placeholder="..." />
+                <marker date="1380396192874" expanded="true" signature="3308:3384" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -179,12 +181,12 @@
         <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/classes/order.php" />
         <option value="$PROJECT_DIR$/classes/combinations.php" />
-        <option value="$PROJECT_DIR$/classes/orderitem.php" />
         <option value="$PROJECT_DIR$/classes/setup.php" />
-        <option value="$PROJECT_DIR$/classes/meta.php" />
         <option value="$PROJECT_DIR$/classes/formatter.php" />
-        <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/classes/metasettings.php" />
+        <option value="$PROJECT_DIR$/classes/meta.php" />
+        <option value="$PROJECT_DIR$/classes/orderitem.php" />
+        <option value="$PROJECT_DIR$/classes/cart.php" />
       </list>
     </option>
   </component>
@@ -858,7 +860,11 @@
       <created>1380390806428</created>
       <updated>1380390806428</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Работаю над корзиной">
+      <created>1380391416652</created>
+      <updated>1380391416652</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1053,24 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="50" selection-start="1252" selection-end="1252" vertical-scroll-proportion="-30.0">
-          <folding>
-            <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380371822514" expanded="true" signature="982:1579" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380371822514" expanded="true" signature="982:1059" placeholder="SELECT * FRO..{$table_order_items}..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="50" selection-start="1462" selection-end="1477" vertical-scroll-proportion="-14.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/setup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="30" selection-start="1388" selection-end="1388" vertical-scroll-proportion="-15.307693">
@@ -1085,13 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-11.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/formatter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="90" selection-start="1229" selection-end="1229" vertical-scroll-proportion="-24.192308">
@@ -1099,21 +1080,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/cart.php">
+    <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3579" selection-end="3579" vertical-scroll-proportion="-26.153847">
+        <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="-14.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="50" selection-start="1462" selection-end="1477" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="40" selection-start="4077" selection-end="4089" vertical-scroll-proportion="-24.26923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="54" selection-start="2707" selection-end="2718" vertical-scroll-proportion="-26.076923">
           <folding>
-            <marker date="1380390785701" expanded="true" signature="885:990" placeholder="..." />
-            <marker date="1380390785701" expanded="true" signature="885:983" placeholder="..." />
-            <marker date="1380390785701" expanded="true" signature="3020:3096" placeholder="SELECT order..{$table_order}..." />
+            <element signature="e#6#19#0" expanded="true" />
+            <marker date="1380396187748" expanded="true" signature="982:2772" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380396187748" expanded="true" signature="982:1059" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
+    <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="0.43377885">
-          <folding />
+        <state line="78" column="49" selection-start="2826" selection-end="2826" vertical-scroll-proportion="0.6214623">
+          <folding>
+            <marker date="1380396192874" expanded="true" signature="885:990" placeholder="..." />
+            <marker date="1380396192874" expanded="true" signature="885:983" placeholder="..." />
+            <marker date="1380396192874" expanded="true" signature="3308:3384" placeholder="SELECT order..{$table_order}..." />
+          </folding>
         </state>
       </provider>
     </entry>

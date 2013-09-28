@@ -13,7 +13,7 @@ class Meta extends Formatter {
 	function getGroupsList() {
 		global $wpdb;
 		//TODO: запоминать вывод.
-		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group);
+		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group.' ORDER BY groupID');
 	}
 	
 	function getLotMetagroups($lot) {
@@ -43,17 +43,23 @@ class Meta extends Formatter {
 	}
 	
 	function getMetaValue($lot, $metaName) {
-		$metaVal=get_metadata('maginza', $lot->ID, $metaName, true);	
+		$metaVal=get_metadata('maginza', $lot->ID, $metaName, true);
 		$metaVal=apply_filters('getmetavalue',$metaVal, $metaName, $lot->ID);
 		return $metaVal;
 	}
 
     /**
-     *
-     *
+     * Отдаём формулу расчёта стоимости позиции
      */
-    function setMetaOrderValues() {
-
+    public function getLotFormula($lot) {
+        $groupIDS=$this->getLotMetagroups($lot);
+        $groups=$this->getGroupsList();
+        foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
+           $group=$groups[$groupID];
+            if ($group->lotPriceFormula!='') {
+                return $group->lotPriceFormula;
+            }
+        }
     }
 
 
@@ -95,17 +101,23 @@ class Meta extends Formatter {
 		$this->processMetaOption($metaOpt, $metaVal, $formName);
 		return true;		
 	}
-	
-	/**
+
+    /**
+     * Отдаём айдишник формы, что бы знать какую правим
+     *
+     */
+    public function metaFormID($lot) {
+        return "<input type='hidden' name='lotid' id='lotid' value='{$lot->ID}'/>";
+    }
+
+    /**
 	*
 	*  $exclude (string) если надо исключить из вывода какой либо виджет или форматтер
 	*/
 	public function showMetaForm($lot, $exclude='', $formName) {
-		global $wpdb;			
 		$options=$this->getLotMetaOptions($lot);
 		$exclude=explode(',', $exclude);
-		//-- в любом случае добавим айдишник лота
-		echo "<input type='hidden' name='lotid' id='lotid' value='{$lot->ID}'/>";
+        echo $this->metaFormID($lot);
 		if (!$options) return; 
 		foreach($options as $option) {
 			if (in_array($option->optName, $exclude))	continue;				

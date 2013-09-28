@@ -75,7 +75,15 @@ class Cart extends Order {
 
             echo $this->addItemOrder($this->orderID(true), $lotID, $metaOpts, $features);
         }
+        if ($method==="getitemtotalprice") {
+            $itemID=intval($_GET['orderitemid']);
+            $customOpts=$_GET['customopts'];
 
+            $this->setItemID($itemID);
+            $totalPrice=$this->getItemTotalPrice($customOpts);
+
+            var_dump($totalPrice);
+        }
         die();
     }
 

@@ -46,6 +46,30 @@ class OrderItem extends Combinations{
     }
 
     /**
+     * Отдаём конечную стоимость позиции товара
+     *
+     */
+    function getItemTotalPrice($customMetaOptions=array()) {
+        //TODO: Передать это в яваскрипт, для высчитывания формулы без аджакса
+        $inst=OrderItem::getInstance();
+        $item=$inst->getItem();
+        $lot=get_post($item->orderItemID);
+        //--
+        $formula=$this->getLotFormula($lot);
+
+        // возьмём значения по умолчанию опций лота  объединим с изменёнными значениями опций лота из текущего элемента заказа
+        // + объединим с текущими изменёнными значениями опций
+        $lotMetaOptions=$this->getLotMetaOptions($lot);
+        $orderItemMetaOptions=array();
+        foreach ($lotMetaOptions as $metaOpt) {
+            $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+        }
+        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
+
+        return $metaOpts;
+    }
+
+    /**
      *  Переопределяем функию полученея значения метаопции,
      *  отдаём значение из позиции заказа
      *  если значения нет, отдаём значение от лота
@@ -58,7 +82,14 @@ class OrderItem extends Combinations{
         $metaval=($metaOpts[$metaName]!=null)? $metaOpts[$metaName] : parent::getMetaValue($lot, $metaName);
         return  $metaval;
     }
-
+     /**
+      * Переопределяем функцию айдишника формы
+      *
+      */
+    public function metaFormID($lot) {
+        $inst=OrderItem::getInstance();
+        return "<input type='hidden' name='orderitemid' id='orderItemID' value='{$inst->itemID}'/>";
+    }
 
 
 }
