@@ -115,8 +115,8 @@ class Cart extends Order {
     }
 
 
-    public function theButton($action, $text) {
-        echo Formatter::format('button', $action, $text);
+    public function theButton($action, $text, $url) {
+        echo Formatter::format('button', $action, $text, $url);
     }
 
 
