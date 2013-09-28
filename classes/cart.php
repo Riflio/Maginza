@@ -88,6 +88,7 @@ class Cart extends Order {
             $price->text=Formatter::format('price', '', $totalPrice);
             $price->value=$totalPrice;
             $price->orderitemid=$itemID;
+            $price->rand=$_GET['rand'];
             echo json_encode($price);
         }
         die();
