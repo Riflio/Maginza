@@ -14,7 +14,7 @@ class OrderItem extends Combinations{
 
     public static function getInstance() {
         if ( is_null(self::$instance) ) {
-            self::$instance = new Lot();
+            self::$instance = new OrderItem();
         }
         return self::$instance;
     }
