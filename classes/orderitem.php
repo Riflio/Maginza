@@ -27,7 +27,7 @@ class OrderItem extends Combinations{
     /**
      *
      */
-    function getItem() {
+    public function getItem() {
         global $wpdb;
         $inst=OrderItem::getInstance();
         $table_order_items=Options::$table_order_items;

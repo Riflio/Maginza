@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380367539851" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368301752" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380270131583" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380361239502" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366570984" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380266939250" ignored="false" />
-    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368281329" ignored="false" />
+    <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380368349397" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +110,11 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="50" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.759434">
+            <state line="29" column="27" selection-start="484" selection-end="491" vertical-scroll-proportion="0.4587264">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380368299517" expanded="true" signature="637:1079" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380368299517" expanded="true" signature="637:714" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380368348564" expanded="true" signature="644:1086" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380368348564" expanded="true" signature="644:721" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -632,7 +632,11 @@
       <created>1380367541603</created>
       <updated>1380367541603</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Работа над заказом">
+      <created>1380368303887</created>
+      <updated>1380368303887</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -664,7 +668,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25186765" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2529349" sideWeight="0.6711111" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -876,11 +880,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="50" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.759434">
+        <state line="29" column="27" selection-start="484" selection-end="491" vertical-scroll-proportion="0.4587264">
           <folding>
             <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380368299517" expanded="true" signature="637:1079" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380368299517" expanded="true" signature="637:714" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380368348564" expanded="true" signature="644:1086" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380368348564" expanded="true" signature="644:721" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>
