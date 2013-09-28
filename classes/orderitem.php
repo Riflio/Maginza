@@ -66,7 +66,10 @@ class OrderItem extends Combinations{
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
 
-        return  $metaOpts;
+        $compiler = new FormulaInterpreter\Compiler();
+        $executable = $compiler->compile('2 + 2');
+
+        return  $executable->run();;
     }
 
     /**
