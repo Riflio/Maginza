@@ -40,7 +40,7 @@ class Cart extends Order {
                     echo '<div class="descr">';
                         the_content();
                     echo ' </div>';
-                    echo '<div class="article">Артикул:';
+                    echo '<div class="article"><b>Артикул: </b>';
                          $this->theMetaValue($lot, 'Article', 'cart');
                     echo ' </div>';
                     echo '<div class="comb">';
