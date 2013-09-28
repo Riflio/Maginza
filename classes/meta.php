@@ -13,7 +13,7 @@ class Meta extends Formatter {
 	function getGroupsList() {
 		global $wpdb;
 		//TODO: запоминать вывод.
-		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group.' ORDER BY groupID', ARRAY_A);
+		return $wpdb->get_results('SELECT * FROM '.Options::$table_meta_group.' ORDER BY groupID', OBJECT_K);
 	}
 	
 	function getLotMetagroups($lot) {
@@ -57,7 +57,7 @@ class Meta extends Formatter {
         var_dump($groups);
         var_dump( $groupIDS);
         foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
-           $group=$groups[$groupID];
+           $group=$groups->$groupID;
             if ($group->lotPriceFormula!='null') {
                 return $group->lotPriceFormula;
             }

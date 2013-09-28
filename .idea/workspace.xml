@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380404216192" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380404282473" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -17,7 +17,7 @@
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400285262" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380271274019" ignored="false" />
     <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400359903" ignored="false" />
-    <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380404273962" ignored="false" />
+    <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380404396852" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402935765" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380403696839" ignored="false" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="meta.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="29" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.8185185">
+            <state line="44" column="35" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.54567903">
               <folding />
             </state>
           </provider>
@@ -944,7 +944,11 @@
       <created>1380404218563</created>
       <updated>1380404218563</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Работаю над формулой вычисления">
+      <created>1380404284421</created>
+      <updated>1380404284421</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1198,7 +1202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/meta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="29" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.8185185">
+        <state line="44" column="35" selection-start="1472" selection-end="1472" vertical-scroll-proportion="0.54567903">
           <folding />
         </state>
       </provider>
