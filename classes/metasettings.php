@@ -154,33 +154,36 @@ class MetaSettings extends Meta {
 	function updateMetaOptions() {
 		global $wpdb;
 		$options=$_POST['metaoption']; //TODO: checkit!
-        if ($options=='') return;
-		//-- обновляем опции
-		$errCode=0;
-		foreach ($options as $key => $option) {
-			$errCode=$wpdb->update(Options::$table_meta_options, 
-				array(
-					'optType'=>$option['type'],
-					'optValue'=>$option['value'], 
-					'optFormatter'=>$option['formatter'],
-					'optVisible'=>intval($option['visible']), 
-					'optClientEditable'=>intval($option['editable']),
-                    'optTitle'=>$option['title']
-				), 
-				array('id'=>$key), 
-				array('%s', '%s', '%s', '%d', '%d'), 
-				array('%d') 
-			);
-		}
-		//-- обновляем формулу цены
-		$mid=intval($_POST['groupactiveid']);
-		$formula=$_POST['lotPriceFormula'];
-		$errCode=$wpdb->update(Options::$table_meta_group,
-			array('lotPriceFormula'=>$formula),
-			array('groupID'=>$mid),
-			array('%s'),
-			array('%d')
-		);	
+        $formula=$_POST['lotPriceFormula'];
+
+        if ($options!='') { //-- обновляем опции
+            $errCode=0;
+            foreach ($options as $key => $option) {
+                $errCode=$wpdb->update(Options::$table_meta_options,
+                    array(
+                        'optType'=>$option['type'],
+                        'optValue'=>$option['value'],
+                        'optFormatter'=>$option['formatter'],
+                        'optVisible'=>intval($option['visible']),
+                        'optClientEditable'=>intval($option['editable']),
+                        'optTitle'=>$option['title']
+                    ),
+                    array('id'=>$key),
+                    array('%s', '%s', '%s', '%d', '%d'),
+                    array('%d')
+                );
+            }
+        }
+
+        if ($formula!='') { //-- обновляем формулу цены
+		    $mid=intval($_POST['groupactiveid']);
+            $errCode=$wpdb->update(Options::$table_meta_group,
+                array('lotPriceFormula'=>$formula),
+                array('groupID'=>$mid),
+                array('%s'),
+                array('%d')
+            );
+        }
 	}
 	
 	function listGroupsSettings($curGroups, $echo=true) {	

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/meta.php" afterPath="$PROJECT_DIR$/classes/meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/metasettings.php" afterPath="$PROJECT_DIR$/classes/metasettings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400778637" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400869819" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400359903" ignored="false" />
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380400863761" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380366570984" ignored="false" />
-    <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380391408249" ignored="false" />
+    <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380398072283" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +45,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="meta.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="meta.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="118" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.47530866">
+            <state line="58" column="39" selection-start="2006" selection-end="2021" vertical-scroll-proportion="-5.2941175">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metasettings.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="metasettings.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="56.19608">
+            <state line="158" column="26" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.2089915">
               <folding />
             </state>
           </provider>
@@ -180,11 +180,11 @@
         <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/classes/setup.php" />
         <option value="$PROJECT_DIR$/classes/formatter.php" />
-        <option value="$PROJECT_DIR$/classes/metasettings.php" />
         <option value="$PROJECT_DIR$/classes/order.php" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/classes/orderitem.php" />
         <option value="$PROJECT_DIR$/classes/meta.php" />
+        <option value="$PROJECT_DIR$/classes/metasettings.php" />
       </list>
     </option>
   </component>
@@ -890,7 +890,11 @@
       <created>1380400781187</created>
       <updated>1380400781187</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Работаю над корзиной - формула стоимости позиции">
+      <created>1380400871773</created>
+      <updated>1380400871773</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1089,13 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="51" selection-start="5233" selection-end="5233" vertical-scroll-proportion="56.19608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="50" selection-start="1462" selection-end="1477" vertical-scroll-proportion="-22.307692">
@@ -1144,7 +1141,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/meta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="118" selection-start="2947" selection-end="2947" vertical-scroll-proportion="0.47530866">
+        <state line="58" column="39" selection-start="2006" selection-end="2021" vertical-scroll-proportion="-5.2941175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/metasettings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="26" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.2089915">
           <folding />
         </state>
       </provider>
