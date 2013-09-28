@@ -11,7 +11,7 @@ class Cart extends Order {
 	function showCart($args) {
 		echo 'Корзина';
 		$orderItems=$this->getListOrderItems($this->orderID());
-        echo '<form method="GET">';
+        echo '<div class="Cart"><form method="GET">';
         foreach($orderItems as $item) {
             $lotID=$item->orderItemID;
             $itemID=$item->orderItemsID;
@@ -47,7 +47,7 @@ class Cart extends Order {
             echo '</div>';
 
         }
-        echo '</form>';
+        echo '</form></div>';
 	}
 
     function ajax_order() {
