@@ -31,6 +31,7 @@ class OrderItem extends Combinations{
         $inst=OrderItem::getInstance();
         $item=$inst->getItem();
         $comb=parent::getCombination($item->orderItemID, $inst->itemID);
+        echo 'FFF';
         return $comb;
     }
 
