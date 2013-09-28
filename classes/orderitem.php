@@ -66,7 +66,7 @@ class OrderItem extends Combinations{
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
 
-        return  $metaOpts;
+        return  $orderItemMetaOptions;
     }
 
     /**
