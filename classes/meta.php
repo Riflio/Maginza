@@ -56,7 +56,7 @@ class Meta extends Formatter {
        $groups=$this->getGroupsList();
         foreach ($groupIDS as $groupID) { //-- возьмём первую группу, у которой не пустая формула стоимости
            $group=$groups[$groupID];
-            if ($group->lotPriceFormula!='') {
+            if ($group->lotPriceFormula!=null) {
                 return $group->lotPriceFormula;
             }
         }
