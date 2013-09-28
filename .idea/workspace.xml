@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380407446625" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380407759050" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -66,7 +66,7 @@
       <file leaf-file-name="formatter.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/formatter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="86" selection-start="607" selection-end="607" vertical-scroll-proportion="0.44103774">
+            <state line="25" column="84" selection-start="605" selection-end="605" vertical-scroll-proportion="0.44103774">
               <folding />
             </state>
           </provider>
@@ -996,7 +996,11 @@
       <created>1380407449584</created>
       <updated>1380407449584</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Работаю над формулой вычисления">
+      <created>1380407761215</created>
+      <updated>1380407761215</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1250,7 +1254,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/formatter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="86" selection-start="607" selection-end="607" vertical-scroll-proportion="0.44103774">
+        <state line="25" column="84" selection-start="605" selection-end="605" vertical-scroll-proportion="0.44103774">
           <folding />
         </state>
       </provider>
