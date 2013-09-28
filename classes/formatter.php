@@ -40,15 +40,17 @@ class Formatter extends Options{
         $val=apply_filters('mz_widget_'.$type, '',  $metaOpt, $metaVal, $formName);
         if ($val!='') return $val;
         //-- виджеты по умолчанию
+        $name="metaoptvals[{$formName}][{$metaOpt->optName}]";
+
 		switch ($type) {
 			case 'text': 
-				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label><br/>';
 			break;
 			case 'spin':
-				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="text" value="'.$metaVal.'" /> '.__($metaOpt->optName).'<br/>';
+				return '<input name="'.$name.'" id="'.$name.'" type="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label><br/>';
 			break;
 			case 'hidden':
-				return '<input name="metaoptvals['.$formName.']['.$metaOpt->optName.']" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
+				return '<input name="'.$name.'" id="'.$name.'" type="hidden" class="meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
 		}
 	}
