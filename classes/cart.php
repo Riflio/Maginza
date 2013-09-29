@@ -148,6 +148,7 @@ class Cart extends Order {
      *
      */
     public function saveCart($metaoptvals) {
+        global  global $wpdb;;
         foreach($metaoptvals as $orderitemid => $saveMetaOpts) {
             $orderitemid=explode('-', $orderitemid);
             $orderitemid=$orderitemid[1];
@@ -161,8 +162,9 @@ class Cart extends Order {
             $saveMetaOpts=$this->checkMetaOptions($lot, $saveMetaOpts);
 
             $orderItemMetaOptions=$iItem->orderItemMetaOptionsValues($lot, $saveMetaOpts, true);
+            $orderItemMetaOptions=serialize($orderItemMetaOptions);
 
-            var_dump($orderItemMetaOptions);
+            $wpdb->update(Options::$table_order_items, array('metaOptions'=>$orderItemMetaOptions), array('orderItemsID'=>$orderitemid), array('%s'), array('%d'));
 
         }
 
