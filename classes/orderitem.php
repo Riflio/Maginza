@@ -68,13 +68,13 @@ class OrderItem extends Combinations{
      */
     function getItemTotalPrice($customMetaOptions=array()) {
         //TODO: Передать это в яваскрипт, для высчитывания формулы без аджакса
-        $inst=OrderItem::getInstance();
-        $item=$inst->getItem();
+
+        $item=$this->getItem();
         $lot=get_post($item->orderItemID);
         //--
         $formula=$this->getLotFormula($lot);
 
-        $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
+        $metaOpts=$this->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
         $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
