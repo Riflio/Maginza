@@ -48,7 +48,17 @@ class Cart extends Order {
                     echo '<div class="comb">';
                         echo $comb['combination'];
                     echo '</div>';
+                    echo '<div class="countandprice">';
+                       echo '<span class="dprice">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</span>';
+                       echo '<span class="x">?</span>';
+                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</span>';
+                       echo '<span class="eq">=</span>';
+                       echo '<span class="cost">'; echo Formatter::format('price', '', $this->getItemTotalPrice()); echo '</span>';
+                    echo '</div>';
 
+                    echo '<div class="actionbtns">';
+                        $this->theButton('delete', 'Удалить', "#");
+                    echo '</div>';
 
                 echo '</div>';
 
