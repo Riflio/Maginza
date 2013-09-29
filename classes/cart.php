@@ -11,7 +11,65 @@ class Cart extends Order {
 	function showCart($args) {
         global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
+        echo '<div class="cart"><form method="GET" id="formcart" >';
+            echo '<input type="hidden" name="cartOrderID" id="cartOrderID" value="'.$this->orderID().'" />';
+        foreach($orderItems as $item) {
+            $lotID=$item->orderItemID;
+            $itemID=$item->orderItemsID;
 
+            $lot=get_post($lotID);
+
+            $post=$lot;
+            setup_postdata($post);
+
+            $this->setItemID($itemID);
+
+            $comb=$this->getCombination();
+
+            //TODO: изменить на пользовательский шаблон
+
+            echo '<div class="orderitem item-'.$itemID.'">';
+
+                echo '<div class="orderitem-previmg">';
+                         $this->theMetaValue($lot, 'Selprevimg', 'cart');
+                echo '</div>';
+
+                echo '<div class="orderitem-content">';
+                    echo $this->metaFormID();
+                    echo '<div class="title">';
+                        the_title();
+                    echo ' </div>';
+                    echo '<div class="descr">';
+                        the_content();
+                    echo ' </div>';
+                    echo '<div class="article"><b>Артикул: </b>';
+                         $this->theMetaValue($lot, 'Article', 'cart');
+                    echo ' </div>';
+                    echo '<div class="comb">';
+                        echo $comb['combination'];
+                    echo '</div>';
+                    echo '<div class="countandprice">';
+                       echo '<span class="dprice">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</span>';
+                       echo '<span class="x">?</span>';
+                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</span>';
+                       echo '<span class="eq">=</span>';
+                       echo '<span class="cost">'; echo Formatter::format('price', '', $this->getItemTotalPrice()); echo '</span>';
+                    echo '</div>';
+
+                    echo '<div class="actionbtns">';
+                        Cart::theButton('delete', 'Удалить', "#");
+                    echo '</div>';
+
+                echo '</div>';
+
+            echo '</div>';
+
+        }
+        echo '<div class="cartactbtns">';
+            $this->theButton('saveCart', 'Сохранить', "#");
+            $this->theButton('sendCart', 'Отправить заказ', "#");
+        echo '</div>';
+        echo '</form></div>';
 	}
 
     function ajax_order() {
