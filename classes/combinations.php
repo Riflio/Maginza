@@ -11,6 +11,7 @@ class Combinations extends Meta{
 	
 	function admin_init() {
 		add_action('edit_form_advanced', array(&$this, 'edit_form_advanced'), 100, 1);
+
 		add_meta_box('mbcombinations', __('Lot combinations'), array(&$this, 'showCombinsBox'), 'lots', 'advanced',  'core', '');
 		add_action('wp_ajax_addCombination', array(&$this, 'ajax_addCombination'));
 		add_action('wp_ajax_editCombination', array(&$this, 'ajax_addCombination'));
@@ -37,9 +38,7 @@ class Combinations extends Meta{
         foreach ($rels as $rel) {
             echo Formatter::combFeature($rel, $formName);
         }
-
-
-	}
+    }
 
     /**
     * Отгадываем комбинацию по характеристикам
@@ -72,13 +71,21 @@ class Combinations extends Meta{
         die();
     }
 
+
     /**
 	* Сохраняяем все параметры бокса комбинаций товара
 	*
 	*/
 	function edit_form_advanced($post) {
 		global $wpdb;
-
+        if (isset($_GET['combination'])) {
+            $combinations=$_GET['combination'];
+            foreach ($combinations as $combID => $combItems) {
+                $title=$combItems['title'];
+                $article=$combItems['article'];
+                $wpdb->update(Options::$table_combinations, array('combinTitle'=>$title, 'combinArticle'=>$article), array('combinID'=>$combID), array('%s', '%s'), array('%d'));
+            }
+        }
 	}
 
     /**
@@ -138,7 +145,7 @@ class Combinations extends Meta{
             $items[$rel->combinRelCombinID]['combination'].="<b>{$rel->GroupName}: </b> {$rel->GroupFeatures}  </br>";
             $items[$rel->combinRelCombinID]['combinationIDS'].=",{$rel->GroupFeaturesIDS}";
         }
-		return $items;	
+		return $items;
 	}
 	
 	/**
@@ -227,8 +234,8 @@ class Combinations extends Meta{
 	function recGen($lotID, $arrkeys, $features, $groupid, &$genInterration) {		
 		foreach ($features[$arrkeys[$groupid]] as $feature) {
 			$genInterration[$arrkeys[$groupid]]=array($feature);
-			if ( $groupid+1>=count($features)) {	
-				$this->addCombination($lotID, $genInterration);	
+			if ( $groupid+1>=count($features)) {
+ 				$this->addCombination($lotID, $genInterration);
 			} else {
 				$this->recGen($lotID, $arrkeys, $features, $groupid+1, $genInterration);			
 			}		
@@ -240,15 +247,17 @@ class Combinations extends Meta{
 	*
 	*
 	*/
-	function addCombination($lotID, $combinFeatures) {
+	function addCombination($lotID, $combinFeatures, $title='New title') {
 		global $wpdb;
 		//--
-		$wpdb->insert(Options::$table_combinations, array('lotID'=>$lotID, 'combinTitle'=>'New title', 'combinArticle'=>'0'), array('%d','%s','%s'));
+		$wpdb->insert(Options::$table_combinations, array('lotID'=>$lotID, 'combinTitle'=>$title, 'combinArticle'=>'0'), array('%d','%s','%s'));
 		$combinID=$wpdb->insert_id;		
 		//-- 
 		foreach($combinFeatures as $key => $rel) {
 			$wpdb->insert(Options::$table_combinations_rel, array('combinRelGroupId'=>$key, 'combinRelCombinID'=> $combinID, 'combinRelItemsID'=>implode($rel, ',')), array('%d', '%d','%s'));
 		}
+
+        $wpdb->update(Options::$table_combinations, array('combinArticle'=>$combinID), array('combinID'=>$combinID), array('%d'), array('%d'));
 	}
 	
 	/*
