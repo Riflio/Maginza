@@ -74,7 +74,7 @@ class OrderItem extends Combinations{
         //--
         $formula=$this->getLotFormula($lot);
 
-        $metaOpts=$this->orderItemMetaOptionsValues($lot, $customMetaOptions);
+        $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
         $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
