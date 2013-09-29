@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/orderitem.php" afterPath="$PROJECT_DIR$/classes/orderitem.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380412607473" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380412818892" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -121,11 +120,11 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="33" selection-start="5671" selection-end="5692" vertical-scroll-proportion="0.6933962">
+            <state line="164" column="11" selection-start="5768" selection-end="5768" vertical-scroll-proportion="0.7334906">
               <folding>
-                <marker date="1380412813752" expanded="true" signature="1026:1131" placeholder="..." />
-                <marker date="1380412813752" expanded="true" signature="1026:1124" placeholder="..." />
-                <marker date="1380412813752" expanded="true" signature="4603:4679" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380414015826" expanded="true" signature="1026:1131" placeholder="..." />
+                <marker date="1380414015826" expanded="true" signature="1026:1124" placeholder="..." />
+                <marker date="1380414015826" expanded="true" signature="4603:4679" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -1049,7 +1048,11 @@
       <created>1380412609711</created>
       <updated>1380412609711</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="Работаю над охранением корзины">
+      <created>1380412821496</created>
+      <updated>1380412821496</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1303,11 +1306,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="33" selection-start="5671" selection-end="5692" vertical-scroll-proportion="0.6933962">
+        <state line="164" column="11" selection-start="5768" selection-end="5768" vertical-scroll-proportion="0.7334906">
           <folding>
-            <marker date="1380412813752" expanded="true" signature="1026:1131" placeholder="..." />
-            <marker date="1380412813752" expanded="true" signature="1026:1124" placeholder="..." />
-            <marker date="1380412813752" expanded="true" signature="4603:4679" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1380414015826" expanded="true" signature="1026:1131" placeholder="..." />
+            <marker date="1380414015826" expanded="true" signature="1026:1124" placeholder="..." />
+            <marker date="1380414015826" expanded="true" signature="4603:4679" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>
