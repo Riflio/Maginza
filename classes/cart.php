@@ -148,7 +148,7 @@ class Cart extends Order {
      *
      */
     public function saveCart($metaoptvals) {
-        global  global $wpdb;;
+        global $wpdb;;
         foreach($metaoptvals as $orderitemid => $saveMetaOpts) {
             $orderitemid=explode('-', $orderitemid);
             $orderitemid=$orderitemid[1];
