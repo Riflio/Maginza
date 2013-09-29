@@ -59,7 +59,6 @@ jQuery(document).ready(function($){
                 method: 'savecart'
             },
             function(data){
-                alert(data);
                 alert('Сохранено.');
                 try {
                     var data=$.parseJSON(_data);
@@ -77,7 +76,7 @@ jQuery(document).ready(function($){
             maginza.ajaxurl,
             {
                 action:	'order',
-                method: 'sendCart',
+                method: 'sendcart',
                 cartorderid: $('#cartOrderID').val()
             },
             function(_data){
