@@ -34,7 +34,23 @@ class Cart extends Order {
                          $this->theMetaValue($lot, 'Selprevimg', 'cart');
                 echo '</div>';
 
+                echo '<div class="orderitem-content">';
+                    echo $this->metaFormID();
+                    echo '<div class="title">';
+                        the_title();
+                    echo ' </div>';
+                    echo '<div class="descr">';
+                        the_content();
+                    echo ' </div>';
+                    echo '<div class="article"><b>Артикул: </b>';
+                         $this->theMetaValue($lot, 'Article', 'cart');
+                    echo ' </div>';
+                    echo '<div class="comb">';
+                        echo $comb['combination'];
+                    echo '</div>';
 
+
+                echo '</div>';
 
             echo '</div>';
 
