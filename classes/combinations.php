@@ -160,6 +160,7 @@ class Combinations extends Meta{
 				<a href="#" id="addcombination" class="button">'.__('Add combination').'</a>
 				<a href="#" id="autogeneratecombination" class="button">'.__('Auto generate combinations').'</a>
 				<a href="#" id="combinationsave" class="button" style="display: none;" >'.__('Save combination!').'</a>
+				<a href="#" id="combineditinputs"  class="button">'.__('Edit Titles and Articles').'</a>
 			</div>
 		';
 		

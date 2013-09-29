@@ -173,6 +173,11 @@ jQuery(document).ready(function($){
 		
 		return false;		
 	});
+
+    $("#mbcombinations").on('click', 'a#combineditinputs', function() {
+        $('.combinations_list_table input').attr("disabled", false);
+    });
+
 	
 	function refreshCombList() {
 		$.get(
