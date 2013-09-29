@@ -10,7 +10,7 @@ class Combinations extends Meta{
 	}
 	
 	function admin_init() {
-		add_action('edit_form_advanced', array(&$this, 'edit_form_advanced'), 100, 1);
+		add_action('save_post', array(&$this, 'save_post'), 100, 1);
 
 		add_meta_box('mbcombinations', __('Lot combinations'), array(&$this, 'showCombinsBox'), 'lots', 'advanced',  'core', '');
 		add_action('wp_ajax_addCombination', array(&$this, 'ajax_addCombination'));
@@ -76,7 +76,7 @@ class Combinations extends Meta{
 	* Сохраняяем все параметры бокса комбинаций товара
 	*
 	*/
-	function edit_form_advanced($post) {
+	function save_post($post) {
 		global $wpdb;
         if (isset($_GET['combination'])) {
             $combinations=$_GET['combination'];

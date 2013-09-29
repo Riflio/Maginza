@@ -176,6 +176,7 @@ jQuery(document).ready(function($){
 
     $("#mbcombinations").on('click', 'a#combineditinputs', function() {
         $('.combinations_list_table input').attr("disabled", false);
+        return false;
     });
 
 	
