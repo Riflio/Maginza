@@ -73,7 +73,7 @@ class OrderItem extends Combinations{
         $item=$inst->getItem();
         $lot=get_post($item->orderItemID);
         //--
-       // $formula=$this->getLotFormula($lot);
+        $formula=$this->getLotFormula($lot);
 
        // $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
