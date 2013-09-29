@@ -51,16 +51,16 @@ class OrderItem extends Combinations{
      *  + объединим с текущими переданными значениями опций
      */
     public function orderItemMetaOptionsValues($lot, $customMetaOptions=array(), $onlyEditable=false) {
-
-        $lotMetaOptions=$this->getLotMetaOptions($lot);
-        $orderItemMetaOptions=array();
-        foreach ($lotMetaOptions as $metaOpt) {
-            if ($onlyEditable && $metaOpt->optClientEditable) {
-                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
-            }
-        }
-        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
-        return $metaOpts;
+//
+//        $lotMetaOptions=$this->getLotMetaOptions($lot);
+//        $orderItemMetaOptions=array();
+//        foreach ($lotMetaOptions as $metaOpt) {
+//            if ($onlyEditable && $metaOpt->optClientEditable) {
+//                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+//            }
+//        }
+//        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
+//        return $metaOpts;
 
     }
     /**
@@ -75,7 +75,7 @@ class OrderItem extends Combinations{
         //--
         $formula=$this->getLotFormula($lot);
 
-       // $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
+        $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
       //  $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
