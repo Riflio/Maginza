@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Работаю над охранением корзины">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.maginza.js" afterPath="$PROJECT_DIR$/js/jquery.maginza.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380417634066" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380417675323" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -121,9 +120,9 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="37" selection-start="451" selection-end="451" vertical-scroll-proportion="0.30070755">
+            <state line="65" column="36" selection-start="2565" selection-end="2567" vertical-scroll-proportion="0.33254716">
               <folding>
-                <marker date="1380417670412" expanded="true" signature="4715:4791" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380418093228" expanded="true" signature="4721:4797" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -1135,7 +1134,11 @@
       <created>1380417593691</created>
       <updated>1380417593691</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Работаю над охранением корзины">
+      <created>1380417677709</created>
+      <updated>1380417677709</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1389,9 +1392,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="451" selection-end="451" vertical-scroll-proportion="0.30070755">
+        <state line="65" column="36" selection-start="2565" selection-end="2567" vertical-scroll-proportion="0.33254716">
           <folding>
-            <marker date="1380417670412" expanded="true" signature="4715:4791" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1380418093228" expanded="true" signature="4721:4797" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>
