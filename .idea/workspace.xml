@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Добавляю сохранение изменённых комбинаций при обновлении поста">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/combinations.php" afterPath="$PROJECT_DIR$/classes/combinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.admin.js" afterPath="$PROJECT_DIR$/js/jquery.admin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495392315" ignored="false" />
-    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380492515271" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495401443" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
     <file path="/formatter.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380384837529" ignored="false" />
@@ -83,24 +82,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="combinations.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="56" selection-start="275" selection-end="275" vertical-scroll-proportion="-4.0">
+            <state line="81" column="32" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.44074073">
               <folding>
-                <marker date="1380495366562" expanded="true" signature="3322:4016" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1380495366562" expanded="true" signature="3917:3976" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1380495366562" expanded="true" signature="4629:4704" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1380495366562" expanded="true" signature="6732:6823" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1380495695704" expanded="true" signature="3324:4018" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1380495695704" expanded="true" signature="3919:3978" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1380495695704" expanded="true" signature="4631:4706" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1380495695704" expanded="true" signature="6734:6825" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.admin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.admin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="21" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.55263156">
+            <state line="178" column="21" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,8 +173,8 @@
         <option value="$PROJECT_DIR$/classes/orderitem.php" />
         <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
-        <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/js/jquery.admin.js" />
+        <option value="$PROJECT_DIR$/classes/combinations.php" />
       </list>
     </option>
   </component>
@@ -1137,7 +1136,11 @@
       <created>1380493760763</created>
       <updated>1380493760763</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="Добавляю сохранение изменённых комбинаций при обновлении поста">
+      <created>1380495404668</created>
+      <updated>1380495404668</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1358,22 +1361,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="275" selection-end="275" vertical-scroll-proportion="-4.0">
-          <folding>
-            <marker date="1380495366562" expanded="true" signature="3322:4016" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1380495366562" expanded="true" signature="3917:3976" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1380495366562" expanded="true" signature="4629:4704" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1380495366562" expanded="true" signature="6732:6823" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
-          </folding>
+        <state line="178" column="21" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
+    <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="21" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.55263156">
-          <folding />
+        <state line="81" column="32" selection-start="2596" selection-end="2596" vertical-scroll-proportion="0.44074073">
+          <folding>
+            <marker date="1380495695704" expanded="true" signature="3324:4018" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1380495695704" expanded="true" signature="3919:3978" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1380495695704" expanded="true" signature="4631:4706" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1380495695704" expanded="true" signature="6734:6825" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+          </folding>
         </state>
       </provider>
     </entry>

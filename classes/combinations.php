@@ -78,8 +78,8 @@ class Combinations extends Meta{
 	*/
 	function save_post($post) {
 		global $wpdb;
-        if (isset($_GET['combination'])) {
-            $combinations=$_GET['combination'];
+        if (isset($_POST['combination'])) {
+            $combinations=$_POST['combination'];
             foreach ($combinations as $combID => $combItems) {
                 $title=$combItems['title'];
                 $article=$combItems['article'];
