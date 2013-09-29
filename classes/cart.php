@@ -177,7 +177,8 @@ class Cart extends Order {
     public function sendCart($orderID) {
         global $wpdb;
         //TODO:
-        $wpdb->update(Options::$table_order, array('orderStatus'=>5), array('orderID'=>$orderID, 'userID'=>Byer::ID()), array('%s'), array('%d', '%s'));
+        $wpdb->update(Options::$table_order, array('orderStatus'=>'5'), array('orderID'=>$orderID, 'userID'=>Buyer::ID()), array('%s'), array('%d', '%s'));
+
     }
 
 

@@ -80,13 +80,14 @@ jQuery(document).ready(function($){
                 cartorderid: $('#cartOrderID').val()
             },
             function(_data){
+                alert('Ваш заказ отправлен на обработку.');
                 try {
                     var data=$.parseJSON(_data);
                 }
                 catch (err) {
                     return;
                 }
-                alert('Ваш заказ отправлен на обработку.');
+
             }
         );
     });
