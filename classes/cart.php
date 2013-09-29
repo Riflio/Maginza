@@ -162,6 +162,7 @@ class Cart extends Order {
 
             $orderItemMetaOptions=$iItem->orderItemMetaOptionsValues($lot, $saveMetaOpts, true);
 
+            var_dump($orderItemMetaOptions);
 
         }
 
