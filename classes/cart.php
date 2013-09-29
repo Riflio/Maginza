@@ -34,33 +34,7 @@ class Cart extends Order {
                          $this->theMetaValue($lot, 'Selprevimg', 'cart');
                 echo '</div>';
 
-                echo '<div class="orderitem-content">';
-                    echo $this->metaFormID();
-                    echo '<div class="title">';
-                        the_title();
-                    echo ' </div>';
-                    echo '<div class="descr">';
-                        the_content();
-                    echo ' </div>';
-                    echo '<div class="article"><b>Артикул: </b>';
-                         $this->theMetaValue($lot, 'Article', 'cart');
-                    echo ' </div>';
-                    echo '<div class="comb">';
-                        echo $comb['combination'];
-                    echo '</div>';
-                    echo '<div class="countandprice">';
-                       echo '<span class="dprice">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</span>';
-                       echo '<span class="x">?</span>';
-                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</span>';
-                       echo '<span class="eq">=</span>';
-                       echo '<span class="cost">'; echo Formatter::format('price', '', $this->getItemTotalPrice()); echo '</span>';
-                    echo '</div>';
 
-                    echo '<div class="actionbtns">';
-                        Cart::theButton('delete', 'Удалить', "#");
-                    echo '</div>';
-
-                echo '</div>';
 
             echo '</div>';
 

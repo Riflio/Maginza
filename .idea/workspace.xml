@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380414197849" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380414443184" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -16,7 +16,7 @@
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380411509211" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380411177398" ignored="false" />
-    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380414429235" ignored="false" />
+    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380414475365" ignored="false" />
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380404396852" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380402935765" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
@@ -48,7 +48,7 @@
       <file leaf-file-name="meta.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/meta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="39" selection-start="3554" selection-end="3571" vertical-scroll-proportion="-10.960784">
+            <state line="91" column="5" selection-start="3128" selection-end="3128" vertical-scroll-proportion="-10.960784">
               <folding />
             </state>
           </provider>
@@ -120,9 +120,9 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="12" selection-start="2703" selection-end="2703" vertical-scroll-proportion="0.42099056">
+            <state line="36" column="16" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.7216981">
               <folding>
-                <marker date="1380414434845" expanded="true" signature="4605:4681" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1380414615529" expanded="true" signature="3208:3284" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -1058,7 +1058,11 @@
       <created>1380414200316</created>
       <updated>1380414200316</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="Работаю над охранением корзины">
+      <created>1380414446800</created>
+      <updated>1380414446800</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1292,13 +1296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/meta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="39" selection-start="3554" selection-end="3571" vertical-scroll-proportion="-10.960784">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="60" selection-start="1600" selection-end="1600" vertical-scroll-proportion="-11.038462">
@@ -1310,11 +1307,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/meta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="5" selection-start="3128" selection-end="3128" vertical-scroll-proportion="-10.960784">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="12" selection-start="2703" selection-end="2703" vertical-scroll-proportion="0.42099056">
+        <state line="36" column="16" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.7216981">
           <folding>
-            <marker date="1380414434845" expanded="true" signature="4605:4681" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1380414615529" expanded="true" signature="3208:3284" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>
