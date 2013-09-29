@@ -80,10 +80,10 @@ class OrderItem extends Combinations{
 
         $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
-      //  $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
+        $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
-      //  $parser = new Parser($formula);
-        return 123;//  $parser->run();
+        $parser = new Parser($formula);
+        return  $parser->run();
     }
 
     /**
