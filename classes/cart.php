@@ -160,7 +160,7 @@ class Cart extends Order {
 
             $saveMetaOpts=$this->checkMetaOptions($lot, $saveMetaOpts);
 
-            $orderItemMetaOptions=$iItem->orderItemMetaOptionsValues($lot, $saveMetaOpts);
+            $orderItemMetaOptions=$iItem->orderItemMetaOptionsValues($lot, $saveMetaOpts, true);
 
             var_dump($orderItemMetaOptions);
         }

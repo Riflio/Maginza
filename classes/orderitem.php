@@ -50,11 +50,13 @@ class OrderItem extends Combinations{
      *  Возьмём значения по умолчанию опций лота  объединим с изменёнными значениями опций лота из текущего элемента заказа
      *  + объединим с текущими переданными значениями опций
      */
-    public function orderItemMetaOptionsValues($lot, $customMetaOptions=array()) {
+    public function orderItemMetaOptionsValues($lot, $customMetaOptions=array(), $onlyEditable=false) {
         $lotMetaOptions=$this->getLotMetaOptions($lot);
         $orderItemMetaOptions=array();
         foreach ($lotMetaOptions as $metaOpt) {
-            $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+            if ($onlyEditable && $metaOpt->optClientEditable) {
+                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+            }
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
         return $metaOpts;
