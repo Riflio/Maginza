@@ -11,6 +11,12 @@ class Cart extends Order {
 	function showCart($args) {
         global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
+
+        if (count($orderItems)==0) {
+            echo 'Ваша корзина пуста.';
+            return;
+        }
+
         echo '<div class="cart"><form method="GET" id="formcart" >';
             echo '<input type="hidden" name="cartOrderID" id="cartOrderID" value="'.$this->orderID().'" />';
         foreach($orderItems as $item) {

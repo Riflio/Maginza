@@ -81,6 +81,7 @@ jQuery(document).ready(function($){
             },
             function(_data){
                 alert('Ваш заказ отправлен на обработку.');
+                location.reload();
                 try {
                     var data=$.parseJSON(_data);
                 }
