@@ -52,14 +52,18 @@ class OrderItem extends Combinations{
      */
     public function orderItemMetaOptionsValues($lot, $customMetaOptions=array(), $onlyEditable=false) {
           $lotMetaOptions=$this->getLotMetaOptions($lot);
-//        $orderItemMetaOptions=array();
-//        foreach ($lotMetaOptions as $metaOpt) {
-//            if ($onlyEditable && $metaOpt->optClientEditable) {
-//                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
-//            }
-//        }
-//        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
-//        return $metaOpts;
+          $orderItemMetaOptions=array();
+        foreach ($lotMetaOptions as $metaOpt) {
+            if ($onlyEditable) {
+                if ( $metaOpt->optClientEditable) {
+                    $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+                }
+            } else {
+                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+            }
+        }
+        $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
+        return $metaOpts;
 
     }
     /**
