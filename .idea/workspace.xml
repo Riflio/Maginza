@@ -7,7 +7,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380416369567" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380416416845" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380371019600" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -96,11 +96,11 @@
       <file leaf-file-name="orderitem.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="27" selection-start="1399" selection-end="1851" vertical-scroll-proportion="0.44228432">
+            <state line="52" column="103" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.23572296">
               <folding>
                 <element signature="e#6#19#0" expanded="true" />
-                <marker date="1380416412980" expanded="true" signature="983:3251" placeholder="SELECT * FRO..WHERE..." />
-                <marker date="1380416412980" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
+                <marker date="1380416453685" expanded="true" signature="983:3248" placeholder="SELECT * FRO..WHERE..." />
+                <marker date="1380416453685" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
             </state>
           </provider>
@@ -1098,7 +1098,11 @@
       <created>1380416372370</created>
       <updated>1380416372370</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Работаю над охранением корзины">
+      <created>1380416420195</created>
+      <updated>1380416420195</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1350,11 +1354,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/orderitem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="27" selection-start="1399" selection-end="1851" vertical-scroll-proportion="0.44228432">
+        <state line="52" column="103" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.23572296">
           <folding>
             <element signature="e#6#19#0" expanded="true" />
-            <marker date="1380416412980" expanded="true" signature="983:3251" placeholder="SELECT * FRO..WHERE..." />
-            <marker date="1380416412980" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
+            <marker date="1380416453685" expanded="true" signature="983:3248" placeholder="SELECT * FRO..WHERE..." />
+            <marker date="1380416453685" expanded="true" signature="983:1060" placeholder="SELECT * FRO..{$table_order_items}..." />
           </folding>
         </state>
       </provider>

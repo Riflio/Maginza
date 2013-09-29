@@ -51,8 +51,7 @@ class OrderItem extends Combinations{
      *  + объединим с текущими переданными значениями опций
      */
     public function orderItemMetaOptionsValues($lot, $customMetaOptions=array(), $onlyEditable=false) {
-//
-//        $lotMetaOptions=$this->getLotMetaOptions($lot);
+          $lotMetaOptions=$this->getLotMetaOptions($lot);
 //        $orderItemMetaOptions=array();
 //        foreach ($lotMetaOptions as $metaOpt) {
 //            if ($onlyEditable && $metaOpt->optClientEditable) {
