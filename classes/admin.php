@@ -123,7 +123,7 @@ class Admin extends Options {
             $user=Buyer::getInfo($order->userID);
             $items[]=array(
                 'OrderID'=>$order->orderID,
-                'User'=>'<a href="'.$user->user_url.'">'.$user->user_nicename.'</a>',
+                'User'=>'<a href="'.$user->url.'">'.$user->login.'</a>',
                 'OrderStatus'=>$order->orderStatus,
                 'OrderDate'=> date_format(new DateTime($order->orderDT), 'd.m.Y H:m'),
                 'OrderAction'=>'<a href="?page=Maginza&order='.$order->orderID.'">'.__('Show').'</a>'

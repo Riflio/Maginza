@@ -34,9 +34,22 @@ class Buyer extends Options {
      * Выдаём инфу о клиенту
      *
      */
-    public function getInfo($id='') {
-        $user_info = get_userdata( ($id!='') ? $id : Buyer::ID() );
-		return $user_info;
+    public function getInfo($id=NULL) {
+        $user_info=(object) NULL;
+
+        if (isset($id)&&!is_numeric($id)) { //-- Если задан айдишник и он айдишник сессии
+            $user_info->login=$id;
+            return $user_info;
+        } else {
+            $id=(isset($id))? $id : Buyer::ID();
+        }
+
+        $user_info->url=get_the_author_meta('user_url', $id);
+        $user_info->login=get_the_author_meta('user_login', $id);
+
+        return $user_info;
+
+
 	}
 	
 	public function wp_login($u) {
