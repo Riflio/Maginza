@@ -359,7 +359,6 @@ class Combinations__List_Table extends WP_List_Table {
 
     function column_default( $item, $column_name ) {
         switch( $column_name ) {
-            case 'id':
                 return $item[$column_name];
             case 'article':
             case 'title':

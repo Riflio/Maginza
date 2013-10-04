@@ -64,33 +64,8 @@ class Admin extends Options {
 	
 	function admin_maginza(){ 
 		global $Maginza, $wpdb; 
-	
-		$orders=$wpdb->get_results($wpdb->prepare('SELECT * FROM '.Options::$table_order.' '));
-		
 
-		echo '<table>';
-		
-		foreach ($orders as $order) {
-			
-			$options = unserialize($order->lotMetaOptions);
-						
-			echo '<tr>';
-			
-				echo '<td>';
-					echo $order->userID;
-				echo '</td>';
-				
-				echo '<td>';
-					echo $order->lotID;
-				echo '</td>';
-				
-				do_action('mz_showorder', $order->lotID, $order->userID, $options);
-					
-			echo '</tr>';
-		
-		}
-		
-		echo '</table>';
+        require_once('admin.tpl.php');
 		
 	}
 	
