@@ -125,7 +125,7 @@ class Admin extends Options {
                 'OrderID'=>$order->orderID,
                 'User'=>$order->userID,
                 'OrderStatus'=>$order->orderStatus,
-                'OrderDate'=> date_format($order->orderDT, 'd.m.Y'),
+                'OrderDate'=> date_format(new DateTime($order->orderDT), 'd.m.Y'),
                 'OrderAction'=>'<a href="?order='.$order->orderID.'">'.__('Show').'</a>'
             );
         }
