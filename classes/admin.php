@@ -1,7 +1,7 @@
 <?php
 
 class Admin extends Options {
-    private var $pagehook;
+    private  $pagehook;
 
 	function __construct() {
 		add_action('admin_init', array(&$this, 'admin_init'));
