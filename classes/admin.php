@@ -65,6 +65,7 @@ class Admin extends Options {
 	function admin_maginza(){ 
 		global $Maginza, $wpdb; 
 
+
         require_once('admin.tpl.php');
 		
 	}
