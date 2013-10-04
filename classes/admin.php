@@ -120,12 +120,12 @@ class Admin extends Options {
 
         $items=array();
         foreach ($orders as $order) {
-
-            $items['OrderID']=$order->orderID;
-            $items['User']=$order->userID;
-            $items['OrderStatus']=$order->orderStatus;
-            $items['OrderDate']=$order->orderDT;
-
+            $items[]=array(
+                'OrderID'=>$order->orderID,
+                'User'=>$order->userID,
+                'OrderStatus'=>$order->orderStatus,
+                'OrderDate'=>$order->orderDT
+            );
         }
         $table=new Orders__List_Table('OrdersTable');
         //--
