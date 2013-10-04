@@ -74,19 +74,22 @@ class Admin extends Options {
 	function admin_maginza(){ 
 		global $Maginza, $wpdb;
 
-        add_meta_box('metabox_stat', __('Statistics'), array(&$this, 'metabox_stat'), $this->pagehook, 'normal', 'core');
-        add_meta_box('metabox_orders', __('Orders'), array(&$this, 'metabox_orders'), $this->pagehook, 'normal', 'core');
+        if (isset($_GET['order'])) {
+            add_meta_box('metabox_curorder', __('Orders'), array(&$this, 'metabox_curorder'), $this->pagehook, 'normal', 'core');
+        } else {
+            add_meta_box('metabox_stat', __('Statistics'), array(&$this, 'metabox_stat'), $this->pagehook, 'normal', 'core');
+            add_meta_box('metabox_orders', __('Orders'), array(&$this, 'metabox_orders'), $this->pagehook, 'normal', 'core');
+        }
 
         require_once('admin.tpl.php');
 		
 	}
 	
-	function render_lot_meta_box_content($data) {
-		var_dump($data);
-	}
-	
 
-	
+	/**
+	 * Добавляем новую колонку в листинг товаров админки
+     *
+	 */
 	function manage_users_columns($columns) {
 		$columns['allorderprice']='Всего на';
 		return $columns;
@@ -146,6 +149,15 @@ class Admin extends Options {
 
     }
 
+    /**
+     * Выводим текущий заказ
+     *
+     */
+    public function metabox_curorder() {
+
+        echo 'Current ORDER';
+
+    }
 	
 	
 }

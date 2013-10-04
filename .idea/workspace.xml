@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/admin.php" afterPath="$PROJECT_DIR$/classes/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/buyer.php" afterPath="$PROJECT_DIR$/classes/buyer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380926671233" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380927545880" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -26,7 +25,7 @@
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380416636503" ignored="false" />
     <file path="/jquery.admin.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495399491" ignored="false" />
-    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380927454805" ignored="false" />
+    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380927778153" ignored="false" />
     <file path="/admin.tpl.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905272391" ignored="false" />
     <file path="/buyer.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380926169169" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,10 +82,10 @@
       <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="43" selection-start="3955" selection-end="3955" vertical-scroll-proportion="0.4009434">
+            <state line="89" column="56" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.2381531">
               <folding>
                 <element signature="e#7#20#0" expanded="true" />
-                <marker date="1380927459501" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
+                <marker date="1380928120901" expanded="true" signature="3660:3687" placeholder="SELECT * FRO..{$tableorder}..." />
               </folding>
             </state>
           </provider>
@@ -1232,7 +1231,11 @@
       <created>1380926673961</created>
       <updated>1380926673961</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Добавляю просмотр заказов в админке">
+      <created>1380927548299</created>
+      <updated>1380927548299</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1485,10 +1488,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="43" selection-start="3955" selection-end="3955" vertical-scroll-proportion="0.4009434">
+        <state line="89" column="56" selection-start="3018" selection-end="3018" vertical-scroll-proportion="0.2381531">
           <folding>
             <element signature="e#7#20#0" expanded="true" />
-            <marker date="1380927459501" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
+            <marker date="1380928120901" expanded="true" signature="3660:3687" placeholder="SELECT * FRO..{$tableorder}..." />
           </folding>
         </state>
       </provider>
