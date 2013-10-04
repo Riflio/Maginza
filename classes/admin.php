@@ -74,8 +74,8 @@ class Admin extends Options {
 	function admin_maginza(){ 
 		global $Maginza, $wpdb;
 
-        add_meta_box('metabox_stat', 'Metabox_stat', array(&$this, 'metabox_stat'), $this->pagehook, 'normal', 'core');
-        add_meta_box('metabox_orders', 'Metabox_orders', array(&$this, 'metabox_orders'), $this->pagehook, 'normal', 'core');
+        add_meta_box('metabox_stat', __('Statistics'), array(&$this, 'metabox_stat'), $this->pagehook, 'normal', 'core');
+        add_meta_box('metabox_orders', __('Orders'), array(&$this, 'metabox_orders'), $this->pagehook, 'normal', 'core');
 
         require_once('admin.tpl.php');
 		
@@ -117,14 +117,15 @@ class Admin extends Options {
         global $wpdb;
         $tableorder=Options::$table_order;
         $orders=$wpdb->get_results("SELECT * FROM {$tableorder} ");
-
+        //--
         $items=array();
         foreach ($orders as $order) {
             $items[]=array(
                 'OrderID'=>$order->orderID,
                 'User'=>$order->userID,
                 'OrderStatus'=>$order->orderStatus,
-                'OrderDate'=>$order->orderDT
+                'OrderDate'=>$order->orderDT,
+                'OrderAction'=>'<a href="?order='.$order->orderID.'">'.__('Show').'</a>'
             );
         }
         $table=new Orders__List_Table('OrdersTable');
@@ -133,13 +134,11 @@ class Admin extends Options {
             'OrderID'=>__('Order ID'),
             'User'=>__('User'),
             'OrderStatus'=>__('Order Status'),
-            'OrderDate'=>__('Order Date')
+            'OrderDate'=>__('Order Date'),
+            'OrderAction'=>__('Actions')
         );
-
+        //--
         $table->prepare_items($items, $columns);
-
-
-
         $table->display();
 
     }

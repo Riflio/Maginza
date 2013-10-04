@@ -10,7 +10,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380915618931" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380915790430" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -25,7 +25,7 @@
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380416636503" ignored="false" />
     <file path="/jquery.admin.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495399491" ignored="false" />
-    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380915782855" ignored="false" />
+    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380916180258" ignored="false" />
     <file path="/admin.tpl.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905272391" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,10 +81,10 @@
       <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="20" selection-start="3577" selection-end="3577" vertical-scroll-proportion="0.43867925">
+            <state line="127" column="88" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.38089624">
               <folding>
                 <element signature="e#7#20#0" expanded="true" />
-                <marker date="1380915783317" expanded="true" signature="3462:3489" placeholder="SELECT * FRO..{$tableorder}..." />
+                <marker date="1380916216166" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
               </folding>
             </state>
           </provider>
@@ -1190,7 +1190,11 @@
       <created>1380915621944</created>
       <updated>1380915621944</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="Добавляю просмотр заказов в админке">
+      <created>1380915795163</created>
+      <updated>1380915795163</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1443,10 +1447,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="20" selection-start="3577" selection-end="3577" vertical-scroll-proportion="0.43867925">
+        <state line="127" column="88" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.38089624">
           <folding>
             <element signature="e#7#20#0" expanded="true" />
-            <marker date="1380915783317" expanded="true" signature="3462:3489" placeholder="SELECT * FRO..{$tableorder}..." />
+            <marker date="1380916216166" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
           </folding>
         </state>
       </provider>
