@@ -1,6 +1,7 @@
 <?php
 
 class Admin extends Options {
+    private var $pagehook;
 
 	function __construct() {
 		add_action('admin_init', array(&$this, 'admin_init'));
@@ -40,7 +41,7 @@ class Admin extends Options {
 	
 	function admin_menu(){
 		//-- добавляем пункт в основное меню
-		add_menu_page( "Maginza", __('Maginza', TEXTDOMAIN), 5, 'Maginza',  array(&$this, 'admin_maginza'));
+        $this->pagehook=add_menu_page( "Maginza", __('Maginza', TEXTDOMAIN), 5, 'Maginza',  array(&$this, 'admin_maginza'));
 		add_submenu_page("Maginza", __('Global Settings', TEXTDOMAIN), __('Global Settings', TEXTDOMAIN), 5, 'mz_globalsettings', array(&$this->globalSettings, 'showForm'));	 
 		add_submenu_page("Maginza", __('Meta Settings', TEXTDOMAIN), __('Meta Settings', TEXTDOMAIN), 5, 'mz_metasettings', array(&$this->metaSettings, 'showForm'));
 		
@@ -63,8 +64,9 @@ class Admin extends Options {
 	
 	
 	function admin_maginza(){ 
-		global $Maginza, $wpdb; 
+		global $Maginza, $wpdb;
 
+        add_meta_box('howto-metaboxes-contentbox-1', 'Contentbox 1 Title', array(&$this, 'on_contentbox_1_content'), $this->pagehook, 'normal', 'core');
 
         require_once('admin.tpl.php');
 		
@@ -89,7 +91,15 @@ class Admin extends Options {
 		}
 	} 
 
-	
+
+    /**
+     *
+     *
+     */
+	public function on_contentbox_1_content() {
+        echo 'TEST TEST TEST';
+    }
+
 	
 	
 }

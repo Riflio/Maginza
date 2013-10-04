@@ -8,7 +8,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380906054396" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380906398163" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -23,7 +23,7 @@
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
     <file path="/orderitem.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380416636503" ignored="false" />
     <file path="/jquery.admin.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495399491" ignored="false" />
-    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905309496" ignored="false" />
+    <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380907622730" ignored="false" />
     <file path="/admin.tpl.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905272391" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,21 +58,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-14.307693">
+            <state line="99" column="22" selection-start="3009" selection-end="3009" vertical-scroll-proportion="1.3832548">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.tpl.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="maginza.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maginza.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="155" column="0" selection-start="4418" selection-end="4418" vertical-scroll-proportion="-88.92308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.tpl.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/admin.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="57" selection-start="580" selection-end="580" vertical-scroll-proportion="0.4009434">
+            <state line="2" column="23" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.3076923">
               <folding>
-                <element signature="e#6#19#0" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -131,15 +139,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="44" selection-start="5595" selection-end="5595" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery.maginza.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/jquery.maginza.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -181,8 +180,8 @@
         <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/js/jquery.admin.js" />
         <option value="$PROJECT_DIR$/classes/combinations.php" />
-        <option value="$PROJECT_DIR$/classes/admin.php" />
         <option value="$PROJECT_DIR$/classes/admin.tpl.php" />
+        <option value="$PROJECT_DIR$/classes/admin.php" />
       </list>
     </option>
   </component>
@@ -1164,7 +1163,11 @@
       <created>1380906057622</created>
       <updated>1380906057622</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="шибочка в combinations.php">
+      <created>1380906402156</created>
+      <updated>1380906402156</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1317,13 +1320,6 @@
         <state line="32" column="37" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maginza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="164" selection-start="2329" selection-end="2334" vertical-scroll-proportion="0.0">
@@ -1394,20 +1390,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/admin.php">
+    <entry file="file://$PROJECT_DIR$/maginza.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2301" selection-end="2301" vertical-scroll-proportion="-14.307693">
+        <state line="155" column="0" selection-start="4418" selection-end="4418" vertical-scroll-proportion="-88.92308">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="57" selection-start="580" selection-end="580" vertical-scroll-proportion="0.4009434">
+        <state line="2" column="23" selection-start="33" selection-end="33" vertical-scroll-proportion="-1.3076923">
           <folding>
-            <element signature="e#6#19#0" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="22" selection-start="3009" selection-end="3009" vertical-scroll-proportion="1.3832548">
+          <folding />
         </state>
       </provider>
     </entry>
