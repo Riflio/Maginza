@@ -120,11 +120,12 @@ class Admin extends Options {
         //--
         $items=array();
         foreach ($orders as $order) {
+
             $items[]=array(
                 'OrderID'=>$order->orderID,
                 'User'=>$order->userID,
                 'OrderStatus'=>$order->orderStatus,
-                'OrderDate'=> date('d.m.Y H:i:s', $order->orderDT),
+                'OrderDate'=> date_format($order->orderDT, 'd.m.Y'),
                 'OrderAction'=>'<a href="?order='.$order->orderID.'">'.__('Show').'</a>'
             );
         }
