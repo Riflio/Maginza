@@ -44,8 +44,9 @@ class Buyer extends Options {
             $id=(isset($id))? $id : Buyer::ID();
         }
 
-        $user_info->url=get_the_author_meta('user_url', $id);
+
         $user_info->login=get_the_author_meta('user_login', $id);
+        $user_info->url=get_the_author_meta('user_url', $id);
 
         return $user_info;
 
