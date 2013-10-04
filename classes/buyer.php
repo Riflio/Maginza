@@ -2,35 +2,41 @@
 /* *  */
 class Buyer extends Options {	
 	private static $instance;	
-	public static function getInstance() {		
+
+    public static function getInstance() {
 		if ( is_null(self::$instance) ) {			
 			self::$instance = new Buyer();		
 		}		
 		return self::$instance;	
 	}
+
 	function __construct() {
 		add_action('wp_login', array(&$this, 'wp_login'));	
 	}
-	public function ID() {	
+
+    /**
+     *
+     */
+    public function ID() {
 		global $current_user, $wpdb;
+
 		get_currentuserinfo();
 		if (is_user_logged_in()) {
 			$ID=$current_user->ID;		
 		}  else {
-			if (!session_id()) {
-				session_start();				
-				$ID=session_id();
-			} else { //-- не нашли, ставим новый рандомный				
-				$ID=session_id();			
-			}		
+			if (!session_id())	session_start();
+			$ID=session_id();
 		}		
 		return $ID;	
 	}
-	
-	public function getInfo() {	
-		global $current_user;		
-		get_currentuserinfo();		
-		return $current_user;	
+
+    /**
+     * Выдаём инфу о клиенту
+     *
+     */
+    public function getInfo($id='') {
+        $user_info = get_userdata( ($id!='') ? $id : Buyer::ID() );
+		return $user_info;
 	}
 	
 	public function wp_login($u) {

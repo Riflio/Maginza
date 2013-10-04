@@ -120,13 +120,13 @@ class Admin extends Options {
         //--
         $items=array();
         foreach ($orders as $order) {
-
+            $user=Buyer::getInfo($order->userID);
             $items[]=array(
                 'OrderID'=>$order->orderID,
-                'User'=>$order->userID,
+                'User'=>'<a href="'.$user->user_url.'">'.$user->user_nicename.'</a>',
                 'OrderStatus'=>$order->orderStatus,
                 'OrderDate'=> date_format(new DateTime($order->orderDT), 'd.m.Y H:m'),
-                'OrderAction'=>'<a href="?order='.$order->orderID.'">'.__('Show').'</a>'
+                'OrderAction'=>'<a href="?page=Maginza&order='.$order->orderID.'">'.__('Show').'</a>'
             );
         }
         $table=new Orders__List_Table('OrdersTable');
