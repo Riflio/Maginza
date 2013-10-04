@@ -20,6 +20,10 @@ class OrderItem extends Combinations{
         return self::$instance;
     }
 
+	/**
+	*
+	*
+	*/
     public function setItemID($itemID) {
         $inst=OrderItem::getInstance();
         $inst->itemID=$itemID;
