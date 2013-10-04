@@ -4,13 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/classes/admin.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Добавляю просмотр заказов в админке">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/admin.php" afterPath="$PROJECT_DIR$/classes/admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380915790430" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380918629561" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -81,10 +81,10 @@
       <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="88" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.38089624">
+            <state line="133" column="38" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.5011792">
               <folding>
                 <element signature="e#7#20#0" expanded="true" />
-                <marker date="1380916216166" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
+                <marker date="1380918625573" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
               </folding>
             </state>
           </provider>
@@ -1194,7 +1194,11 @@
       <created>1380915795163</created>
       <updated>1380915795163</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="Добавляю просмотр заказов в админке">
+      <created>1380916221740</created>
+      <updated>1380916221740</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1447,10 +1451,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="88" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.38089624">
+        <state line="133" column="38" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.5011792">
           <folding>
             <element signature="e#7#20#0" expanded="true" />
-            <marker date="1380916216166" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
+            <marker date="1380918625573" expanded="true" signature="3460:3487" placeholder="SELECT * FRO..{$tableorder}..." />
           </folding>
         </state>
       </provider>

@@ -124,7 +124,7 @@ class Admin extends Options {
                 'OrderID'=>$order->orderID,
                 'User'=>$order->userID,
                 'OrderStatus'=>$order->orderStatus,
-                'OrderDate'=>$order->orderDT,
+                'OrderDate'=> date('d.m.Y H:i:s', $order->orderDT),
                 'OrderAction'=>'<a href="?order='.$order->orderID.'">'.__('Show').'</a>'
             );
         }
