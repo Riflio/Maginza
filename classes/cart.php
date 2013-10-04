@@ -124,6 +124,16 @@ class Cart extends Order {
         die();
     }
 
+    /**
+     * Выдаём список заказов клиента
+     *
+     */
+    public function getListOrders() {
+        global $wpdb;
+        $torder=Options::$table_order;
+        $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$torder} WHERE userID=%1", Buyer::ID()));
+
+    }
 
     /**
      * Выдаём айдишник заказа.
@@ -154,7 +164,7 @@ class Cart extends Order {
      *
      */
     public function saveCart($metaoptvals) {
-        global $wpdb;;
+        global $wpdb;
         foreach($metaoptvals as $orderitemid => $saveMetaOpts) {
             $orderitemid=explode('-', $orderitemid);
             $orderitemid=$orderitemid[1];

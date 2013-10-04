@@ -1,5 +1,13 @@
 <?php
 
+/**
+ *
+ *
+ */
+
+require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
+
+
 class Admin extends Options {
     private  $pagehook;
 
@@ -58,15 +66,16 @@ class Admin extends Options {
 	}
 	
 	function print_scripts() {
-		wp_enqueue_script('post');	
-			
+		wp_enqueue_script('post');
+        wp_enqueue_script('common');
 	}
 	
 	
 	function admin_maginza(){ 
 		global $Maginza, $wpdb;
 
-        add_meta_box('howto-metaboxes-contentbox-1', 'Contentbox 1 Title', array(&$this, 'on_contentbox_1_content'), $this->pagehook, 'normal', 'core');
+        add_meta_box('metabox_stat', 'Metabox_stat', array(&$this, 'metabox_stat'), $this->pagehook, 'normal', 'core');
+        add_meta_box('metabox_orders', 'Metabox_orders', array(&$this, 'metabox_orders'), $this->pagehook, 'normal', 'core');
 
         require_once('admin.tpl.php');
 		
@@ -93,14 +102,131 @@ class Admin extends Options {
 
 
     /**
-     *
+     *  Бокс со статистикой...
      *
      */
-	public function on_contentbox_1_content() {
-        echo 'TEST TEST TEST';
+	public function metabox_stat() {
+        echo 'Тут скоро будет статистика...';
+    }
+
+    /**
+     * Бокс-таблица со всеми заказами
+     *
+     */
+    public function metabox_orders() {
+        global $wpdb;
+        $tableorder=Options::$table_order;
+        $orders=$wpdb->get_results("SELECT * FROM {$tableorder} ");
+
+        $items=array();
+        foreach ($orders as $order) {
+
+            $items['OrderID']=$order->orderID;
+            $items['User']=$order->userID;
+            $items['OrderStatus']=$order->orderStatus;
+            $items['OrderDate']=$order->orderDT;
+
+        }
+        $table=new Orders__List_Table('OrdersTable');
+        //--
+        $columns=array(
+            'OrderID'=>__('Order ID'),
+            'User'=>__('User'),
+            'OrderStatus'=>__('Order Status'),
+            'OrderDate'=>__('Order Date')
+        );
+
+        $table->prepare_items($items, $columns);
+
+
+
+        $table->display();
+
     }
 
 	
 	
 }
+
+class Orders__List_Table extends WP_List_Table {
+    var $data=array();
+
+    function __construct($class) {
+        parent::__construct( array(
+            'singular'=> 'wp_list_text_link', //Singular label
+            'plural' => $class,
+            'ajax'	=> false //We won't support Ajax for this table
+        ) );
+    }
+
+    function display_tablenav( $which ) {
+        if ( 'top' == $which ) {
+            echo '<div class="tablenav '.esc_attr( $which ).'"><div class="alignleft actions">';
+            $this->bulk_actions();
+            echo '</div>';
+            $this->extra_tablenav( $which );
+            $this->pagination( $which );
+            echo '<br class="clear" /></div>';
+        }
+    }
+
+    function extra_tablenav( $which ) {
+        echo '
+			<ul class="subsubsub">
+				<li class="all">
+					<a href="#" class="current">
+						'.__('Total orders').'
+						<span class="count">('.count($this->items).')</span>
+					</a>
+				</li>
+			</ul>
+		';
+    }
+
+
+    function prepare_items($items, $columns) {
+        $hidden = array();
+        $sortable = array();
+        $this->_column_headers = array($columns, $hidden, $sortable);
+        $this->items = $items;
+    }
+
+    function column_default( $item, $column_name ) {
+        switch( $column_name ) {
+            case 'OrderID':
+                return $item[$column_name];
+            break;
+            case 'User':
+                return $item[$column_name];
+            break;
+            case 'OrderStatus':
+                return $item[$column_name];
+            break;
+            case 'OrderDate':
+                return $item[$column_name];
+            break;
+            default:
+                return $item[$column_name];
+            break;
+        }
+    }
+
+    function column_article($item) {
+        $actions = array(
+            'edit'      => sprintf('<a class="btnCombinationEdit" id="%s" href="#">Edit</a>', $item['id']),
+            'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
+            'save'      => sprintf('<a class="btnCombinationSave" id="%s" href="#">Save</a>', $item['id']),
+        );
+        return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
+    }
+
+    function no_items() {
+        _e( 'No combinations add.' );
+    }
+
+}
+
+
+
+
 ?>
