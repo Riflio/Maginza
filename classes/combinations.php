@@ -359,8 +359,8 @@ class Combinations__List_Table extends WP_List_Table {
 
     function column_default( $item, $column_name ) {
         switch( $column_name ) {
-                return $item[$column_name];
             case 'article':
+                return $item[$column_name];
             case 'title':
                 return "<input type='text' disabled=true name='combination[{$item[id]}][{$column_name}]' value='{$item[$column_name]}' />";
             case 'combination':
