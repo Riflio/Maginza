@@ -38,15 +38,14 @@ class Buyer extends Options {
         $user_info=(object) NULL;
 
         if (isset($id)&&!is_numeric($id)) { //-- Если задан айдишник и он айдишник сессии
-            $user_info->login=$id;
+            $user_info->user_login=$id;
             return $user_info;
         } else {
             $id=(isset($id))? $id : Buyer::ID();
         }
 
 
-        $user_info->login=get_the_author_meta('user_login', $id);
-        $user_info->url=get_the_author_meta('user_url', $id);
+        $user_info=get_userdata($id);
 
         return $user_info;
 
