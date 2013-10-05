@@ -154,12 +154,128 @@ class Admin extends Options {
      *
      */
     public function metabox_curorder() {
+        global $post;
+        $orderID=intval($_GET['order']);
 
-        echo 'Current ORDER';
+        $order=new Order();
+        $orderItems=$order->getListOrderItems($orderID);
+
+        $tableitems=array();
+        foreach($orderItems as $item) {
+            $lotID=$item->orderItemID;
+            $itemID=$item->orderItemsID;
+
+            $lot=get_post($lotID);
+
+            $post=$lot;
+            setup_postdata($post);
+
+            $order->setItemID($itemID);
+
+            $comb=$order->getCombination();
+
+            $tableitems[]=array(
+                'Title'=>get_the_title(),
+                'Descr'=>get_the_content(),
+                'Article'=> $order->theMetaValue($lot, 'Article', 'cart', false),
+                'Comb'=>$comb['combination'],
+                'Price'=>$order->theMetaValue($lot, 'Price', 'cart', false),
+                'Quantity'=>$order->theMetaValue($lot, 'Quantity',  'cart-'.$itemID, false)
+            );
+
+        }
+        //--
+        $tablecolumns=array(
+            'Title'=>__('Title'),
+            'Descr'=>__('Description'),
+            'Article'=>__('Article'),
+            'Comb'=>__('Comb'),
+            'Price'=>__('Price'),
+            'Quantity'=>__('Quantity')
+        );
+
+
+        $table=new CurOrder__List_Table('CurOrder_listtable');
+        $table->prepare_items($tableitems, $tablecolumns);
+        $table->display();
+
 
     }
 	
 	
+}
+
+
+class CurOrder__List_Table extends WP_List_Table {
+    var $data=array();
+
+    function __construct($class) {
+        parent::__construct( array(
+            'singular'=> 'wp_list_text_link', //Singular label
+            'plural' => $class,
+            'ajax'	=> false //We won't support Ajax for this table
+        ) );
+    }
+
+    function display_tablenav( $which ) {
+        if ( 'top' == $which ) {
+            echo '<div class="tablenav '.esc_attr( $which ).'"><div class="alignleft actions">';
+            $this->bulk_actions();
+            echo '</div>';
+            $this->extra_tablenav( $which );
+            $this->pagination( $which );
+            echo '<br class="clear" /></div>';
+        }
+    }
+
+    function extra_tablenav( $which ) {
+        echo '
+			<ul class="subsubsub">
+				<li class="all">
+					<a href="#" class="current">
+						'.__('Total order items').'
+						<span class="count">('.count($this->items).')</span>
+					</a>
+				</li>
+			</ul>
+		';
+    }
+
+
+    function prepare_items($items, $columns) {
+        $hidden = array();
+        $sortable = array();
+        $this->_column_headers = array($columns, $hidden, $sortable);
+        $this->items = $items;
+    }
+
+    function column_default( $item, $column_name ) {
+        switch( $column_name ) {
+            case 'Title':
+                return $item[$column_name];
+            break;
+            case 'Descr':
+                return $item[$column_name];
+            break;
+            default:
+                return $item[$column_name];
+                break;
+        }
+    }
+
+    function column_article($item) {
+        $actions = array(
+            'edit'      => sprintf('<a class="btnCombinationEdit" id="%s" href="#">Edit</a>', $item['id']),
+            'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
+            'save'      => sprintf('<a class="btnCombinationSave" id="%s" href="#">Save</a>', $item['id']),
+        );
+        return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
+    }
+
+    function no_items() {
+        _e( 'No order items.' );
+    }
+
 }
 
 class Orders__List_Table extends WP_List_Table {
@@ -235,7 +351,7 @@ class Orders__List_Table extends WP_List_Table {
     }
 
     function no_items() {
-        _e( 'No combinations add.' );
+        _e( 'No client orders.' );
     }
 
 }

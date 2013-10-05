@@ -95,26 +95,27 @@ class Meta extends Formatter {
     * решаем, что делать с метаопцией
 	*
     */
-     private function processMetaOption($metaOpt, $metaVal, $formName) {
+     private function processMetaOption($metaOpt, $metaVal, $formName, $echo=true) {
 		if (!$metaOpt) return false; //-- нас наебали, расходимся	
 		if (!$metaVal) $metaVal=$metaOpt->optValue;	
 		//-- проверить, виден ли
 		if (!$metaOpt->optVisible) return; 		
 		//-- проверить, если редактируемый или из админки, то выводим виджет, нет - через форматтер прогоняем
 		if ($metaOpt->optClientEditable || is_admin()  ) {
-			echo $this->widget($metaOpt->optType, $metaOpt, $metaVal, $formName);
+			$p=$this->widget($metaOpt->optType, $metaOpt, $metaVal, $formName);
 		} else {
-			echo $this->format($metaOpt->optFormatter, $metaOpt, $metaVal);
+            $p=$this->format($metaOpt->optFormatter, $metaOpt, $metaVal);
 		}
+        if ($echo) echo $p;
+        return $p;
 	}
 	
 	//-- выводим отформатированное значение или виджет
-	public function theMetaValue($lot, $metaName, $formName='') {
+	public function theMetaValue($lot, $metaName, $formName='', $echo=true) {
 		global $wpdb;	
 		$metaVal=$this->getMetaValue($lot, $metaName);		
-		$metaOpt=$this->OptionInMetaGroups($lot, $metaName);		
-		$this->processMetaOption($metaOpt, $metaVal, $formName);
-		return true;		
+		$metaOpt=$this->OptionInMetaGroups($lot, $metaName);
+        return 	$this->processMetaOption($metaOpt, $metaVal, $formName, $echo);
 	}
 
     /**
