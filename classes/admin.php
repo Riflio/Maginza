@@ -263,14 +263,6 @@ class CurOrder__List_Table extends WP_List_Table {
         }
     }
 
-    function column_article($item) {
-        $actions = array(
-            'edit'      => sprintf('<a class="btnCombinationEdit" id="%s" href="#">Edit</a>', $item['id']),
-            'delete'    => sprintf('<a class="btnCombinationDelete" id="%s" href="#">Delete</a>', $item['id']),
-            'save'      => sprintf('<a class="btnCombinationSave" id="%s" href="#">Save</a>', $item['id']),
-        );
-        return sprintf('%1$s %2$s', $this->column_default($item, 'article'), $this->row_actions($actions) );
-    }
 
     function no_items() {
         _e( 'No order items.' );
