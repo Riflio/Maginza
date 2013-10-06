@@ -19,8 +19,6 @@ class Cart extends Order {
     public function wp_login($ulogin, $userInfo ) {
         global $wpdb;
         if (is_admin()) return true;
-        echo 'DATA:';
-    var_dump($userInfo);
         if (session_id()!="") {
             //-- пробуем найти старый айдишник
             $oldID=session_id();
