@@ -35,7 +35,7 @@ class Cart extends Order {
         get_currentuserinfo();
         $r= '';
          if ( !is_user_logged_in() ) {
-            $r.= ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/cart">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/cart">Регистрация</a>';
+            $r.= ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/zavershenie-zakaza">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/zavershenie-zakaza">Регистрация</a>';
             $r.='<br> Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
