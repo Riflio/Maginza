@@ -94,7 +94,7 @@ class Cart extends Order {
         }
         echo '<div class="cartactbtns">';
             $this->theButton('saveCart', 'Сохранить', "#");
-            $this->theButton('sendCart', 'Продолжить оформление', "http://suvenirus.org/zavershenie-zakaza");
+            $this->theButton('nextCart', 'Продолжить оформление', "http://suvenirus.org/zavershenie-zakaza");
         echo '</div>';
         echo '</form></div>';
 	}
