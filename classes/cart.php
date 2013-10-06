@@ -7,6 +7,26 @@ class Cart extends Order {
 		add_shortcode('maginza_ordercomplete', array(&$this, 'maginza_ordercomplete'));
         add_action('wp_ajax_order', array(&$this, 'ajax_order'));
         add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));
+
+        add_action('wp_login', array(&$this, 'wp_login'), 10, 2);
+    }
+
+    /**
+     *  Когда юзер логинится, меняем айдишник его сессии на айдишник пользователя в заказах
+     *
+     */
+
+    public function wp_login($ulogin, $userInfo ) {
+        global $wpdb;
+        if (is_admin()) return true;
+        echo 'DATA:';
+    var_dump($userInfo);
+        if (session_id()!="") {
+            //-- пробуем найти старый айдишник
+            $oldID=session_id();
+            $wpdb->update(Options::$table_order, array('userID'=>$userInfo->ID), array('userID'=>$oldID), array("%s"),  array("%s"));
+        }
+        return true;
     }
 
     /**
