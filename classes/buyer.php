@@ -11,7 +11,7 @@ class Buyer extends Options {
 	}
 
 	function __construct() {
-		add_action('wp_login', array(&$this, 'wp_login'));	
+		add_action('wp_login', array(&$this, 'wp_login'), 10, 2);
 	}
 
     /**
@@ -52,15 +52,15 @@ class Buyer extends Options {
 
 	}
 	
-	public function wp_login($u) {
+	public function wp_login($ulogin, $userInfo ) {
 		global $wpdb;		
-	/*	if (is_admin()) return true;		
-		$userInfo= get_userdatabylogin($u);				
+		if (is_admin()) return true;
+
 		if (session_id()!="") { 
 			//-- пробуем найти старый айдишник			
 			$oldID=session_id();			
-			$wpdb->update(Options::getInstance(0)->table_order, array('userID'=>$userInfo->ID), array('userID'=>$oldID, 'status'=>Options::getInstance(0)->status_onbuy), array("%s"),  array("%s", "%s"));		
-		} 		*/		
+			$wpdb->update(Options::$table_order, array('userID'=>$userInfo->ID), array('userID'=>$oldID), array("%s"),  array("%s"));
+		}
 		return true;			
 	}
 }

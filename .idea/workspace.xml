@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/buyer.php" afterPath="$PROJECT_DIR$/classes/buyer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381100498106" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381100581877" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -27,7 +27,7 @@
     <file path="/jquery.admin.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495399491" ignored="false" />
     <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380931133009" ignored="false" />
     <file path="/admin.tpl.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905272391" ignored="false" />
-    <file path="/buyer.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380926169169" ignored="false" />
+    <file path="/buyer.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381100768328" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buyer.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="buyer.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/buyer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="37" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+            <state line="61" column="130" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.759434">
               <folding />
             </state>
           </provider>
@@ -82,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4502994">
+            <state line="40" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-14.461538">
               <folding>
                 <marker date="1381100573556" expanded="true" signature="5919:5958" placeholder="SELECT * FRO..{$torder}..." />
                 <marker date="1381100573556" expanded="true" signature="6248:6324" placeholder="SELECT order..{$table_order}..." />
@@ -172,12 +172,12 @@
         <option value="$PROJECT_DIR$/js/jquery.admin.js" />
         <option value="$PROJECT_DIR$/classes/combinations.php" />
         <option value="$PROJECT_DIR$/classes/admin.tpl.php" />
-        <option value="$PROJECT_DIR$/classes/buyer.php" />
         <option value="$PROJECT_DIR$/classes/meta.php" />
         <option value="$PROJECT_DIR$/classes/admin.php" />
         <option value="$PROJECT_DIR$/maginza.php" />
         <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
+        <option value="$PROJECT_DIR$/classes/buyer.php" />
       </list>
     </option>
   </component>
@@ -1271,7 +1271,11 @@
       <created>1381100500393</created>
       <updated>1381100500393</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="Добавляю просмотр заказов в админке">
+      <created>1381100584705</created>
+      <updated>1381100584705</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1459,13 +1463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/buyer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="37" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="94" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.0">
@@ -1513,11 +1510,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.4502994">
+        <state line="40" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="-14.461538">
           <folding>
             <marker date="1381100573556" expanded="true" signature="5919:5958" placeholder="SELECT * FRO..{$torder}..." />
             <marker date="1381100573556" expanded="true" signature="6248:6324" placeholder="SELECT order..{$table_order}..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/buyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="130" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.759434">
+          <folding />
         </state>
       </provider>
     </entry>
