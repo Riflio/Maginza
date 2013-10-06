@@ -36,7 +36,7 @@ class Cart extends Order {
         $r= '';
          if ( !is_user_logged_in() ) {
             $r.= ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/cart">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/cart">Регистрация</a>';
-            $r.='Регистрация не займёт много времени, она нужна для оформления заказа.';
+            $r.='<br> Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
              $r=$this->theButton('sendCart', 'Завершить оформление', "#");
