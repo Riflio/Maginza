@@ -50,6 +50,7 @@ class Cart extends Order {
      */
     function maginza_ordercomplete($args) {
         global $current_user;
+        //TODO: всё переделать!!!
         get_currentuserinfo();
         $r= '';
          if ( !is_user_logged_in() ) {
@@ -57,7 +58,8 @@ class Cart extends Order {
             $r.='<br> Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
-             $r=$this->theButton('sendCart', 'Завершить оформление', "#", false);
+             $url=admin_url('admin-ajax.php' ).'?action=order&method=sendcart&cartorderid=,'.$this->orderID();
+             $r=$this->theButton('sendCart', 'Завершить оформление', $url, false);
 
 
          }

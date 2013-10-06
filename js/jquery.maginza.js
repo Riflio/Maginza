@@ -72,16 +72,15 @@ jQuery(document).ready(function($){
     });
 
     $('#sendCart').on('click', function(){
+        var a=$(this);
         $.get(
-            maginza.ajaxurl,
+            $(a).attr('href'),
             {
-                action:	'order',
-                method: 'sendcart',
-                cartorderid: $('#cartOrderID').val()
+
             },
             function(_data){
                 alert('Ваш заказ отправлен на обработку.');
-                location.reload();
+                window.location.href = "http://suvenirus.org/cart";
                 try {
                     var data=$.parseJSON(_data);
                 }
