@@ -49,6 +49,7 @@ jQuery(document).ready(function($){
                 $('.orderitem.item-'+data.orderitemid).remove();
             }
         );
+        return false;
     });
 
     $('.cartactbtns #saveCart').on('click', function(){
@@ -69,11 +70,11 @@ jQuery(document).ready(function($){
 
             }
         );
+        return false;
     });
 
     $('a#sendCart').on('click', function(){
         var a=$(this);
-        alert('fff');
         $.get(
             $(a).attr('href'),
             {
@@ -91,6 +92,7 @@ jQuery(document).ready(function($){
 
             }
         );
+        return false;
     });
 
 });
