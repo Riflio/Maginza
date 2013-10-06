@@ -71,12 +71,13 @@ jQuery(document).ready(function($){
         );
     });
 
-    $('#sendCart').on('click', function(){
+    $('a#sendCart').on('click', function(){
         var a=$(this);
+        alert('fff');
         $.get(
             $(a).attr('href'),
             {
-
+                test: 'test'
             },
             function(_data){
                 alert('Ваш заказ отправлен на обработку.');
