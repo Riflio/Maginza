@@ -4,6 +4,7 @@ class Cart extends Order {
 	
 	function __construct() {
 		add_shortcode('maginza_cart', array(&$this, 'showCart'));
+		add_shortcode('maginza_ordercomplete', array(&$this, 'maginza_ordercomplete'));
         add_action('wp_ajax_order', array(&$this, 'ajax_order'));
         add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));
     }
@@ -23,6 +24,26 @@ class Cart extends Order {
             return $c.' товаров.';
             //TODO: доделать склонения
         }
+    }
+
+    /**
+     *
+     *
+     */
+    function maginza_ordercomplete($args) {
+        global $current_user;
+        get_currentuserinfo();
+
+         if ( !is_user_logged_in() ) {
+           echo ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/cart">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/cart">Регистрация</a>';
+           echo 'Регистрация не займёт много времени, она нужна для оформления заказа.';
+         } else {
+
+             $this->theButton('sendCart', 'Завершить оформление', "#");
+
+
+         }
+
     }
 
     /**
