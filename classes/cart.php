@@ -39,7 +39,7 @@ class Cart extends Order {
             $r.='<br> Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
-             $r=$this->theButton('sendCart', 'Завершить оформление', "#");
+             $r=$this->theButton('sendCart', 'Завершить оформление', "#", false);
 
 
          }
