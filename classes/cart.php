@@ -5,12 +5,48 @@ class Cart extends Order {
 	function __construct() {
 		add_shortcode('maginza_cart', array(&$this, 'showCart'));
 		add_shortcode('maginza_ordercomplete', array(&$this, 'maginza_ordercomplete'));
+		add_shortcode('maginza_clientorderslist', array(&$this, 'maginza_clientorderslist'));
         add_action('wp_ajax_order', array(&$this, 'ajax_order'));
         add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));
 
         add_action('wp_login', array(&$this, 'wp_login'), 10, 2);
     }
 
+    /**
+     * Выводим список заказов клиента
+     *
+     */
+    public function maginza_clientorderslist($args) {
+        $orders=$this->getListOrders();
+        //TODO: !!!переделать всё!!! это временно!!!
+
+        if (count($orders)==0) {
+            return 'У Вас ещё небыло заказов.';
+        }
+
+        $ret='<table> <tr><td>Номер</td><td>Статус</td><td>Дата</td></tr>';
+
+        foreach ($orders as $order) {
+
+            switch ( $order->orderStatus) {
+                case 0: $status='В процессе'; break;
+                case 5: $status='Завершён'; break;
+            }
+
+            $date=new DateTime($order->orderDT);
+
+            $ret.='<tr>';
+                $ret.=('<td>'.$order->orderID.'</td>');
+                $ret.=('<td>'.$status.'</td>');
+                $ret.=('<td>'.$date->format('d.m.Y H:m').'</td>');
+                $ret.=('<td><a class="btn changeorder" id="'.$order->orderID.'" href="#">Изменить</a></td>');
+            $ret.='</tr>';
+        }
+
+        $ret.='</table>';
+
+        return $ret;
+    }
     /**
      *  Когда юзер логинится, меняем айдишник его сессии на айдишник пользователя в заказах
      *
@@ -188,7 +224,7 @@ class Cart extends Order {
     }
 
     /**
-     * Выдаём список заказов клиента
+     * Отдаём список заказов клиента
      *
      */
     public function getListOrders() {
