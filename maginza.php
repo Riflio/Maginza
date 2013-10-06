@@ -48,7 +48,7 @@ class Maginza extends Options  {
 	private $admin;
 	private $options;
 	private $order;
-	private $cart;
+	public  $cart;
 	public $combinations;
     private $lots;
 	
