@@ -14,7 +14,7 @@ class Cart extends Order {
      */
     public function cartStatus() {
         $orderItems=$this->getListOrderItems($this->orderID());
-        $c=count($orderItems)
+        $c=count($orderItems);
         if ($c==0) {
             return 'нет товаров';
         } else {
