@@ -8,7 +8,28 @@ class Cart extends Order {
         add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));
     }
 
-	function showCart($args) {
+    /**
+     *
+     *
+     */
+    public function cartStatus() {
+        $orderItems=$this->getListOrderItems($this->orderID());
+        $c=count($orderItems)
+        if ($c==0) {
+            return 'нет товаров';
+        } else {
+            if ($c==1) return '1 товар.';
+            if ($c>1 && $c<5) return $c.' товара.';
+            return $c.' товаров.';
+            //TODO: доделать склонения
+        }
+    }
+
+    /**
+     *
+     *
+     */
+    function showCart($args) {
         global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
 
