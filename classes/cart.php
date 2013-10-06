@@ -33,17 +33,18 @@ class Cart extends Order {
     function maginza_ordercomplete($args) {
         global $current_user;
         get_currentuserinfo();
-
+        $r= '';
          if ( !is_user_logged_in() ) {
-           echo ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/cart">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/cart">Регистрация</a>';
-           echo 'Регистрация не займёт много времени, она нужна для оформления заказа.';
+            $r.= ' <a class="simplemodal-login alogin" href="/login?redirect_to=http://suvenirus.org/cart">Вход с паролем</a> или <a class="aregister" href="/register?redirect_to=http://suvenirus.org/cart">Регистрация</a>';
+            $r.='Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
-             $this->theButton('sendCart', 'Завершить оформление', "#");
+             $r=$this->theButton('sendCart', 'Завершить оформление', "#");
 
 
          }
 
+        return $r;
     }
 
     /**
@@ -197,8 +198,10 @@ class Cart extends Order {
     }
 
 
-    public function theButton($action, $text, $url) {
-        echo Formatter::format('button', $action, $text, $url);
+    public function theButton($action, $text, $url, $echo=true) {
+        $r= Formatter::format('button', $action, $text, $url);
+        if ($echo) echo $r;
+        return $r;
     }
 
     /**
