@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
         );
     });
 
-    $('.cartactbtns #sendCart').on('click', function(){
+    $('#sendCart').on('click', function(){
         $.get(
             maginza.ajaxurl,
             {
