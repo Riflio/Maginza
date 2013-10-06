@@ -2,7 +2,7 @@
 jQuery(document).ready(function($){
 
 	
-	$('.orderaction').live('click', function() {	
+	$('#buy.orderaction').live('click', function() {
 		var met=$(this).attr('id');
 		var th=$(this);
 		$.get(
