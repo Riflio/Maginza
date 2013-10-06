@@ -58,7 +58,7 @@ class Cart extends Order {
             $r.='<br> Регистрация не займёт много времени, она нужна для оформления заказа.';
          } else {
 
-             $url=admin_url('admin-ajax.php' ).'?action=order&method=sendcart&cartorderid=,'.$this->orderID();
+             $url=admin_url('admin-ajax.php' ).'?action=order&method=sendcart&cartorderid='.$this->orderID();
              $r=$this->theButton('sendCart', 'Завершить оформление', $url, false);
 
 
