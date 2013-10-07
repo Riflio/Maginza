@@ -47,6 +47,17 @@ class Cart extends Order {
 
         return $ret;
     }
+
+    /**
+     * Изменяем статус заказа, короче отправляем его обратно в корзину
+     * TODO: сделать запись в лог
+     */
+    public function toChangeOrder($orderID) {
+        global $wpdb;
+        $wpdb->update(Options::$table_order, array('orderStatus'=>'0'), array('orderID'=>$orderID), array('%s'), array('%d'));
+        return ;
+    }
+
     /**
      *  Когда юзер логинится, меняем айдишник его сессии на айдишник пользователя в заказах
      *
@@ -218,6 +229,11 @@ class Cart extends Order {
         if ($method==="sendcart") {
             $cartOrderID=intval($_GET['cartorderid']);
             $this->sendCart($cartOrderID);
+        }
+
+        if ($method==="changeorder") {
+            $orderID=intval($_GET['orderitemid']);
+            $this->toChangeOrder($orderID);
         }
 
         die();

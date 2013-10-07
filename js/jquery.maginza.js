@@ -95,4 +95,28 @@ jQuery(document).ready(function($){
         return false;
     });
 
+
+
+    $('a.btn.changeorder').on('click', function(){
+        var itemID=$(this).attr('id');
+        $.get(
+            maginza.ajaxurl,
+            {
+                action:	'order',
+                method: 'changeorder',
+                orderitemid: itemID,
+                rand: Math.random()
+            },
+            function(_data){
+
+                alert('Ваш заказ перенесён в корзину. Сейчас в неё перейдём.');
+                window.location.href = "http://suvenirus.org/cart";
+
+            }
+        );
+        return false;
+    });
+
+
+
 });
