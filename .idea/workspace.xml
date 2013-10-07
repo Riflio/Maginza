@@ -11,7 +11,7 @@
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381104003924" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381104032152" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -86,11 +86,10 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="20" selection-start="7984" selection-end="7984" vertical-scroll-proportion="0.75555557">
+            <state line="230" column="21" selection-start="7668" selection-end="7668" vertical-scroll-proportion="0.48271605">
               <folding>
-                <marker date="1381104030013" expanded="true" signature="7775:7814" placeholder="SELECT * FRO..{$torder}..." />
-                <marker date="1381104030013" expanded="true" signature="7907:7946" placeholder="SELECT * FRO..{$torder}..." />
-                <marker date="1381104030013" expanded="true" signature="8284:8360" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1381104097668" expanded="true" signature="7745:7782" placeholder="SELECT * FRO..{$torder}..." />
+                <marker date="1381104097668" expanded="true" signature="8096:8172" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -1331,7 +1330,11 @@
       <created>1381104006747</created>
       <updated>1381104006747</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="Добавляю просмотр заказов в админке">
+      <created>1381104034470</created>
+      <updated>1381104034470</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1575,11 +1578,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="20" selection-start="7984" selection-end="7984" vertical-scroll-proportion="0.75555557">
+        <state line="230" column="21" selection-start="7668" selection-end="7668" vertical-scroll-proportion="0.48271605">
           <folding>
-            <marker date="1381104030013" expanded="true" signature="7775:7814" placeholder="SELECT * FRO..{$torder}..." />
-            <marker date="1381104030013" expanded="true" signature="7907:7946" placeholder="SELECT * FRO..{$torder}..." />
-            <marker date="1381104030013" expanded="true" signature="8284:8360" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1381104097668" expanded="true" signature="7745:7782" placeholder="SELECT * FRO..{$torder}..." />
+            <marker date="1381104097668" expanded="true" signature="8096:8172" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>
