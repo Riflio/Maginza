@@ -241,7 +241,7 @@ class Cart extends Order {
 
 
             var_dump($wpdb->prepare("SELECT * FROM {$torder} WHERE userID=%1", Buyer::ID()));
-var_dump($current_user->ID);
+var_dump(Buyer::ID());
         return $orders;
 
 
