@@ -180,7 +180,8 @@ class Admin extends Options {
                 'Article'=> $order->theMetaValue($lot, 'Article', 'cart', false),
                 'Comb'=>$comb['combination'],
                 'Price'=>$order->theMetaValue($lot, 'Price', 'cart', false),
-                'Quantity'=>$order->theMetaValue($lot, 'Quantity',  'cart-'.$itemID, false)
+                'Quantity'=>$order->theMetaValue($lot, 'Quantity',  'cart-'.$itemID, false),
+                'Prev'=> $order->theMetaValue($lot, 'Selprevimg', 'cart', false)
             );
 
         }
@@ -191,7 +192,8 @@ class Admin extends Options {
             'Article'=>__('Article'),
             'Comb'=>__('Comb'),
             'Price'=>__('Price'),
-            'Quantity'=>__('Quantity')
+            'Quantity'=>__('Quantity'),
+            'Prev'=>__('Prev')
         );
 
 
