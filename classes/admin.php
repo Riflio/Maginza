@@ -187,13 +187,13 @@ class Admin extends Options {
         }
         //--
         $tablecolumns=array(
+            'SelPrev'=>__('Prev'),
             'Title'=>__('Title'),
             'Descr'=>__('Description'),
             'Article'=>__('Article'),
             'Comb'=>__('Comb'),
             'Price'=>__('Price'),
-            'Quantity'=>__('Quantity'),
-            'SelPrev'=>__('Prev')
+            'Quantity'=>__('Quantity')
         );
 
 
