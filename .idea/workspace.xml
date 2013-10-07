@@ -6,12 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/admin.php" afterPath="$PROJECT_DIR$/classes/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/admin.maginza.css" afterPath="$PROJECT_DIR$/css/admin.maginza.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381105227253" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381105309654" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -29,6 +29,7 @@
     <file path="/admin.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381105164715" ignored="false" />
     <file path="/admin.tpl.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380905272391" ignored="false" />
     <file path="/buyer.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381100768328" ignored="false" />
+    <file path="/admin.maginza.css" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381105383967" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="28" selection-start="5840" selection-end="5840" vertical-scroll-proportion="0.7016509">
+            <state line="188" column="28" selection-start="5840" selection-end="5840" vertical-scroll-proportion="-22.884615">
               <folding>
                 <element signature="e#7#20#0" expanded="true" />
                 <marker date="1381105303259" expanded="true" signature="3660:3687" placeholder="SELECT * FRO..{$tableorder}..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.maginza.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/admin.maginza.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.21395881">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,7 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/classes/lot.php" />
         <option value="$PROJECT_DIR$/classes/setup.php" />
         <option value="$PROJECT_DIR$/classes/metasettings.php" />
         <option value="$PROJECT_DIR$/classes/FormulaInterpreter/Calculator.class.php" />
@@ -181,6 +190,7 @@
         <option value="$PROJECT_DIR$/js/jquery.maginza.js" />
         <option value="$PROJECT_DIR$/classes/cart.php" />
         <option value="$PROJECT_DIR$/classes/admin.php" />
+        <option value="$PROJECT_DIR$/css/admin.maginza.css" />
       </list>
     </option>
   </component>
@@ -1350,7 +1360,11 @@
       <created>1381105229251</created>
       <updated>1381105229251</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="Добавляю просмотр заказов в админке">
+      <created>1381105312073</created>
+      <updated>1381105312073</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1485,11 +1499,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="720" column="31" selection-start="21369" selection-end="21369" vertical-scroll-proportion="0.44339624" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/globalsettings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="37" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" />
@@ -1594,11 +1603,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="28" selection-start="5840" selection-end="5840" vertical-scroll-proportion="0.7016509">
+        <state line="188" column="28" selection-start="5840" selection-end="5840" vertical-scroll-proportion="-22.884615">
           <folding>
             <element signature="e#7#20#0" expanded="true" />
             <marker date="1381105303259" expanded="true" signature="3660:3687" placeholder="SELECT * FRO..{$tableorder}..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/admin.maginza.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.21395881">
+          <folding />
         </state>
       </provider>
     </entry>

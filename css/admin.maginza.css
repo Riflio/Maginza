@@ -6,3 +6,7 @@
 	background-color: #8FC1F8 !important; 
 }
 
+.curorder_listtable img {
+    width: 150px;
+    height: 150px;
+}
