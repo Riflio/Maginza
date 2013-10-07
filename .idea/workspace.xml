@@ -5,13 +5,13 @@
     <bookmark url="file://$PROJECT_DIR$/js/jquery.maginza.js" line="78" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Добавляю просмотр заказов в админке">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/cart.php" afterPath="$PROJECT_DIR$/classes/cart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381103859994" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381103908735" ignored="false" />
     <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380495692361" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
@@ -20,7 +20,7 @@
     <file path="/setup.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380254449338" ignored="false" />
     <file path="/order.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380411509211" ignored="false" />
     <file path="/jquery.maginza.js" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381102424315" ignored="false" />
-    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381103891211" ignored="false" />
+    <file path="/cart.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381103993721" ignored="false" />
     <file path="/meta.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380930763550" ignored="false" />
     <file path="/maginza.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1381088011915" ignored="false" />
     <file path="/metasettings.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380401177684" ignored="false" />
@@ -65,7 +65,7 @@
       <file leaf-file-name="buyer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/buyer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="-26.73077">
+            <state line="24" column="36" selection-start="313" selection-end="423" vertical-scroll-proportion="-15.692307">
               <folding />
             </state>
           </provider>
@@ -86,11 +86,11 @@
       <file leaf-file-name="cart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="236" column="23" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.6925926">
+            <state line="243" column="28" selection-start="7992" selection-end="7992" vertical-scroll-proportion="0.75555557">
               <folding>
-                <marker date="1381103894553" expanded="true" signature="7759:7798" placeholder="SELECT * FRO..{$torder}..." />
-                <marker date="1381103894553" expanded="true" signature="7850:7889" placeholder="SELECT * FRO..{$torder}..." />
-                <marker date="1381103894553" expanded="true" signature="8205:8281" placeholder="SELECT order..{$table_order}..." />
+                <marker date="1381104001827" expanded="true" signature="7775:7814" placeholder="SELECT * FRO..{$torder}..." />
+                <marker date="1381104001827" expanded="true" signature="7907:7946" placeholder="SELECT * FRO..{$torder}..." />
+                <marker date="1381104001827" expanded="true" signature="8290:8366" placeholder="SELECT order..{$table_order}..." />
               </folding>
             </state>
           </provider>
@@ -1323,7 +1323,11 @@
       <created>1381103862383</created>
       <updated>1381103862383</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="Добавляю просмотр заказов в админке">
+      <created>1381103898716</created>
+      <updated>1381103898716</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1525,13 +1529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/buyer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="-26.73077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="94" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-17.73077">
@@ -1555,6 +1552,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/buyer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="313" selection-end="423" vertical-scroll-proportion="-15.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="55" selection-start="4141" selection-end="4167" vertical-scroll-proportion="-17.653847">
@@ -1567,11 +1571,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="23" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.6925926">
+        <state line="243" column="28" selection-start="7992" selection-end="7992" vertical-scroll-proportion="0.75555557">
           <folding>
-            <marker date="1381103894553" expanded="true" signature="7759:7798" placeholder="SELECT * FRO..{$torder}..." />
-            <marker date="1381103894553" expanded="true" signature="7850:7889" placeholder="SELECT * FRO..{$torder}..." />
-            <marker date="1381103894553" expanded="true" signature="8205:8281" placeholder="SELECT order..{$table_order}..." />
+            <marker date="1381104001827" expanded="true" signature="7775:7814" placeholder="SELECT * FRO..{$torder}..." />
+            <marker date="1381104001827" expanded="true" signature="7907:7946" placeholder="SELECT * FRO..{$torder}..." />
+            <marker date="1381104001827" expanded="true" signature="8290:8366" placeholder="SELECT order..{$table_order}..." />
           </folding>
         </state>
       </provider>

@@ -228,12 +228,20 @@ class Cart extends Order {
      *
      */
     public function getListOrders() {
-        global $wpdb;
+        global $current_user, $wpdb;
+
         $torder=Options::$table_order;
         $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$torder} WHERE userID=%1", Buyer::ID()));
 
-        var_dump($wpdb->prepare("SELECT * FROM {$torder} WHERE userID=%1", Buyer::ID()));
 
+
+
+        get_currentuserinfo();
+
+
+
+            var_dump($wpdb->prepare("SELECT * FROM {$torder} WHERE userID=%1", Buyer::ID()));
+var_dump($current_user->ID);
         return $orders;
 
 
