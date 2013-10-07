@@ -24,7 +24,7 @@ class Cart extends Order {
             return 'У Вас ещё небыло заказов.';
         }
 
-        $ret='<table> <tr><td>Номер</td><td>Статус</td><td>Дата</td></tr>';
+        $ret='<table class="tableclientorders"> <tr><td>Номер</td><td>Статус</td><td>Дата</td></tr>';
 
         foreach ($orders as $order) {
 
