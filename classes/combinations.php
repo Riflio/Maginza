@@ -268,7 +268,8 @@ class Combinations extends Meta{
 	*
 	*/
 	function editCombination($lotID, $combinID, $article, $title, $features, $isDef) {
-		global $wpdb;
+        global $wpdb;
+        $isDef=($isDef==='on')? true : false;
 		$wpdb->update(Options::$table_combinations, array('combinTitle'=> $title, 'combinArticle'=>$article, 'combinIsDefault'=>$isDef), array('combinID'=>$combinID), array('%s', '%s', '%d'), array('%d'));
 		$wpdb->delete(Options::$table_combinations_rel, array('combinRelCombinID'=>$combinID), array('%d'));
 		foreach($features as $key => $rel) {

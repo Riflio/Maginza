@@ -150,7 +150,6 @@ jQuery(document).ready(function($){
 	
 	
 	$("#mbcombinations").on('click', 'a#combinationsave, a.btnCombinationSave', function(){
-        alert($('.combinations_list_table tr.curCombiEdit td.column-isdefault input').val());
 		$.get(
 			ajaxurl+'?'+$("input[name^='tax_input[features]']").serialize(),
 			{
