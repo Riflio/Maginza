@@ -185,7 +185,8 @@ class Combinations extends Meta{
 			'article' 	=> __('Article'),			
 			'title'		=> __('Title'),
 			'combination'=>__('Combination'),
-			'combinationIDS'=>__('combinationIDS')
+			'combinationIDS'=>__('combinationIDS'),
+            'isdefault'=>__('Default')
 		);
 		$columns=apply_filters('mzcombinations_getcolumns', $columns);
 		return $columns;
@@ -367,6 +368,9 @@ class Combinations__List_Table extends WP_List_Table {
                 return $item[$column_name];
             case 'combinationIDS':
                 return $item[$column_name];
+            case 'isdefault':
+                $check=($item[$column_name]==true)? 'checked' : '';
+                return "<input type='checkbox' disabled=true {$check} name='combination[{$item[id]}][{$column_name}]' "" />";
             default:
                 return $item[$column_name];
         }
