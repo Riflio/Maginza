@@ -51,6 +51,7 @@ class Combinations extends Meta{
             //-- узнаем, какая комбинация установлена по умолчанию
             $defComb= get_metadata('maginza', $lotID, 'CombDefault', true);
             if (!$defComb) return false; //TODO: сделать нормальное сообщение об ошибке
+           var_dump($defComb);
             return $combins[$defComb];
         }
         $features=array_diff($features, array(''));
