@@ -61,7 +61,6 @@ class Setup extends Options {
 			lotID bigint(20) unsigned NOT NULL default '0',
 			combinTitle varchar(255),
 			combinArticle bigint(20),
-			combinIsDefault TINYINT(1),
 			PRIMARY KEY	(combinID)
 		) $charset_collate;";
 		dbDelta($sql);		

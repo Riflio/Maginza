@@ -135,9 +135,12 @@ class Combinations extends Meta{
 			WHERE comb.lotID=%d
 			", $lotID
 		));
+
+        //-- узнаем, какая комбинация установлена по умолчанию
+        $defComb= get_metadata('maginza', $lotID, 'CombDefault', true);
 		//-- На выход добавим все комбинации
 		foreach ($qCombinations as $comb) {
-			$items[$comb->combinID]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle, 'combination'=>'', 'combinationIDS'=>'-1' );
+			$items[$comb->combinID]=array('id'=>$comb->combinID, 'article'=>$comb->combinArticle, 'title'=>$comb->combinTitle, 'isdefault'=>($defComb==$comb->combinID), 'combination'=>'', 'combinationIDS'=>'-1' );
 		}
         //-- На выход раскидаем названия характеристик и названия групп по комбинациям
         $qRels=$this->getLotAllFeatures($lotID, 'combinRelID');
@@ -269,8 +272,10 @@ class Combinations extends Meta{
 	*/
 	function editCombination($lotID, $combinID, $article, $title, $features, $isDef) {
         global $wpdb;
-        $isDef=($isDef==='on')? true : false;
-		$wpdb->update(Options::$table_combinations, array('combinTitle'=> $title, 'combinArticle'=>$article, 'combinIsDefault'=>$isDef), array('combinID'=>$combinID), array('%s', '%s', '%d'), array('%d'));
+        if ($isDef=='on') {
+            update_metadata('maginza', $lotID, 'CombDefault', $combinID);
+        }
+		$wpdb->update(Options::$table_combinations, array('combinTitle'=> $title, 'combinArticle'=>$article), array('combinID'=>$combinID), array('%s', '%s', '%d'), array('%d'));
 		$wpdb->delete(Options::$table_combinations_rel, array('combinRelCombinID'=>$combinID), array('%d'));
 		foreach($features as $key => $rel) {
 	        $wpdb->insert(Options::$table_combinations_rel, array('combinRelGroupId'=>$key, 'combinRelCombinID'=> $combinID, 'combinRelItemsID'=>implode($rel, ',')), array('%d', '%d','%s'));
