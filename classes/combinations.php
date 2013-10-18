@@ -370,7 +370,7 @@ class Combinations__List_Table extends WP_List_Table {
                 return $item[$column_name];
             case 'isdefault':
                 $check=($item[$column_name]==true)? 'checked' : '';
-                return "<input type='checkbox' disabled=true {$check} name='combination[{$item[id]}][{$column_name}]' "" />";
+                return "<input type='checkbox' disabled=true {$check} name='combination[{$item[id]}][{$column_name}]' />";
             default:
                 return $item[$column_name];
         }
