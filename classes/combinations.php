@@ -47,7 +47,7 @@ class Combinations extends Meta{
     public function whatCombination($features, $lotID) {
         $combins=$this->getCombinationList($lotID);
         //-- Если не передано никаких выбранных характеристик
-        if (!is_array($features)||count($features)==0) {
+        if (!$features||!is_array($features)||count($features)==0) {
             //-- узнаем, какая комбинация установлена по умолчанию
             $defComb= get_metadata('maginza', $lotID, 'CombDefault', true);
             if (!$defComb) return false; //TODO: сделать нормальное сообщение об ошибке
