@@ -83,8 +83,16 @@ class Combinations extends Meta{
 	* Сохраняяем все параметры бокса комбинаций товара
 	*
 	*/
-	function save_post($post) {
+	function save_post($post_id) {
 		global $wpdb;
+
+        //-- проверяем, если нет ни одной комбинации, создаём комбинацию и ставим её по умолчанию.
+        if (count($this->getCombinations($post_id))==0) {
+            $sfeatures=implode($_GET['tax_input[features]'], ',');
+            $combinFeatures=$this->featuresbygroups($sfeatures);
+            $combinID=$this->addCombination($post_id, $combinFeatures, 'По умолчанию');
+            update_metadata('maginza', $post_id, 'CombDefault', $combinID);
+        }
 
         if (isset($_POST['combination'])) {
             $combinations=$_POST['combination'];
@@ -94,6 +102,7 @@ class Combinations extends Meta{
                 $wpdb->update(Options::$table_combinations, array('combinTitle'=>$title, 'combinArticle'=>$article), array('combinID'=>$combID), array('%s', '%s'), array('%d'));
             }
         }
+
 
 	}
 
@@ -130,7 +139,24 @@ class Combinations extends Meta{
     }
 
     /**
-    * Отдаём список комбинаций товара
+     * Отдаём список комбинаций товара
+     *
+     */
+
+    public function getCombinations($lotID) {
+        global $wpdb;
+        $table_combinations=Options::$table_combinations;
+        $qCombinations=$wpdb->get_results($wpdb->prepare(
+            "SELECT comb.*
+			FROM  {$table_combinations} as comb
+			WHERE comb.lotID=%d
+			", $lotID
+        ));
+        return $qCombinations;
+    }
+
+    /**
+    * Отдаём список комбинаций товара с характеристиками
     *
     */
     public function getCombinationList($lotID) {
@@ -138,13 +164,7 @@ class Combinations extends Meta{
 		$items=array();
     	$table_combinations=Options::$table_combinations;
 		//-- получим все комбинации товара
-		$qCombinations=$wpdb->get_results($wpdb->prepare(
-			"SELECT comb.*
-			FROM  {$table_combinations} as comb
-			WHERE comb.lotID=%d
-			", $lotID
-		));
-
+		$qCombinations=$this->getCombinations($lotID);
         //-- узнаем, какая комбинация установлена по умолчанию
         $defComb= get_metadata('maginza', $lotID, 'CombDefault', true);
 		//-- На выход добавим все комбинации
@@ -272,6 +292,8 @@ class Combinations extends Meta{
 		}
 
         $wpdb->update(Options::$table_combinations, array('combinArticle'=>$combinID), array('combinID'=>$combinID), array('%d'), array('%d'));
+
+        return $combinID;
 	}
 	
 	/*
