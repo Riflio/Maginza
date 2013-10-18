@@ -150,6 +150,7 @@ jQuery(document).ready(function($){
 	
 	
 	$("#mbcombinations").on('click', 'a#combinationsave, a.btnCombinationSave', function(){
+        alert($('.combinations_list_table tr.curCombiEdit td.column-isdefault input').val());
 		$.get(
 			ajaxurl+'?'+$("input[name^='tax_input[features]']").serialize(),
 			{
@@ -157,7 +158,8 @@ jQuery(document).ready(function($){
 				lotID: $('input#post_ID').val(),
 				combinID: $('.combinations_list_table tr.curCombiEdit td.column-id').text(),
 				article: $('.combinations_list_table tr.curCombiEdit td.column-article input').val(),
-				title: $('.combinations_list_table tr.curCombiEdit td.column-title input').val()
+				title: $('.combinations_list_table tr.curCombiEdit td.column-title input').val(),
+                isdefault:  $('.combinations_list_table tr.curCombiEdit td.column-isdefault input').val()
 			}, function(_data) {
 				refreshCombList();
 			}

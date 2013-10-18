@@ -267,9 +267,9 @@ class Combinations extends Meta{
 	*
 	*
 	*/
-	function editCombination($lotID, $combinID, $article, $title, $features) {
+	function editCombination($lotID, $combinID, $article, $title, $features, $isDef) {
 		global $wpdb;
-		$wpdb->update(Options::$table_combinations, array('combinTitle'=> $title, 'combinArticle'=>$article), array('combinID'=>$combinID), array('%s', '%s'), array('%d'));
+		$wpdb->update(Options::$table_combinations, array('combinTitle'=> $title, 'combinArticle'=>$article, 'combinIsDefault'=>$isDef), array('combinID'=>$combinID), array('%s', '%s', '%d'), array('%d'));
 		$wpdb->delete(Options::$table_combinations_rel, array('combinRelCombinID'=>$combinID), array('%d'));
 		foreach($features as $key => $rel) {
 	        $wpdb->insert(Options::$table_combinations_rel, array('combinRelGroupId'=>$key, 'combinRelCombinID'=> $combinID, 'combinRelItemsID'=>implode($rel, ',')), array('%d', '%d','%s'));
@@ -308,7 +308,7 @@ class Combinations extends Meta{
 		if ($action=="autogeneratecombination") 
 			$this->recGen($lotID, array_keys($combinFeatures), $combinFeatures, 0, $a=array());
 		if ($action=="editCombination") 	
-			$this->editCombination($lotID, intval($_GET['combinID']), $_GET['article'], $_GET['title'], $combinFeatures);
+			$this->editCombination($lotID, intval($_GET['combinID']), $_GET['article'], $_GET['title'], $combinFeatures, $_GET['isdefault']);
 		die();
 	}
 	
@@ -370,7 +370,7 @@ class Combinations__List_Table extends WP_List_Table {
                 return $item[$column_name];
             case 'isdefault':
                 $check=($item[$column_name]==true)? 'checked' : '';
-                return "<input type='checkbox' disabled=true {$check} name='combination[{$item[id]}][{$column_name}]' />";
+                return "<input type='radio' disabled=true {$check} name='combination[{$item[id]}][{$column_name}]' />";
             default:
                 return $item[$column_name];
         }
