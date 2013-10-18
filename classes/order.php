@@ -43,10 +43,6 @@ class Order extends OrderItem {
         $metaOpts=serialize($metaOpts);
 
         //-- подберём комбинацию по характеристикам
-
-        if (!$features) { //--не выбранно характеристик
-
-        }
         $combination=$this->whatCombination($features, $lotID);
 
         if ($combination===false) {
