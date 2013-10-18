@@ -46,6 +46,13 @@ class Combinations extends Meta{
     */
     public function whatCombination($features, $lotID) {
         $combins=$this->getCombinationList($lotID);
+        //-- Если не передано никаких выбранных характеристик
+        if (!is_array($features)||count($features)==0) {
+            //-- узнаем, какая комбинация установлена по умолчанию
+            $defComb= get_metadata('maginza', $lotID, 'CombDefault', true);
+            if (!$defComb) return false; //TODO: сделать нормальное сообщение об ошибке
+            return $combins[$defComb];
+        }
         $features=array_diff($features, array(''));
         $fCount=count($features);
         $features=implode('|', $features);
@@ -78,6 +85,7 @@ class Combinations extends Meta{
 	*/
 	function save_post($post) {
 		global $wpdb;
+        wp_die('Неведома хуйня');
         if (isset($_POST['combination'])) {
             $combinations=$_POST['combination'];
             foreach ($combinations as $combID => $combItems) {
@@ -86,6 +94,7 @@ class Combinations extends Meta{
                 $wpdb->update(Options::$table_combinations, array('combinTitle'=>$title, 'combinArticle'=>$article), array('combinID'=>$combID), array('%s', '%s'), array('%d'));
             }
         }
+
 	}
 
     /**

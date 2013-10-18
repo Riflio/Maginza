@@ -5,15 +5,14 @@
     <bookmark url="file://$PROJECT_DIR$/js/jquery.maginza.js" line="78" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="Добавляю возможность выбора &quot;комбинации по умолчанию&quot;">
+    <list default="true" id="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/combinations.php" afterPath="$PROJECT_DIR$/classes/combinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/setup.php" afterPath="$PROJECT_DIR$/classes/setup.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Maginza.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1382130393805" ignored="false" />
-    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1382130309414" ignored="false" />
+    <file path="/Dummy.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1382130399203" ignored="false" />
+    <file path="/combinations.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1382135216933" ignored="false" />
     <file path="/readme.txt" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380231552766" ignored="false" />
     <file path="/lot.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380269850123" ignored="false" />
     <file path="/formatter.php" changelist="26fca5a5-b8b3-4023-b1f0-0087b9fc28b0" time="1380384837529" ignored="false" />
@@ -96,7 +95,7 @@
       <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="55" selection-start="989" selection-end="989" vertical-scroll-proportion="-0.65384614">
+            <state line="46" column="55" selection-start="989" selection-end="989" vertical-scroll-proportion="-13.807693">
               <folding>
                 <marker date="1381345090575" expanded="true" signature="2073:2124" placeholder="SELECT * FRO..{$table_order_items}..." />
               </folding>
@@ -107,7 +106,7 @@
       <file leaf-file-name="setup.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/setup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2219" selection-end="2219" vertical-scroll-proportion="-0.5769231">
+            <state line="64" column="29" selection-start="2268" selection-end="2268" vertical-scroll-proportion="-13.653846">
               <folding />
             </state>
           </provider>
@@ -125,12 +124,12 @@
       <file leaf-file-name="combinations.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/combinations.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="34" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.48271605">
+            <state line="87" column="20" selection-start="2939" selection-end="2939" vertical-scroll-proportion="0.5497006">
               <folding>
-                <marker date="1382130390553" expanded="true" signature="3324:4018" placeholder="SELECT rels...{$table_combinations_rel}..." />
-                <marker date="1382130390553" expanded="true" signature="3919:3978" placeholder="SELECT combi..wp_maginza_combinations..." />
-                <marker date="1382130390553" expanded="true" signature="4631:4706" placeholder="SELECT comb...{$table_combinations}..." />
-                <marker date="1382130390553" expanded="true" signature="6952:7043" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+                <marker date="1382135231789" expanded="true" signature="3758:4452" placeholder="SELECT rels...{$table_combinations_rel}..." />
+                <marker date="1382135231789" expanded="true" signature="4353:4412" placeholder="SELECT combi..wp_maginza_combinations..." />
+                <marker date="1382135231789" expanded="true" signature="5065:5140" placeholder="SELECT comb...{$table_combinations}..." />
+                <marker date="1382135231789" expanded="true" signature="7386:7477" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
               </folding>
             </state>
           </provider>
@@ -1387,7 +1386,11 @@
       <created>1382128854842</created>
       <updated>1382128854842</updated>
     </task>
-    <option name="localTasksCounter" value="256" />
+    <task id="LOCAL-00256" summary="Добавляю возможность выбора &quot;комбинации по умолчанию&quot;">
+      <created>1382130402012</created>
+      <updated>1382130402012</updated>
+    </task>
+    <option name="localTasksCounter" value="257" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1586,15 +1589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="55" selection-start="989" selection-end="989" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <marker date="1381345090575" expanded="true" signature="2073:2124" placeholder="SELECT * FRO..{$table_order_items}..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="152" column="0" selection-start="3806" selection-end="3806" vertical-scroll-proportion="0.0">
@@ -1611,13 +1605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/setup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2219" selection-end="2219" vertical-scroll-proportion="-0.5769231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/meta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="44" selection-start="319" selection-end="342" vertical-scroll-proportion="-5.3333335">
@@ -1625,14 +1612,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="29" selection-start="2268" selection-end="2268" vertical-scroll-proportion="-13.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="55" selection-start="989" selection-end="989" vertical-scroll-proportion="-13.807693">
+          <folding>
+            <marker date="1381345090575" expanded="true" signature="2073:2124" placeholder="SELECT * FRO..{$table_order_items}..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/combinations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="34" selection-start="4824" selection-end="4824" vertical-scroll-proportion="0.48271605">
+        <state line="87" column="20" selection-start="2939" selection-end="2939" vertical-scroll-proportion="0.5497006">
           <folding>
-            <marker date="1382130390553" expanded="true" signature="3324:4018" placeholder="SELECT rels...{$table_combinations_rel}..." />
-            <marker date="1382130390553" expanded="true" signature="3919:3978" placeholder="SELECT combi..wp_maginza_combinations..." />
-            <marker date="1382130390553" expanded="true" signature="4631:4706" placeholder="SELECT comb...{$table_combinations}..." />
-            <marker date="1382130390553" expanded="true" signature="6952:7043" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
+            <marker date="1382135231789" expanded="true" signature="3758:4452" placeholder="SELECT rels...{$table_combinations_rel}..." />
+            <marker date="1382135231789" expanded="true" signature="4353:4412" placeholder="SELECT combi..wp_maginza_combinations..." />
+            <marker date="1382135231789" expanded="true" signature="5065:5140" placeholder="SELECT comb...{$table_combinations}..." />
+            <marker date="1382135231789" expanded="true" signature="7386:7477" placeholder="SELECT * FRO..{$wpdb-&gt;term_taxonomy}..." />
           </folding>
         </state>
       </provider>
