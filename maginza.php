@@ -150,9 +150,11 @@ class Maginza extends Options  {
 		global $wpdb;
 		if( is_search() ) {
 			$findkeys=$wpdb->get_results('SELECT optName FROM '.Options::$table_meta_options.' WHERE optForSearch=1');	
-			$findkeys=implode(',', array_values($findkeys));
-			$where = preg_replace('/post_title LIKE \'(.*?)\'\)/', 'post_title LIKE  \'$1\') OR ( (wp_maginzameta.meta_key FIND_IN_SET('.$findkeys.') ) AND  (wp_maginzameta.meta_value LIKE \'$1\') ) ', $where );
+			//$findkeys=implode(',', array_values($findkeys));
+			//$where = preg_replace('/post_title LIKE \'(.*?)\'\)/', 'post_title LIKE  \'$1\') OR ( (wp_maginzameta.meta_key FIND_IN_SET('.$findkeys.') ) AND  (wp_maginzameta.meta_value LIKE \'$1\') ) ', $where );
+			
 			var_dump($findkeys);
+			die();
 		}
 		return $where;
 	}
