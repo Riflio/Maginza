@@ -38,6 +38,7 @@ class Setup extends Options {
 					  optVisible bool NOT NULL,	
 					  optClientEditable bool NOT NULL,
 					  optTitle varchar(255),
+					  optForSearch bool NOT NULL,
 					  UNIQUE KEY id (id)
 		);";		
 		dbDelta($sql);		

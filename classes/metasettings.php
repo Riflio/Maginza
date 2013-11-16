@@ -27,7 +27,8 @@ class MetaSettings extends Meta {
 			'value'=> __('Value'),
 			'formatter'=>__('Formatter'),
 			'visible'=> __('Visible'),
-			'clienteditable'=> __('Client editable')			
+			'clienteditable'=> __('Client editable'),
+			'forsearch'=>__('For search')			
 		);		
 		$this->metaTypes=array(
 			array('text', 'Текст'),
@@ -144,9 +145,10 @@ class MetaSettings extends Meta {
 				'optValue'=>'',
 				'optFormatter'=>'',
 				'optVisible'=>1, 
-				'optClientEditable'=>1  
+				'optClientEditable'=>1,
+				'optForSearch'=>1  
 			), 
-			array('%d', '%s', '%s', '%s', '%s', '%d', '%d')
+			array('%d', '%s', '%s', '%s', '%s', '%d', '%d', '%d')
 		); 
 		die();
 	}
@@ -166,10 +168,11 @@ class MetaSettings extends Meta {
                         'optFormatter'=>$option['formatter'],
                         'optVisible'=>intval($option['visible']),
                         'optClientEditable'=>intval($option['editable']),
-                        'optTitle'=>$option['title']
+                        'optTitle'=>$option['title'],
+                    	'optForSearch'=>intval($option['forsearch'])
                     ),
                     array('id'=>$key),
-                    array('%s', '%s', '%s', '%d', '%d'),
+                    array('%s', '%s', '%s', '%d', '%d', '%s', '%d'),
                     array('%d')
                 );
             }
@@ -344,7 +347,10 @@ class MetaSettings__List_Table extends WP_List_Table {
 				return "<input name='metaoption[{$item->id}][visible]' type='checkbox' value='1' disabled {$visible} />";
 			case 'clienteditable': 
 				$editable=($item->optClientEditable==true)? 'checked':'';
-				return "<input name='metaoption[{$item->id}][editable]' type='checkbox' value='1' disabled {$editable} />";
+				return "<input name='metaoption[{$item->id}][editable]' type='checkbox' value='1' disabled {$editable} />";			
+			case 'forsearch':
+				$forsearch=($item->optForSearch==true)? 'checked':'';
+				return "<input name='metaoption[{$item->id}][forsearch]' type='checkbox' value='1' disabled {$forsearch} />";
             case 'title':
                 return "<input name='metaoption[{$item->id}][title]' type='text' value='{$item->optTitle}' disabled />";
 			default:
