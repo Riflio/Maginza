@@ -146,7 +146,7 @@ class Maginza extends Options  {
 		return $join;
 	}
 
-	function maginza_search_where( $where )	{
+	function maginza_search_where( $where )	{ 
 		global $wpdb;
 		if( is_search() ) {
 			$qfindkeys=$wpdb->get_results('SELECT optName FROM '.Options::$table_meta_options.' WHERE optForSearch=1');
