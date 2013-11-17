@@ -153,7 +153,7 @@ class Maginza extends Options  {
 			$findkeys=array();	
 			foreach ($qfindkeys as $findkey) { $findkeys[]= '\''.$findkey->optName.'\''; }
 			$findkeys=implode(',', $findkeys);			
-			$where = preg_replace('/post_title LIKE \'(.*?)\'\)/', 'post_title LIKE  \'$1\') OR ( (wp_maginzameta.meta_key FIND_IN_SET('.$findkeys.') ) AND  (wp_maginzameta.meta_value LIKE \'$1\') ) ', $where );
+			$where = preg_replace('/post_title LIKE \'(.*?)\'\)/', 'post_title LIKE  \'$1\') OR ( (FIND_IN_SET(wp_maginzameta.meta_key, '.$findkeys.')) AND  (wp_maginzameta.meta_value LIKE \'$1\') ) ', $where );
 			var_dump($where);
 		}
 		return $where;
