@@ -152,7 +152,7 @@ class Maginza extends Options  {
 			$qfindkeys=$wpdb->get_results('SELECT optName FROM '.Options::$table_meta_options.' WHERE optForSearch=1');
 			$findkeys=array();	
 			foreach ($qfindkeys as $findkey) { $findkeys[]= $findkey->optName; }
-			$findkeys=implode(',' $findkeys);
+			$findkeys=implode(',', $findkeys);
 			
 			//$where = preg_replace('/post_title LIKE \'(.*?)\'\)/', 'post_title LIKE  \'$1\') OR ( (wp_maginzameta.meta_key FIND_IN_SET('.$findkeys.') ) AND  (wp_maginzameta.meta_value LIKE \'$1\') ) ', $where );
 			
