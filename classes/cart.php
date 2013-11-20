@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @author pavelk
+ * ПОЛОВИНА БУДЕТ ПЕРЕДЕЛАНО
+ *
+ */
+
 class Cart extends Order {
 	
 	function __construct() {
