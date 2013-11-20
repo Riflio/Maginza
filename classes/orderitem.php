@@ -87,8 +87,9 @@ class OrderItem extends Combinations{
         //$formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
         //$parser = new Parser($formula);
-        
-        return   $formula.array_keys($metaOpts).array_values($metaOpts); //$parser->run();
+        var_dump(array_keys($metaOpts));
+        var_dump(array_values($metaOpts));
+        return   $formula; //$parser->run();
     }
 
     /**
