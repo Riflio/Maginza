@@ -9,7 +9,7 @@ require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 
 
 class Admin extends Options {
-    private  $pagehook;
+    private  $pagehook; 
 
 	function __construct() {
 		add_action('admin_init', array(&$this, 'admin_init'));
