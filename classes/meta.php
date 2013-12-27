@@ -33,7 +33,7 @@ class Meta extends Formatter {
 	
 	
 	
-	function getLotMetaOptions($lot) {
+	public function getLotMetaOptions($lot) {
 		global $wpdb;	
 		//-- проверим, принадлежит ли нужной группе, отсортируем в порядке возрастания айдишников групп и  только уникальные названия
 		$lotMetaGroups=$this->getLotMetagroups($lot);
@@ -42,7 +42,7 @@ class Meta extends Formatter {
 		//TODO: запомнить вывод
 	}
 	
-	function getMetaValue($lot, $metaName) {
+	public function getMetaValue($lot, $metaName) {
 		$metaVal=get_metadata('maginza', $lot->ID, $metaName, true);
 		$metaVal=apply_filters('getmetavalue',$metaVal, $metaName, $lot->ID);
 		return $metaVal;

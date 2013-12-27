@@ -92,6 +92,7 @@ class Setup extends Options {
 	
 	public function uninstall() {
 		global $wpdb;		
+		return;
 		$sql='DROP TABLE  IF EXISTS '.Options::$table_order;
 		$wpdb->query($sql);	
 		$sql='DROP TABLE  IF EXISTS '.Options::$table_meta_group;

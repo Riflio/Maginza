@@ -42,7 +42,7 @@ class MetaSettings extends Meta {
             array('price', 'Price')
 		);
 		
-		
+		$this->columns=apply_filters('mz_metaoptions_columns', $this->columns);
 		$this->metaTypes=apply_filters('mz_metaoptions_metatypes', $this->metaTypes);
 		$this->metaFormatters=apply_filters('mz_metaoptions_metaformatters', $this->metaFormatters);
 		
@@ -270,7 +270,6 @@ class MetaSettings extends Meta {
 	}
 	
 }
-
 
 require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 
