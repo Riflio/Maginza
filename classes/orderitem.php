@@ -84,6 +84,8 @@ class OrderItem extends Combinations{
 
         $metaOpts=$inst->orderItemMetaOptionsValues($lot, $customMetaOptions);
 
+        ChromePhp::log($metaOpts);
+        
         $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
         $parser = new Parser($formula);

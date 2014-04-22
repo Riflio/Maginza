@@ -87,7 +87,9 @@ class Combinations extends Meta{
 	*/
 	function save_post($post_id) {
 		global $wpdb;
-
+		
+		if ( wp_is_post_revision( $post_id ) ) return; //-- Автоматические ревизии игнорируем
+		
         //-- проверяем, если нет ни одной комбинации, создаём комбинацию и ставим её по умолчанию.
         if (count($this->getCombinations($post_id))==0) {
             $sfeatures=implode($_GET['tax_input[features]'], ',');
