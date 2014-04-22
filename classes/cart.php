@@ -15,9 +15,20 @@ class Cart extends Order {
         add_action('wp_ajax_order', array(&$this, 'ajax_order'));
         add_action('wp_ajax_nopriv_order', array(&$this, 'ajax_order'));
 
+        add_action( 'wp_enqueue_scripts',  array(&$this, 'enqueue_scripts') );
+        
+        //add_action('init', array($this, 'init'), 1);;
         add_action('wp_login', array(&$this, 'wp_login'), 10, 2);
     }
-
+    
+    /**
+     * Подключаем скрипты
+     */
+	function enqueue_scripts() {
+		wp_enqueue_script('formulaparser',  WP_PLUGIN_URL.'/wp_maginza/js/maginza.formulaparser.js', array());
+		
+	}
+    
     /**
      * Выводим список заказов клиента
      *
@@ -127,7 +138,10 @@ class Cart extends Order {
     function showCart($args) {
         global $post;
 		$orderItems=$this->getListOrderItems($this->orderID());
-
+		
+		
+		//-- отдаём для js расчёта данные --//
+		
         if (count($orderItems)==0) {
             echo 'Ваша корзина пуста.';
             return;
@@ -152,11 +166,13 @@ class Cart extends Order {
 
             echo '<div class="orderitem item-'.$itemID.'">';
 
+            	echo '<script> '.$this->getItemJSData().'</script>';
+            
                 echo '<div class="orderitem-previmg">';
                          $this->theMetaValue($lot, 'Selprevimg', 'cart');
                 echo '</div>';
 
-                echo '<div class="orderitem-content">';
+                echo '<div class="orderitem-content lotform" id="'.$itemID.'" >';
                     echo $this->metaFormID();
                     echo '<div class="title">';
                         the_title();
@@ -173,7 +189,7 @@ class Cart extends Order {
                     echo '<div class="countandprice">';
                        echo '<span class="dprice">'; $this->theMetaValue($lot, 'Price', 'cart'); echo '</span>';
                        echo '<span class="x">&times;</span>';
-                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity',  'cart-'.$itemID); echo '</span>';
+                       echo '<span class="count">'; $this->theMetaValue($lot, 'Quantity', 'cart', true, $itemID); echo '</span>';
                        echo '<span class="eq">=</span>';
                        echo '<span class="cost">'; echo Formatter::format('price', '', $this->getItemTotalPrice()); echo '</span>';
                     echo '</div>';
@@ -188,6 +204,7 @@ class Cart extends Order {
 
         }
         echo '<div class="cartactbtns">';
+        
             $this->theButton('saveCart', 'Сохранить', "#");
             $this->theButton('nextCart', 'Продолжить оформление', "http://suvenirus.org/zavershenie-zakaza");
         echo '</div>';
@@ -195,31 +212,18 @@ class Cart extends Order {
 	}
 
     function ajax_order() {
-        $method=$_GET['method'];
-        $lotID=intval($_GET['lotid']);
+        $method=$_REQUEST['method'];
+        $lotID=intval($_REQUEST['lotid']);
         if ($method==="buy") {
-            $metaOpts=Formatter::reqMetaOptpValue($_GET['formname']);
-            $features=Formatter::reqCombFeature($_GET['formname']);
+            $metaOpts=Formatter::reqMetaOptpValue($_REQUEST['formname']);
+            $features=Formatter::reqCombFeature($_REQUEST['formname']);
 
             echo $this->addItemOrder($this->orderID(true), $lotID, $metaOpts, $features);
         }
-        if ($method==="getitemtotalprice") {
-            $itemID=intval($_GET['orderitemid']);
-            $customOpts=$metaOpts=$this->checkMetaOptions(get_post($lotID), $_GET); //-- выберем метаопци из всего запроса
-
-            $this->setItemID($itemID);
-            $totalPrice=$this->getItemTotalPrice($customOpts);
-
-            $price=(object) NULL;
-            $price->text=Formatter::format('price', '', $totalPrice);
-            $price->value=$totalPrice;
-            $price->orderitemid=$itemID;
-            $price->rand=$_GET['rand'];
-            echo json_encode($price);
-        }
+       
 
         if ($method==="deleteorderitem") {
-            $itemID=intval($_GET['orderitemid']);
+            $itemID=intval($_REQUEST['orderitemid']);
             $this->deleteOrderItem($itemID);
 
             $res=(object) NULL;
@@ -228,17 +232,17 @@ class Cart extends Order {
         }
 
         if ($method==="savecart") {
-            $metaoptvals=$_GET['metaoptvals'];
+            $metaoptvals=$_REQUEST['metaoptvals'];
             $this->saveCart($metaoptvals);
         }
 
         if ($method==="sendcart") {
-            $cartOrderID=intval($_GET['cartorderid']);
+            $cartOrderID=intval($_REQUEST['cartorderid']);
             $this->sendCart($cartOrderID);
         }
 
         if ($method==="changeorder") {
-            $orderID=intval($_GET['orderitemid']);
+            $orderID=intval($_REQUEST['orderitemid']);
             $this->toChangeOrder($orderID);
         }
 

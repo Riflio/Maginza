@@ -1,6 +1,29 @@
-
 jQuery(document).ready(function($){
 
+	/**
+	 * Отслеживаем изменение всех полей ввода, что бы пересчитать стоимость а может и тому подобное
+	 * 
+	 */
+	$('.mz_widget_user[name^="metaoptvals"]').live('change paste keyup', function() {
+		var id=$(this).attr('id');
+		
+		var name=$(this).data('widgetOptname');
+		var val=$(this).val();
+		
+		//-- Объединяем характеристики лота с изменёнными пользователем характеристиками
+		var lotData=maginza['lotdata'+id];
+		var userData={};
+		userData[name]=val;		
+		var resData = $.extend({}, lotData['meta'], userData);
+		
+		//-- Расчитываем итоговую стоимость
+		var expr= Parser.parse(lotData['formula']);
+		var price= expr.evaluate(resData);
+		
+		$('.lotform#'+id).find('.cost').html( maginza.formatPrice.replace(/%s/g, price) ); //TODO: Переделать см. общий туду
+	});
+	
+	
 	
 	$('#buy.orderaction').live('click', function() {
 		var met=$(this).attr('id');
@@ -44,6 +67,7 @@ jQuery(document).ready(function($){
                     var data=$.parseJSON(_data);
                 }
                 catch (err) {
+                	alert('Извините, возникла ошибка при удалении позиции. Обратитесь, пожалуйста, к онлайн консультанту.');
                     return;
                 }
                 $('.orderitem.item-'+data.orderitemid).remove();
@@ -53,7 +77,7 @@ jQuery(document).ready(function($){
     });
 
     $('.cartactbtns #saveCart').on('click', function(){
-        $.get(
+        $.post(
             maginza.ajaxurl+'?'+$('#formcart').serialize(),
             {
                 action:	'order',

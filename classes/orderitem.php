@@ -63,12 +63,33 @@ class OrderItem extends Combinations{
                     $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
                 }
             } else {
-                $orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
+            	$orderItemMetaOptions[$metaOpt->optName]=$this->getMetaValue($lot, $metaOpt->optName);
             }
         }
         $metaOpts=array_merge($orderItemMetaOptions, $customMetaOptions);
         return $metaOpts;
 
+    }
+    
+    /**
+     * Отдайм данные для расчёта стоимости и прочего для js
+     * 
+     */
+    public function getItemJSData($js=true) {
+    	$inst=OrderItem::getInstance();
+    	$item=$inst->getItem();
+    	$lot=get_post($item->orderItemID);
+    	
+    	$data=array(
+    			"meta"=> $this->orderItemMetaOptionsValues($lot),
+    			"formula"=> $this->getLotFormula($lot)
+    	);
+    	
+    	if ($js) {
+    		return ('maginza.lotdata'.$inst->itemID.'='.json_encode($data).'');
+    	}
+    	
+    	return $data;
     }
     /**
      * Отдаём конечную стоимость позиции товара
@@ -88,6 +109,8 @@ class OrderItem extends Combinations{
         
         $formula=str_replace(array_keys($metaOpts), array_values($metaOpts), $formula);
 
+        
+      
         $parser = new Parser($formula);
 
         return   $parser->run();

@@ -129,7 +129,10 @@ class Maginza extends Options  {
 			)
 		);
 		wp_enqueue_script('maginza', WP_PLUGIN_URL.'/wp_maginza/js/jquery.maginza.js', array('jquery'));	//-- через хэш указываем на ajaxurl
-		wp_localize_script( 'maginza', 'maginza', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+		wp_localize_script( 'maginza', 'maginza', array( 
+				'ajaxurl' => admin_url( 'admin-ajax.php' ) ,
+				'formatPrice' => get_option('mz_format_price') //TODO: Переделать см. в общем todo
+		));
 		
 		
 		

@@ -86,6 +86,15 @@ class Order extends OrderItem {
         global $wpdb;
         $table_order_items=Options::$table_order_items;
         $orders=$wpdb->get_results($wpdb->prepare("SELECT * FROM {$table_order_items} WHERE orderID=%d ", $orderID ));
+        //-- Возможно, пока клиент отсутствовал, лот удалили, необходимо проверить и в случае чего удалить из заказа
+        //TODO: Будет правильнее удалять из заказов непосредственно при удалении лота см. общий туду
+        $allLotIDs=$wpdb->get_var($wpdb->prepare("SELECT  GROUP_CONCAT(ID) FROM {$wpdb->posts} WHERE post_type=%s ", 'lots'));
+        $allLotIDs=explode(',' , $allLotIDs);        
+        foreach($orders as $key=> $item) {        
+        	if (! in_array($item->orderItemID, $allLotIDs)  ) {
+        		unset($orders[$key]);
+        	}        	
+        }	
         return $orders;
     }
 	

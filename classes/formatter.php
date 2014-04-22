@@ -20,37 +20,40 @@ class Formatter extends Options{
         //-- форматтеры по умолчанию
 		switch ($templ) {
 			case 'text':
-				return sprintf('%s', $args[2]);							
+				$s=sprintf('%s', $args[2]);							
 			break;
 			case 'button':
-				return sprintf(get_option('mz_format_addbutton'), $args[3], $args[1], $args[2]);
+				$s=sprintf(get_option('mz_format_addbutton'), $args[3], $args[1], $args[2]);
 			break;
             case 'price':
-                return sprintf(get_option('mz_format_price'), $args[2]);
+                $s=sprintf(get_option('mz_format_price'), $args[2]);
             break;
 		}
+		return '<span id="" class="formatter '.$templ.'" >'.$s.'</span>';
 	}
 
     /**
      *
      *
      */
-	function widget($type, $metaOpt, $metaVal, $formName) {
+	function widget($type, $metaOpt, $metaVal, $formName, $id) {
 		apply_filters('mz_widget', '',  $metaOpt, $metaVal, $formName);
         $val=apply_filters('mz_widget_'.$type, '',  $metaOpt, $metaVal, $formName);
         if ($val!='') return $val;
         //-- виджеты по умолчанию
-        $name="metaoptvals[{$formName}][{$metaOpt->optName}]";
+        $name="metaoptvals[{$formName}-$id][{$metaOpt->optName}]";
 
+        $class=(is_admin())? 'mz_widget_admin': 'mz_widget_user'; //-- Что бы разделить для скриптов и css пользовательские виджеты и из админской панели
+		$class.=" {$metaOpt->optName} {$type} ";
 		switch ($type) {
 			case 'text': 
-				return '<input name="'.$name.'" id="'.$name.'" type="text" class="text" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
+				return '<input name="'.$name.'" data-widget-optname="'.$metaOpt->optName.'" id="'.$id.'" type="text" class="'.$class.'" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
 			break;
 			case 'spin':
-				return '<input name="'.$name.'" id="'.$name.'" type="text" class="spin" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
+				return '<input name="'.$name.'" data-widget-optname="'.$metaOpt->optName.'" id="'.$id.'" type="text" class="'.$class.'" value="'.$metaVal.'" /><label for="'.$name.'">'.$metaOpt->optTitle.'</label>';
 			break;
 			case 'hidden':
-				return '<input name="'.$name.'" id="'.$name.'" type="hidden" class="hidden meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
+				return '<input name="'.$name.'" data-widget-optname="'.$metaOpt->optName.'" id="'.$id.'" type="hidden" class="'.$class.' meta-'.$metaOpt->optName.'" value="'.$metaVal.'" /> ';
 			break;
 		}
 	}
