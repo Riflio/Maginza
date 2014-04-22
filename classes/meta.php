@@ -138,7 +138,7 @@ class Meta extends Formatter {
 		foreach($options as $option) {
 			if (in_array($option->optName, $exclude))	continue;				
 			$metaVal=$this->getMetaValue($lot, $option->optName);			
-			$this->processMetaOption($option, $metaVal,  $formName, $lot->ID);
+			$this->processMetaOption($option, $metaVal,  $formName, true, $lot->ID);
 		}		
 		return true;
 	}
